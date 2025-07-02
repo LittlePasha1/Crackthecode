@@ -1,82 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De Onwijze Wijsheid</title>
+<link rel="stylesheet" href="css/style.css" />
 
-/* Basis reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+  <!-- Fonts van Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
 
-body {
-  margin: 0;
-  padding: 2rem 3rem;
-  font-family: 'Lora', serif;
-  background-color: #faf5f0;
-  color: #4a6a6d;
-  line-height: 1.7;
-  font-size: 1.15rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  <header class="container">
+<img src="images/logo.png" alt="De Onwijze Wijsheid Logo" style="max-height: 70px;" />
+    <h1>De Onwijze Wijsheid</h1>
+  </header>
 
-/* Links */
-a {
-  color: #d95f36; /* warm rood-oranje */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover, a:focus {
-  color: #b0451e; /* dieper oranje */
-  text-decoration: underline;
-}
+  <nav class="container">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Column</a>
+    <a href="#">Onderwerpen</a>
+    <a href="#">Contributie</a>
+  </nav>
 
-/* Headers */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #234e52; /* diepe donkergroen */
-  letter-spacing: 0.05em;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  line-height: 1.1;
-}
+  <main class="container">
+    <section>
+      <h2>Welkom bij De Onwijze Wijsheid</h2>
+      <p class="subtitle">Voor wie graag twijfelt, denkt, voelt, onderzoekt en zichzelf tegenkomt.</p>
+      <p>
+        Deze plek is voor wie durft vragen te stellen. Over voeding. Over lichaam. Over geest. 
+        Over hoe dingen écht werken. Of juist niet. Geen pasklare antwoorden – wel nieuwsgierigheid, eerlijkheid en verbinding.
+      </p>
+      <p>
+        Neem een kijkje bij de columns, de onderwerpen of draag zelf iets bij. De onwijze wijsheid ontstaat samen.
+      </p>
+    </section>
+  </main>
 
-h1 {
-  font-size: 4.5rem;
-  font-weight: 700;
-}
+  <footer class="container">
+    <p>&copy; 2025 De Onwijze Wijsheid. Alle rechten voorbehouden.</p>
+  </footer>
 
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-/* Paragrafen */
-p {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-/* Spacing tussen secties */
-section {
-  margin-bottom: 4rem;
-}
-
-/* Container max width */
-.container {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Extra lucht rond links in text */
-.subtitle, .caption {
-  color: #778a89;
-  font-style: italic;
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
+</body>
+</html>
