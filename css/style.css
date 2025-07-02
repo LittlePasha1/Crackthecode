@@ -19,7 +19,7 @@ body {
 html {
   height: 100%;
   box-sizing: border-box;
-  border: 12px solid #e95420; /* dikke oranje rand rond het scherm */
+  border: none;
 }
 
 /* -------------------- */
