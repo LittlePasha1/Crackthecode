@@ -1,39 +1,82 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>De Onwijze Wijsheid</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="mainpage">
-    <header class="site-header">
-      <h1>De Onwijze Wijsheid</h1>
-      <p class="subtitle">Een open platform voor inzichten, informatie en bijdragen</p>
-    </header>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-    <main class="content-grid">
-      <section class="content-box">
-        <h2>📓 Columns</h2>
-        <p>Persoonlijke, kritische observaties. Soms pijnlijk raak, soms plagerig.</p>
-        <a href="column/index.html">Lees meer →</a>
-      </section>
+/* Basis reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-      <section class="content-box">
-        <h2>📚 Themapagina’s</h2>
-        <p>Diepgaande uitleg over begrippen en thema’s zoals omega-3, vetten, macht...</p>
-        <a href="artikels/index.html">Bekijk →</a>
-      </section>
+body {
+  margin: 0;
+  padding: 2rem 3rem;
+  font-family: 'Lora', serif;
+  background-color: #faf5f0;
+  color: #4a6a6d;
+  line-height: 1.7;
+  font-size: 1.15rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-      <section class="content-box">
-        <h2>🤝 Bijdragen</h2>
-        <p>Gebruikers die meeschrijven, linken of iets toevoegen – dat kan hier.</p>
-        <a href="contribute/index.html">Contribute →</a>
-      </section>
-    </main>
+/* Links */
+a {
+  color: #d95f36; /* warm rood-oranje */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover, a:focus {
+  color: #b0451e; /* dieper oranje */
+  text-decoration: underline;
+}
 
-    <footer class="site-footer">
-      <p>© 2025 – In opbouw, maar steeds wakker.</p>
-      <p class="stats">102 leden • 4 online • 36 bijdragen</p>
-    </footer>
-  </body>
-</html>
+/* Headers */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #234e52; /* diepe donkergroen */
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Paragrafen */
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Spacing tussen secties */
+section {
+  margin-bottom: 4rem;
+}
+
+/* Container max width */
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Extra lucht rond links in text */
+.subtitle, .caption {
+  color: #778a89;
+  font-style: italic;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
