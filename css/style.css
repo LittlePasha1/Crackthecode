@@ -1,84 +1,110 @@
-/* -------------------- */
-/* 🎨 FONT IMPORT */
-/* -------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-/* -------------------- */
-/* 🌑 FRONT PAGE */
-/* -------------------- */
-body.frontpage {
-  background-color: #2a2a2a;
-  color: #f0f0f0;
-  font-family: 'Georgia', serif;
+/* Algemene basisstijl */
+body {
   margin: 0;
-  height: 100vh;
-  padding: 2rem;
+  padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  color: #cc4b2b;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Frontpage */
+.frontpage {
+  background-color: #111;
+  color: #f1f1f1;
+  font-family: Georgia, serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  height: 100vh;
+  margin: 0;
   text-align: center;
-  border: 2px solid #f0f0f0;
+  padding: 2rem;
 }
 
 .page-header {
-  font-size: 1.1rem;
-  color: #f0f0f0;
-  opacity: 0.6;
-  text-align: center;
-  margin: 0 0 1rem 0;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 1px;
+  font-size: 2rem;
+  color: #f1f1f1;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .impactquote {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: bold;
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0 0 3rem 0;
   line-height: 1.4;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.6s;
-  color: #f0f0f0;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
 
 .enter-button {
   background-color: transparent;
-  border: 2px solid #f0f0f0;
-  color: #f0f0f0;
+  border: 2px solid #f1f1f1;
+  color: #f1f1f1;
   padding: 1rem 2rem;
-  text-decoration: none;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  margin-top: 3rem;
 }
-
 .enter-button:hover {
-  background-color: #f0f0f0;
-  color: #2a2a2a;
+  background-color: #f1f1f1;
+  color: #111;
   cursor: pointer;
 }
 
-/* -------------------- */
-/* 📱 RESPONSIVE */
-/* -------------------- */
-@media (max-width: 600px) {
-  .impactquote {
-    font-size: 2rem;
-  }
-
-  .enter-button {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-  }
+/* MAIN PAGE (main.html) */
+body.mainpage {
+  background-color: #f8f8f8;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  padding: 0;
 }
+
+.site-header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.site-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin: 0;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.content-box h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
