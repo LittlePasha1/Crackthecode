@@ -2,35 +2,67 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Welkom</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <title>De Onwijze Wijsheid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f5ee; /* parelmoer */
+      color: #305e56;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #305e56; /* donkergroenblauw */
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #305e56;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      background-color: transparent;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #305e56;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #254c45; /* iets donkerder bij hover */
+    }
+  </style>
 </head>
-<body class="frontpage">
-  <header class="header">
-    <div class="logo-title">
-      <h1 class="site-title">De Onwijze Wijsheid</h1>
-    </div>
-    <div class="logo-symbol">
-      <svg class="spiral-logo" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="48" stroke="#375e54" stroke-width="4" fill="none"/>
-        <path d="M70,50 a20,20 0 1,1 -40,0 a10,10 0 1,0 20,0 a5,5 0 1,1 -10,0" 
-              fill="none" stroke="#375e54" stroke-width="3" />
-      </svg>
-    </div>
+<body>
+
+  <header>
+    <h1>De Onwijze Wijsheid</h1>
+    <p>Een open platform voor kritische inzichten, informatie en vrije bijdragen</p>
   </header>
 
-  <p class="page-header">WELKOM</p>
-
-  <div class="splash">
-    <h1 class="impactquote">Voor wie zichzelf niet meer kan sussen.</h1>
-  </div>
-
-  <div class="button-wrapper">
-    <a href="main.html" class="enter-button">Verder gaan</a>
-  </div>
-</body>
-
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Column</a>
+    <a href="#">Onderwerpen</a>
+    <a href="#">Contributie</a>
+  </nav>
 
 </body>
 </html>
