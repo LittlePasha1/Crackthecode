@@ -108,3 +108,28 @@ body.mainpage {
 .content-box h2 {
   margin-top: 0;
   font-size: 1.5rem;
+
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #375e54;
+  margin: 0;
+}
+
+.logo-symbol {
+  width: 90px;
+  height: 90px;
+}
+
+.spiral-logo {
+  width: 100%;
+  height: 100%;
+}
+
