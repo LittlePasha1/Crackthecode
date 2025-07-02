@@ -144,3 +144,13 @@ a:hover {
   justify-content: center;
   margin-top: 3rem;
 }
+.page-header {
+  font-size: 2rem;           /* maak groter */
+  letter-spacing: 2px;
+  color: #e95420;
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;         /* extra bold */
+  font-family: Georgia, serif;
+  text-transform: uppercase; /* optioneel: alles hoofdletters */
+}
