@@ -1,5 +1,3 @@
-
-
 /* Basis reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -9,7 +7,7 @@ body {
   margin: 0;
   padding: 2rem 3rem;
   font-family: 'Lora', serif;
-  background-color: #faf5f0;
+  background-color: #f4f5f0;
   color: #4a6a6d;
   line-height: 1.7;
   font-size: 1.15rem;
@@ -62,28 +60,14 @@ section {
   margin-bottom: 4rem;
 }
 
-/* Container max width */
-.container {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.caption {
-  font-size: 1rem;
-  color: #234e52;
-  font-style: italic;
-}
-
-/* Extra lucht rond links in tekst */
-
-/* Container centreren */
+/* Container */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Voor subtiele tekst (zoals een ondertitel) */
+/* Ondertitels */
 .subtitle {
   font-size: 1.2rem;
   color: #234e52; /* diepe donkergroen */
@@ -92,9 +76,9 @@ section {
   margin-bottom: 1.5rem;
 }
 
-
-/* Achtergrondkleur voor de hele site */
-body {
-  background-color: #f4f5f0;
+/* Captions */
+.caption {
+  font-size: 1rem;
+  color: #234e52;
+  font-style: italic;
 }
-
