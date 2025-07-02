@@ -1,7 +1,8 @@
+/* Fonts importeren */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-/* Zorg dat box-sizing voor álle elementen geldt */
+/* Box-sizing reset voor alle elementen */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -16,6 +17,7 @@ body {
   line-height: 1.6;
 }
 
+/* Linkkleur appelgroen en hover oranje */
 a {
   color: #4fa087;
   text-decoration: none;
@@ -24,11 +26,11 @@ a {
 
 a:hover,
 a:focus {
-  color: #2f4b3f;
+  color: #f08c38; /* warm oranje accent */
   text-decoration: underline;
 }
 
-/* Frontpage */
+/* Frontpage specifieke styling */
 .frontpage {
   background-color: #111;
   color: #f1f1f1;
@@ -66,14 +68,85 @@ a:focus {
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
+
 .enter-button:hover {
   background-color: #f1f1f1;
   color: #111;
   cursor: pointer;
 }
 
-/* MAIN PAGE (main.html) */
+/* Mainpage styling */
 body.mainpage {
   background-color: #f8f5ee;
   font-family: 'Inter', sans-serif;
-  color: #30
+  color: #305e56;
+  padding: 1rem 2rem;
+}
+
+/* Site header */
+.site-header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.site-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin: 0;
+  color: #375e54;
+}
+
+/* Subtitel */
+.subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Grid voor content */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Content boxen */
+.content-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+/* Titels in content */
+.content-box h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #305e56;
+}
+
+/* Header layout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+/* Site titel */
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #375e54;
+  margin: 0;
+}
+
+/* Logo styling */
+.logo-symbol {
