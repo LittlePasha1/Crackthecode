@@ -1,152 +1,83 @@
-/* Fonts importeren */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-/* Box-sizing reset voor alle elementen */
+/* Basis reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Algemene basisstijl */
 body {
   margin: 0;
-  padding: 1rem 2rem;
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f5ee;
-  color: #305e56;
-  line-height: 1.6;
+  padding: 2rem 3rem;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  background-color: #faf5f0; /* warm fris */
+  color: #555f61; /* levendig grijsblauw */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Linkkleur appelgroen en hover oranje */
+/* Links */
 a {
-  color: #4fa087;
+  color: #d95f36; /* warm rood-oranje */
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
-a:hover,
-a:focus {
-  color: #f08c38; /* warm oranje accent */
+a:hover, a:focus {
+  color: #b0451e; /* dieper oranje */
   text-decoration: underline;
 }
 
-/* Frontpage specifieke styling */
-.frontpage {
-  background-color: #111;
-  color: #f1f1f1;
-  font-family: Georgia, serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  text-align: center;
-  padding: 2rem;
-}
-
-.page-header {
-  font-size: 2rem;
-  color: #f1f1f1;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.impactquote {
-  font-size: 3.2rem;
-  font-weight: bold;
-  max-width: 800px;
-  margin: 0 0 3rem 0;
-  line-height: 1.4;
-}
-
-.enter-button {
-  background-color: transparent;
-  border: 2px solid #f1f1f1;
-  color: #f1f1f1;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.enter-button:hover {
-  background-color: #f1f1f1;
-  color: #111;
-  cursor: pointer;
-}
-
-/* Mainpage styling */
-body.mainpage {
-  background-color: #f8f5ee;
-  font-family: 'Inter', sans-serif;
-  color: #305e56;
-  padding: 1rem 2rem;
-}
-
-/* Site header */
-.site-header {
-  text-align: center;
-  padding: 3rem 1rem 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.site-header h1 {
+/* Headers */
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  margin: 0;
-  color: #375e54;
-}
-
-/* Subtitel */
-.subtitle {
-  font-size: 1rem;
-  color: #777;
-  margin-top: 0.5rem;
-  font-style: italic;
-}
-
-/* Grid voor content */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 3rem 0;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Content boxen */
-.content-box {
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
-}
-
-/* Titels in content */
-.content-box h2 {
+  color: #234e52; /* diepe donkergroen */
+  letter-spacing: 0.05em;
   margin-top: 0;
-  font-size: 1.5rem;
-  color: #305e56;
+  margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
-/* Header layout */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 3rem;
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
 }
 
-/* Site titel */
-.site-title {
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Subtitels */
+.subtitle {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  color: #375e54;
-  margin: 0;
+  font-size: 1.3rem;
+  color: #6e8a7e; /* warm vergrijsd groen */
+  font-style: normal;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Logo styling */
-.logo-symbol {
+/* Paragrafen */
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Ruimte tussen secties */
+section {
+  margin-bottom: 4rem;
+}
+
+/* Container max breedte */
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
