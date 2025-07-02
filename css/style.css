@@ -1,135 +1,78 @@
 /* -------------------- */
-/* 🔤 LETTERTYPES & BASIS */
+/* 🎨 FONT IMPORT */
 /* -------------------- */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-/* ALGEMENE PAGINA-INSTELLINGEN (bv. main.html) */
-body {
-  margin: 0;
-  padding: 20px;
-  background-color: #f8f9fa;
-  color: #222;
-  line-height: 1.6;
-  font-family: 'Inter', sans-serif;
-  box-sizing: border-box;
-}
-
-/* HTML-RAND VOOR FRONT PAGE */
-html {
-  height: 100%;
-  box-sizing: border-box;
-  border: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 /* -------------------- */
-/* 🎭 FRONT PAGE STIJL  */
+/* 🌑 FRONT PAGE */
 /* -------------------- */
-
 body.frontpage {
-  background-color: #111;
-  color: #f1f1f1;
-  font-family: Georgia, serif;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100%;
-  padding: 2rem;
+  border: 2px solid #f0f0f0;
 }
 
 .page-header {
   font-size: 1.1rem;
-  color: #f1f1f1;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  font-weight: normal;
-  font-family: Georgia, serif;
-  letter-spacing: 1px;
+  color: #f0f0f0;
   opacity: 0.6;
-
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
 }
 
 .impactquote {
-  font-size: 3.2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
   font-weight: bold;
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   line-height: 1.4;
-  color: #e95420;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.6s;
+  color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .enter-button {
   background-color: transparent;
-  border: 2px solid #f1f1f1;
-  color: #f1f1f1;
+  border: 2px solid #f0f0f0;
+  color: #f0f0f0;
   padding: 1rem 2rem;
   text-decoration: none;
   font-size: 1.1rem;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
+  margin-top: 3rem;
 }
 
 .enter-button:hover {
-  background-color: #f1f1f1;
-  color: #111;
+  background-color: #f0f0f0;
+  color: #2a2a2a;
   cursor: pointer;
 }
 
 /* -------------------- */
-/* 🧭 NAVIGATIE & LINKS */
+/* 📱 RESPONSIVE */
 /* -------------------- */
-
-nav {
-  background-color: #ffffff;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #e87d2f;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* -------------------- */
-/* 🟠 TITELS EN LINKS  */
-/* -------------------- */
-
-h1, h2, h3 {
-  color: #e87d2f;
-}
-
-a {
-  color: #e95420;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* -------------------- */
-/* 📱 RESPONSIVE STIJL */
-/* -------------------- */
-
 @media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-
-  nav {
-    font-size: 14px;
-  }
-
   .impactquote {
     font-size: 2rem;
   }
@@ -137,16 +80,5 @@ a:hover {
   .enter-button {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
-  }
-}
-.impactquote {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
   }
 }
