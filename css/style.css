@@ -39,13 +39,16 @@ body.frontpage {
 }
 
 .page-header {
-  font-size: 2rem;
-  letter-spacing: 2px;
-  color: #e95420;
+  font-size: 1.1rem;
+  color: #f1f1f1;
   text-align: center;
   margin-top: 0;
-  font-weight: bold;
-  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+  font-family: Georgia, serif;
+  letter-spacing: 1px;
+  opacity: 0.6;
+
 }
 
 .impactquote {
