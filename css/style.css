@@ -1,13 +1,82 @@
+/* -------------------- */
+/* 🔤 LETTERTYPES & BASIS */
+/* -------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+/* ALGEMENE PAGINA-INSTELLINGEN (bv. main.html) */
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 20px;
   background-color: #f8f9fa;
   color: #222;
   line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
+
+/* HTML-RAND VOOR FRONT PAGE */
+html {
+  height: 100%;
+  box-sizing: border-box;
+  border: 12px solid #e95420; /* dikke oranje rand rond het scherm */
+}
+
+/* -------------------- */
+/* 🎭 FRONT PAGE STIJL  */
+/* -------------------- */
+
+body.frontpage {
+  background-color: #111;
+  color: #f1f1f1;
+  font-family: Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.page-header {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #e95420;
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.impactquote {
+  font-size: 3.2rem;
+  font-weight: bold;
+  max-width: 800px;
+  margin: 3rem auto;
+  line-height: 1.4;
+  color: #e95420;
+}
+
+.enter-button {
+  background-color: transparent;
+  border: 2px solid #f1f1f1;
+  color: #f1f1f1;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.enter-button:hover {
+  background-color: #f1f1f1;
+  color: #111;
+  cursor: pointer;
+}
+
+/* -------------------- */
+/* 🧭 NAVIGATIE & LINKS */
+/* -------------------- */
 
 nav {
   background-color: #ffffff;
@@ -28,13 +97,26 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* -------------------- */
+/* 🟠 TITELS EN LINKS  */
+/* -------------------- */
+
 h1, h2, h3 {
   color: #e87d2f;
 }
 
 a {
-  color: #e87d2f;
+  color: #e95420;
+  text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- */
+/* 📱 RESPONSIVE STIJL */
+/* -------------------- */
 
 @media (max-width: 600px) {
   body {
@@ -44,113 +126,13 @@ a {
   nav {
     font-size: 14px;
   }
-}/* Boekachtig lettertype zoals Merlot */
-body {
-  font-family: Georgia, serif;
-  background-color: white;
-  color: #222;
-  padding: 2rem;
-  line-height: 1.6;
-}
 
-/* Titels met accent */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
+  .impactquote {
+    font-size: 2rem;
+  }
 
-.subtitle {
-  font-size: 1.2rem;
-  color: #555;
-  font-style: italic;
-}
-
-/* Linkkleur zoals Merlot */
-a {
-  color: #e95420;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-.frontpage {
-  background-color: #111;
-  color: #f1f1f1;
-  font-family: Georgia, serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  text-align: center;
-  padding: 2rem;
-}
-
-.impactquote {
-  font-size: 3.2rem;
-  font-weight: bold;
-  max-width: 800px;
-  margin: 0 0 3rem 0;
-  line-height: 1.4;
-}
-
-.enter-button {
-  background-color: transparent;
-  border: 2px solid #f1f1f1;
-  color: #f1f1f1;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-}
-
-.enter-button:hover {
-  background-color: #f1f1f1;
-  color: #111;
-  cursor: pointer;
-}
-.border-wrapper {
-  border: 10px solid #e95420; /* dikke oranje rand */
-  padding: 3rem;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.page-header {
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  color: #e95420;
-  text-align: center;
-  margin-top: 0;
-  font-weight: bold;
-  font-family: Georgia, serif;
-}
-
-.splash h1.impactquote {
-  font-size: 3rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.4;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-.page-header {
-  font-size: 2rem;           /* maak groter */
-  letter-spacing: 2px;
-  color: #e95420;
-  text-align: center;
-  margin-top: 0;
-  font-weight: bold;         /* extra bold */
-  font-family: Georgia, serif;
-  text-transform: uppercase; /* optioneel: alles hoofdletters */
+  .enter-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
 }
