@@ -77,3 +77,22 @@ section {
   margin-bottom: 1.5rem;
   font-size: 1rem;
 }
+/* Container centreren */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Voor subtiele tekst (zoals een ondertitel) */
+.subtitle {
+  font-size: 1.2rem;
+  color: #4a4a6d;
+  margin-bottom: 1.5rem;
+}
+
+/* Achtergrondkleur voor de hele site */
+body {
+  background-color: #f4f5f0;
+}
+
