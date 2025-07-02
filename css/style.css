@@ -87,9 +87,12 @@ section {
 /* Voor subtiele tekst (zoals een ondertitel) */
 .subtitle {
   font-size: 1.2rem;
-  color: #4a4a6d;
+  color: #234e52; /* diepe donkergroen */
+  font-style: italic;
+  margin-top: 0.25rem;
   margin-bottom: 1.5rem;
 }
+
 
 /* Achtergrondkleur voor de hele site */
 body {
