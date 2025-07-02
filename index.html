@@ -1,68 +1,119 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>De Onwijze Wijsheid</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fbeeee; /* parelmoer met vleugje roze */
-      color: #4fa087; /* speels blauwgroen */
-    }
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>De Onwijze Wijsheid</title>
+<style>
+  /* Basis reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f8f5ee;
+    color: #305e56;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #305e56;
+  }
+  header img {
+    height: 40px;
+    margin-right: 1rem;
+  }
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #305e56;
+  }
+  nav {
+    background: repeating-linear-gradient(
+      to bottom,
+      #f8f5ee,
+      #f8f5ee 28px,
+      #d9d7d3 29px,
+      #f8f5ee 30px
+    );
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4fa087;
+    font-size: 1.1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+    background-color: #4fa087;
+    color: white;
+  }
+  main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  main h2, main h3 {
+    color: #305e56;
+    margin-top: 2rem;
+  }
+  main p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 600px) {
     header {
-      text-align: center;
-      padding: 2rem 1rem 1rem 1rem;
+      padding: 1rem;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: #4fa087;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #4fa087;
-      margin-top: 0.5rem;
-    }
-
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      background-color: transparent;
+      gap: 1rem;
+      padding: 0.5rem 0;
     }
-
-    nav a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #4fa087;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
+    main {
+      margin: 1rem;
+      padding: 0 1rem;
     }
-
-    nav a:hover {
-      color: #3a7a6a; /* iets donkerder bij hover */
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>De Onwijze Wijsheid</h1>
-    <p>Een open platform voor kritische inzichten, informatie en vrije bijdragen</p>
-  </header>
+<header>
+  <img src="logo.png" alt="De Onwijze Wijsheid Logo" />
+  <h1>De Onwijze Wijsheid</h1>
+</header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Column</a>
-    <a href="#">Onderwerpen</a>
-    <a href="#">Contributie</a>
-  </nav>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Column</a>
+  <a href="#">Onderwerpen</a>
+  <a href="#">Contributie</a>
+</nav>
+
+<main>
+  <h2>Welkom bij De Onwijze Wijsheid</h2>
+  <p>Jouw digitale ontmoetingsplek voor kritische denkers, dromers en doeners. Dit is geen saaie informatiebron, maar een open source platform waar iedereen welkom is om te praten, lachen, twijfelen en groeien. We geloven in de kracht van verbinding: elkaar uitdagen, versterken en samen nieuwe inzichten ontdekken. Hier creëren we ruimte om vrij te communiceren en open gesprekken te voeren die inspireren.</p>
+
+  <h3>Wie zit er achter De Onwijze Wijsheid?</h3>
+  <p>Dat ben ik, Nancy. Mijn hoofd staat nooit stil en ik ben vastbesloten alles wat ik ontdek te delen met wie het aandurft. Voorlopig ben ik alleen, maar hopelijk niet voor lang! De dingen die ik de afgelopen jaren ontdekte, hebben me op een kantelpunt gebracht. Puzzelstukjes vielen op hun plaats en ik kreeg steeds helderder zicht op hoe onze maatschappij, ook achter de schermen, functioneert — terwijl ik tegelijkertijd hypotheses ontwikkelde over hoe de wereld er ook anders uit zou kunnen zien. Dit platform begint als mijn persoonlijke dagboek, maar is bedoeld als een plek waar jij en velen mee kunnen schrijven, meedenken en bouwen aan een toekomst die er echt toe doet. Maar laat mij dat alvast niet voor jou invullen natuurlijk.</p>
+
+  <h3>Waarom dit platform?</h3>
+  <p>De Onwijze Wijsheid is een duurzaam initiatief met enorm groeipotentieel en maatschappelijke relevantie. Het draait om het verbinden van mensen – ook degenen die soms achterblijven. Naarmate het platform groeit, openen zich eindeloze kansen om samen iets moois neer te zetten: lokale banden smeden, nieuwe ontmoetingsplekken creëren en zelfs nieuwe communities laten ontstaan. We geloven dat echte rijkdom ontstaat wanneer mensen samenkomen, want alleen dan wordt onze ziel echt gezien.</p>
+
+  <h3>Onze visie</h3>
+  <p>Over vijf jaar is De Onwijze Wijsheid dé plek waar een diverse community durft te praten over wat écht telt – van persoonlijke groei tot maatschappelijke impact. Het is een platform dat niet bang is om te prikkelen, te lachen en kritisch te zijn, met ruimte voor feiten, meningen en satire. We verbinden mensen lokaal en wereldwijd, zodat ze elkaar vinden op basis van talenten, interesses en gedeelde waarden. Samen bouwen we aan een bewustere en rechtvaardigere maatschappij.</p>
+</main>
 
 </body>
 </html>
