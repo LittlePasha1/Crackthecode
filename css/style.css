@@ -112,3 +112,35 @@ a:hover {
   color: #111;
   cursor: pointer;
 }
+.border-wrapper {
+  border: 10px solid #e95420; /* dikke oranje rand */
+  padding: 3rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.page-header {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #e95420;
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  font-family: Georgia, serif;
+}
+
+.splash h1.impactquote {
+  font-size: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
