@@ -174,3 +174,37 @@ body.frontpage {
     padding: 1rem 2rem;
   }
 }
+.about-link {
+  background-color: #f4f5f0;
+  padding: 2rem 3rem;
+  margin: 4rem auto 2rem auto;
+  max-width: 800px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.about-link h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #234e52;
+}
+
+.about-link p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #4a6a6d;
+}
+
+.about-link a {
+  font-size: 1rem;
+  color: #d95f36;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about-link a:hover {
+  color: #b0451e;
+  text-decoration: underline;
+}
+
