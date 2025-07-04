@@ -1,9 +1,9 @@
-/* RESET */
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* ALGEMENE TEKST */
+/* Algemene tekst */
 body {
   margin: 0;
   padding: 2rem 3rem;
@@ -16,117 +16,113 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* LINKS */
+/* Algemene linkstijl */
 a {
-  color: #E77C3C;
+  color: #E77C3C; /* Oranje */
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
+
 a:hover,
 a:focus {
-  color: #b24e1e;
+  color: #5BA4B0; /* Babyblauw */
   text-decoration: underline;
 }
 
-/* HEADERS */
+/* Headers */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  color: #234E52;
+  color: #234e52;
   letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.1;
 }
-h1 { font-size: 4.5rem; }
-h2 { font-size: 3rem; }
-h3 { font-size: 2rem; }
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
 
-/* PARAGRAAF */
+/* Paragrafen */
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
-/* ROOSTERSTIJL (main content) */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+/* Ondertitel */
+.subtitle {
+  font-size: 1.2rem;
+  color: #234e52;
+  font-style: italic;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
 }
 
-/* ROOSTERS */
-.content-box {
-  background-color: #f6f4ef;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
-}
-.content-box h2 {
+/* FRONT PAGE */
+body.frontpage {
+  background-color: #f8f5f0;
+  color: #2b2b2b;
   font-family: 'Playfair Display', serif;
-  color: #234E52; /* Donkergroenblauw, exact als website titel */
-}
-.content-box a {
-  color: #E77C3C;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.content-box a::after {
-  content: "→";
-  color: #E77C3C;
-  transition: color 0.3s ease;
-}
-.content-box a:hover,
-.content-box a:hover::after {
-  color: #b24e1e;
-}
-
-/* TABS */
-.main-nav {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #D8D8D8;
-  padding: 0.5rem 0;
-}
-.main-nav ul {
-  list-style: none;
+  margin: 0;
+  height: 100vh;
+  padding: 4rem 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-}
-.main-nav li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.main-nav li:not(:last-child)::after {
-  content: "|";
-  color: #bbb;
-  font-size: 1.3rem;
-  padding: 0 0.5rem;
-}
-.main-nav a {
-  color: #E77C3C;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.6rem 1rem;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-.main-nav a:hover {
-  background-color: #B0E0E6;
-  color: #234E52;
-}
-.main-nav a.active {
-  background-color: #E77C3C;
-  color: white;
-  border-radius: 20px;
-  border: 1px solid #E77C3C;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* TITEL SITE */
+.frontpage .impactquote {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 700px;
+  line-height: 1.4;
+  color: #2b2b2b;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.4s;
+}
+
+.frontpage .button-wrapper {
+  margin-top: 3rem;
+}
+.enter-button {
+  background-color: transparent;
+  border: 2px solid #2b2b2b;
+  color: #2b2b2b;
+  padding: 1.2rem 2.2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+.enter-button:hover {
+  background-color: #2b2b2b;
+  color: #f8f5f0;
+  cursor: pointer;
+}
+
+/* MAIN PAGE */
+body.mainpage {
+  background-color: #F4F1EE;
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #375E54;
+}
+
+/* TITEL */
 .site-header {
   text-align: center;
   padding: 2rem 1rem 1rem;
@@ -145,46 +141,76 @@ p {
   margin-top: 0.5rem;
 }
 
-/* VOET */
-.site-footer {
-  background-color: #F4F1EE;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  color: #415B4F;
+/* TABS */
+.main-nav {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #D8D8D8;
+  padding: 0.5rem 0;
 }
-/* Tabs oranje + verticale streep */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-nav li {
+  position: relative;
+  margin: 0 0.3rem;
+}
+.main-nav li:not(:last-child)::after {
+  content: "‖";
+  color: #bbb;
+  position: absolute;
+  right: -0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
 .main-nav a {
-  color: #E77C3C; /* oranje */
-  border: none;
-  font-weight: bold;
-  text-decoration: none;
+  display: inline-block;
   padding: 0.6rem 1rem;
+  background-color: transparent;
+  color: #E77C3C;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
   transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
-
 .main-nav a:hover {
   background-color: #B0E0E6;
   color: #234E52;
 }
-
-.main-nav li:not(:last-child)::after {
-  content: "|";
-  color: #bbb;
-  font-size: 1.2rem;
-  padding-left: 10px;
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
+.main-nav a.active {
+  background-color: #E77C3C;
+  color: white;
+  border: 1px solid #E77C3C;
 }
 
-/* Rooster titels in donkergroenblauw */
+/* INHOUDSRUBRIEKEN */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.content-box {
+  background-color: #f6f4ef;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
 .content-box h2 {
-  color: #234E52; /* donkergroenblauw zoals site titel */
+  font-family: 'Playfair Display', serif;
+  color: #234E52;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
 }
 
-/* Linkjes in oranje met oranje pijltje */
+/* Links in content-blokken */
 .content-box a {
   color: #E77C3C;
   font-weight: bold;
@@ -194,20 +220,48 @@ p {
   gap: 0.4rem;
   transition: color 0.3s ease;
 }
-
-.content-box a:hover {
-  color: #b24e1e;
-  text-decoration: underline;
-}
-
-/* Enkel 1 pijltje toevoegen via CSS (HTML dus zonder →) */
 .content-box a::after {
   content: "→";
   font-weight: bold;
   color: #E77C3C;
   transition: color 0.3s ease;
 }
+.content-box a:hover {
+  color: #5BA4B0;
+}
 .content-box a:hover::after {
-  color: #b24e1e;
+  color: #5BA4B0;
 }
 
+/* ORANJE LINK LOS GEBRUIK */
+.orange-link {
+  color: #E77C3C;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+.orange-link::after {
+  content: "→";
+  font-weight: bold;
+  color: #E77C3C;
+  transition: color 0.3s ease;
+}
+.orange-link:hover {
+  color: #5BA4B0;
+  text-decoration: underline;
+}
+.orange-link:hover::after {
+  color: #5BA4B0;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #F4F1EE;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #415B4F;
+}
