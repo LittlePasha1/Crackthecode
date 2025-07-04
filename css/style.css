@@ -324,16 +324,23 @@ body.mainpage {
   font-size: 1.2rem;
   padding-left: 10px;
 
+}
 .main-nav a {
   display: inline-block;
   padding: 0.6rem 1rem;
-  background-color: transparent;
-  color: #375E54;
+  background-color: #E77C3C; /* oranje */
+  color: white;
   text-decoration: none;
   border-radius: 20px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid #E77C3C;
+}
+
+.main-nav a:hover {
+  background-color: #B0E0E6; /* babyblauw */
+  color: #234E52;
+
 }
 
 /* Hover = babyblauw */
