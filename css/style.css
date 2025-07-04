@@ -153,3 +153,61 @@ p {
   font-size: 0.9rem;
   color: #415B4F;
 }
+/* Tabs oranje + verticale streep */
+.main-nav a {
+  color: #E77C3C; /* oranje */
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #B0E0E6;
+  color: #234E52;
+}
+
+.main-nav li:not(:last-child)::after {
+  content: "|";
+  color: #bbb;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Rooster titels in donkergroenblauw */
+.content-box h2 {
+  color: #234E52; /* donkergroenblauw zoals site titel */
+}
+
+/* Linkjes in oranje met oranje pijltje */
+.content-box a {
+  color: #E77C3C;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.content-box a:hover {
+  color: #b24e1e;
+  text-decoration: underline;
+}
+
+/* Enkel 1 pijltje toevoegen via CSS (HTML dus zonder →) */
+.content-box a::after {
+  content: "→";
+  font-weight: bold;
+  color: #E77C3C;
+  transition: color 0.3s ease;
+}
+.content-box a:hover::after {
+  color: #b24e1e;
+}
+
