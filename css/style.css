@@ -354,12 +354,10 @@ body.mainpage {
   background-color: #E77C3C; /* oranje */
   color: white;
   border: 1px solid #E77C3C;
+
 }
-
-
-
 .content-box {
-  background-color: #FFFFFF20;
+  background-color: #f6f4ef; /* zachte parelmoer */
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
@@ -367,7 +365,9 @@ body.mainpage {
 
 .content-box h2 {
   font-family: 'Playfair Display', serif;
-  color: #E77C3C;
+  color: #4A6A6D; /* donkergroenblauw = zelfde als site titel */
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .content-box a {
@@ -379,6 +379,7 @@ body.mainpage {
 .content-box a:hover {
   color: #E77C3C;
 }
+
 
 .site-footer {
   background-color: #F4F1EE;
