@@ -304,13 +304,25 @@ body.mainpage {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
   flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
 }
 
 .main-nav li {
   margin: 0;
+  position: relative;
 }
+
+.main-nav li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bbb;
+  font-size: 1.2rem;
+  padding-left: 10px;
 
 .main-nav a {
   display: inline-block;
