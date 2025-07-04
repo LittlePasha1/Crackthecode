@@ -152,9 +152,11 @@ body.frontpage {
 }
 
 .enter-button:hover {
-  background-color: #2b2b2b;
-  color: #f8f5f0;
+  background-color: #B0E0E6; /* babyblauw */
+  color: #2b2b2b;
+  box-shadow: 0 0 10px #D4AF37; /* gouden gloed */
   cursor: pointer;
+
 }
 
 /* Mobile */
@@ -282,7 +284,7 @@ body.mainpage {
 .site-header h1 {
   font-family: 'IM Fell DW Pica SC', serif;
   font-size: 2.5rem;
-  color: #234E52;
+  color: #4A6A6D; /* ← dit moet de exacte titel kleur zijn */
   margin: 0;
 }
 
@@ -294,29 +296,6 @@ body.mainpage {
   margin-top: 0.5rem;
 }
 
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 0;
-  border-bottom: 1px solid #D8D8D8;
-}
-
-.main-nav li {
-  margin: 0 1rem;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #375E54;
-  font-weight: bold;
-}
-
-.main-nav a:hover {
-  color: #E77C3C;
-}
 
 .content-grid {
   display: grid;
@@ -324,6 +303,50 @@ body.mainpage {
   gap: 2rem;
   padding: 2rem;
 }
+
+.main-nav {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #D8D8D8;
+  padding: 0.5rem 0;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  color: #375E54;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.main-nav a:hover {
+  background-color: #B0E0E6; /* babyblauw */
+  color: #234E52;
+}
+
+.main-nav a.active {
+  background-color: #E77C3C; /* oranje */
+  color: white;
+  border: 1px solid #E77C3C;
+}
+
 
 .content-box {
   background-color: #FFFFFF20;
