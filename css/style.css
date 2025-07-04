@@ -449,8 +449,10 @@ body.mainpage {
 
 .main-nav .divider {
   color: #bbb;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   user-select: none;
+  padding: 0 0.4rem;
+
 }
 
 /* Roosters */
