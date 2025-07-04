@@ -328,18 +328,26 @@ body.mainpage {
 .main-nav a {
   display: inline-block;
   padding: 0.6rem 1rem;
-  background-color: #E77C3C; /* oranje */
-  color: white;
+  background-color: transparent;
+  color: #E77C3C; /* Oranje kleur zoals je vroeg */
   text-decoration: none;
   border-radius: 20px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 1px solid #E77C3C;
+  border: 1px solid transparent;
 }
 
 .main-nav a:hover {
-  background-color: #B0E0E6; /* babyblauw */
-  color: #234E52;
+  background-color: #B0E0E6; /* babyblauw achtergrondje bij hover */
+  color: #234E52; /* donkergroenblauw bij hover */
+}
+
+.main-nav a.active {
+  background-color: transparent;
+  color: #E77C3C; /* Oranje blijft ook als actief */
+  border: 1px solid #E77C3C33;
+}
+
 
 }
 
