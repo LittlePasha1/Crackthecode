@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>De Onwijze Wijsheid – Main</title>
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Playfair+Display:ital,wght@0,600;1,600&family=Karla&display=swap" rel="stylesheet">
+  
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,10 +19,10 @@
     <p class="subtitle">Tussen onzin en openbaring</p>
   </header>
 
-  <!-- Navigatiebalk onder de titel -->
+  <!-- Navigatiebalk -->
   <nav class="main-nav">
     <ul>
-      <li><a href="home.html">1. Home</a></li>
+      <li><a href="index.html">1. Home</a></li>
       <li><a href="columns.html">2. Columns</a></li>
       <li><a href="onderwerpen.html">3. Onderwerpen</a></li>
       <li><a href="manifest.html">4. Manifest</a></li>
@@ -63,17 +65,19 @@
       <a href="about.html">Lees meer over mij →</a>
     </section>
   </footer>
-<script>
-  const currentPage = window.location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll(".main-nav a");
 
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-  });
-</script>
+  <!-- Actieve tab-script -->
+  <script>
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".main-nav a");
+
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  </script>
 
 </body>
 </html>
