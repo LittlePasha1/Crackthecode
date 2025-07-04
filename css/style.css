@@ -207,4 +207,64 @@ body.frontpage {
   color: #b0451e;
   text-decoration: underline;
 }
+/* === AANPASSING FRONT PAGE POSITIONERING === */
+
+.frontpage {
+  background-color: #f8f5f0;
+  color: #2b2b2b;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 👉 centreren op de pagina */
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.frontpage .page-header {
+  font-size: 1rem;
+  color: #2b2b2b;  /* zelfde kleur als quote */
+  opacity: 1;
+  margin-bottom: 2rem;
+}
+
+.frontpage .impactquote {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 700px;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+  color: #2b2b2b;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.4s;
+}
+
+.frontpage .button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.enter-button {
+  background-color: transparent;
+  border: 2px solid #2b2b2b;
+  color: #2b2b2b;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.enter-button:hover {
+  background-color: #2b2b2b;
+  color: #f8f5f0;
+  cursor: pointer;
+}
+
 
