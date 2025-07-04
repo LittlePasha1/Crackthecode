@@ -16,15 +16,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Linkstijl */
+/* Algemene linkstijl */
 a {
-  color: #d95f36;
+  color: #E77C3C; /* Oranje */
   text-decoration: none;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
+
 a:hover,
 a:focus {
-  color: #b0451e;
+  color: #b24e1e; /* Donkerder oranje bij hover */
   text-decoration: underline;
 }
 
