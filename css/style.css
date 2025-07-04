@@ -1,9 +1,9 @@
-/* Reset */
+/* RESET */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Algemene tekst */
+/* ALGEMENE TEKST */
 body {
   margin: 0;
   padding: 2rem 3rem;
@@ -16,269 +16,127 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Algemene linkstijl */
+/* LINKS */
 a {
-  color: #E77C3C; /* Oranje */
+  color: #E77C3C;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
-
 a:hover,
 a:focus {
-  color: #b24e1e; /* Donkerder oranje bij hover */
+  color: #b24e1e;
   text-decoration: underline;
 }
 
-/* Headers */
+/* HEADERS */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  color: #234e52;
+  color: #234E52;
   letter-spacing: 0.05em;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  line-height: 1.1;
 }
-h1 {
-  font-size: 4.5rem;
-  font-weight: 700;
-}
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
+h1 { font-size: 4.5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2rem; }
 
-/* Paragrafen */
+/* PARAGRAAF */
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
-/* Containers */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
+/* ROOSTERSTIJL (main content) */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   padding: 2rem;
 }
 
-/* Ondertitel */
-.subtitle {
-  font-size: 1.2rem;
-  color: #234e52;
-  font-style: italic;
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
+/* ROOSTERS */
+.content-box {
+  background-color: #f6f4ef;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
 }
-
-/* Captions */
-.caption {
-  font-size: 1rem;
-  color: #234e52;
-  font-style: italic;
-}
-
-/* =============================== */
-/* ======= FRONT PAGE STYLE ===== */
-/* =============================== */
-
-body.frontpage {
-  background-color: #f8f5f0;
-  color: #2b2b2b;
+.content-box h2 {
   font-family: 'Playfair Display', serif;
-  margin: 0;
-  height: 100vh;
-  padding: 0 2rem;
+  color: #234E52; /* Donkergroenblauw, exact als website titel */
+}
+.content-box a {
+  color: #E77C3C;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.content-box a::after {
+  content: "→";
+  color: #E77C3C;
+  transition: color 0.3s ease;
+}
+.content-box a:hover,
+.content-box a:hover::after {
+  color: #b24e1e;
+}
+
+/* TABS */
+.main-nav {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #D8D8D8;
+  padding: 0.5rem 0;
+}
+.main-nav ul {
+  list-style: none;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* "welkom" tekst */
-.page-header {
-  font-size: 1.1rem;
-  color: #666;
-  opacity: 0.9;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-}
-
-/* Slogan = centrale quote */
-.impactquote {
-  font-size: 2.6rem;
-  font-weight: bold;
-  max-width: 800px;
-  color: #2b2b2b;
-  line-height: 1.4;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.4s;
-}
-
-/* Fade-in effect */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Enter-knop onderaan */
-.button-wrapper {
-  margin-top: 3rem;
-}
-
-.enter-button {
-  background-color: transparent;
-  border: 2px solid #2b2b2b;
-  color: #2b2b2b;
-  padding: 1.2rem 2.2rem;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 100px;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-}
-
-.enter-button:hover {
-  background-color: #2b2b2b;
-  color: #f8f5f0;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .impactquote {
-    font-size: 1.6rem;
-  }
-
-  .enter-button {
-    font-size: 0.9rem;
-    padding: 0.75rem 1.5rem;
-  }
-
-  .header {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 2rem;
-  }
-}
-.about-link {
-  background-color: #f4f5f0;
-  padding: 2rem 3rem;
-  margin: 4rem auto 2rem auto;
-  max-width: 800px;
-  border-top: 1px solid #ccc;
-  text-align: center;
-}
-
-.about-link h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #234e52;
-}
-
-.about-link p {
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
-  color: #4a6a6d;
-}
-
-.about-link a {
-  font-size: 1rem;
-  color: #d95f36;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.about-link a:hover {
-  color: #b0451e;
-  text-decoration: underline;
-}
-/* === AANPASSING FRONT PAGE POSITIONERING === */
-
-.frontpage {
-  background-color: #f8f5f0;
-  color: #2b2b2b;
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  height: 100vh;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* 👉 centreren op de pagina */
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.frontpage .page-header {
-  font-size: 1rem;
-  color: #2b2b2b;  /* zelfde kleur als quote */
-  opacity: 1;
-  margin-bottom: 2rem;
-}
-
-.frontpage .impactquote {
-  font-size: 2.5rem;
-  font-weight: 700;
-  max-width: 700px;
-  margin-top: 0;
-  margin-bottom: 3rem;
-  line-height: 1.4;
-  color: #2b2b2b;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.4s;
-}
-
-.frontpage .button-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 3rem;
-}
-
-.enter-button {
-  background-color: transparent;
-  border: 2px solid #2b2b2b;
-  color: #2b2b2b;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-}
-
-.enter-button:hover {
-  background-color: #2b2b2b;
-  color: #f8f5f0;
-  cursor: pointer;
-}
-body.mainpage {
-  background-color: #F4F1EE;
-  font-family: 'Karla', sans-serif;
-  margin: 0;
+  flex-wrap: wrap;
   padding: 0;
-  color: #375E54;
+  margin: 0;
+}
+.main-nav li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.main-nav li:not(:last-child)::after {
+  content: "|";
+  color: #bbb;
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
+}
+.main-nav a {
+  color: #E77C3C;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.main-nav a:hover {
+  background-color: #B0E0E6;
+  color: #234E52;
+}
+.main-nav a.active {
+  background-color: #E77C3C;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid #E77C3C;
 }
 
+/* TITEL SITE */
 .site-header {
   text-align: center;
   padding: 2rem 1rem 1rem;
 }
-
 .site-header h1 {
   font-family: 'IM Fell DW Pica SC', serif;
   font-size: 2.5rem;
-  color: #4A6A6D; /* ← dit moet de exacte titel kleur zijn */
+  color: #4A6A6D;
   margin: 0;
 }
-
 .subtitle {
   font-family: 'UnifrakturMaguntia', cursive;
   color: #8B5E3C;
@@ -287,126 +145,7 @@ body.mainpage {
   margin-top: 0.5rem;
 }
 
-
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-.main-nav {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #D8D8D8;
-  padding: 0.5rem 0;
-}
-
-.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0;
-}
-
-.main-nav li {
-  margin: 0;
-  position: relative;
-}
-
-.main-nav li:not(:last-child)::after {
-  content: "|";
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #bbb;
-  font-size: 1.2rem;
-  padding-left: 10px;
-
-}
-.main-nav a {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  background-color: transparent;
-  color: #E77C3C; /* Oranje kleur zoals je vroeg */
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-
-.main-nav a:hover {
-  background-color: #B0E0E6; /* babyblauw achtergrondje bij hover */
-  color: #234E52; /* donkergroenblauw bij hover */
-}
-
-.main-nav a.active {
-  background-color: transparent;
-  color: #E77C3C; /* Oranje blijft ook als actief */
-  border: 1px solid #E77C3C33;
-}
-
-
-}
-
-/* Hover = babyblauw */
-.main-nav a:hover {
-  background-color: #B0E0E6; /* babyblauw */
-  color: #234E52;
-}
-
-/* Actieve pagina = oranje */
-.main-nav a.active {
-  background-color: #E77C3C; /* oranje */
-  color: white;
-  border: 1px solid #E77C3C;
-
-}
-.content-box {
-  background-color: #f6f4ef; /* zachte parelmoer */
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
-}
-
-.content-box h2 {
-  font-family: 'Playfair Display', serif;
-  color: #4A6A6D; /* donkergroenblauw = zelfde als site titel */
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-}
-
-/* Links binnen .content-box (zoals 'Lees meer', 'Draag iets bij', 'Bekijk ook') */
-.content-box a {
-  color: #E77C3C;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.3s ease;
-}
-
-.content-box a:hover {
-  color: #b24e1e;
-  text-decoration: underline;
-}
-
-/* Stijl pijltje als er eentje staat via pseudo-element */
-.content-box a::after {
-  content: "→";
-  font-weight: bold;
-  color: #E77C3C;
-  transition: color 0.3s ease;
-}
-.content-box a:hover::after {
-  color: #b24e1e;
-}
-
+/* VOET */
 .site-footer {
   background-color: #F4F1EE;
   text-align: center;
@@ -414,85 +153,3 @@ body.mainpage {
   font-size: 0.9rem;
   color: #415B4F;
 }
-
-.about-link {
-  margin-top: 2rem;
-}
-/* Tabs navigatie */
-.main-nav {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #D8D8D8;
-  padding: 0.5rem 0;
-}
-
-.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.main-nav li {
-  margin: 0;
-}
-
-.main-nav a {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  background-color: transparent;
-  color: #375E54;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-
-.main-nav a:hover {
-  background-color: #B0E0E6; /* babyblauw */
-  color: #234E52;
-}
-
-.main-nav a.active {
-  background-color: #E77C3C; /* oranje */
-  color: white;
-  border: 1px solid #E77C3C;
-}
-
-.main-nav .divider {
-  color: #bbb;
-  font-size: 1.3rem;
-  user-select: none;
-  padding: 0 0.4rem;
-
-}
-
-/* Roosters */
-.content-box {
-  background-color: #f6f4ef; /* zachte parelmoer */
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
-}
-
-.content-box h2 {
-  font-family: 'Playfair Display', serif;
-  color: #234E52; /* donkergroenblauw */
-}
-
-.content-box a {
-  text-decoration: none;
-  color: #234E52;
-  font-weight: bold;
-}
-
-.content-box a:hover {
-  color: #E77C3C;
-}
-
-
-
