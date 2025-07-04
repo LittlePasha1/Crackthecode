@@ -3,41 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>De Onwijze Wijsheid – Main</title>
-  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Playfair+Display:ital,wght@0,600;1,600&family=Karla&display=swap" rel="stylesheet">
-  
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="mainpage">
 
-  <!-- Header met titel en slogan -->
+  <!-- Header -->
   <header class="site-header">
     <h1>De Onwijze Wijsheid</h1>
     <p class="subtitle">Tussen onzin en openbaring</p>
   </header>
 
-  <!-- Navigatiebalk -->
+  <!-- Navigatie -->
   <nav class="main-nav">
     <ul>
-      <li><a href="index.html">1. Home</a></li>
-      <li><a href="columns.html">2. Columns</a></li>
-      <li><a href="onderwerpen.html">3. Onderwerpen</a></li>
-      <li><a href="manifest.html">4. Manifest</a></li>
-      <li><a href="forum.html">5. Forum</a></li>
-      <li><a href="contribute.html">6. Contribute</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><span class="divider">|</span></li>
+      <li><a href="denkstukken.html">Denkstukken</a></li>
+      <li><span class="divider">|</span></li>
+      <li><a href="onderwerpen.html">Onderwerpen</a></li>
+      <li><span class="divider">|</span></li>
+      <li><a href="forum.html">Forum</a></li>
+      <li><span class="divider">|</span></li>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><span class="divider">|</span></li>
+      <li><a href="bijdrage.html">Jouw Bijdrage</a></li>
     </ul>
   </nav>
 
-  <!-- Rubrieken grid -->
+  <!-- Content -->
   <main class="content-grid">
 
     <section class="content-box">
-      <h2>Columns</h2>
+      <h2>Denkstukken</h2>
       <p>Persoonlijke, kritische observaties. Soms pijnlijk raak, soms plagerig.</p>
-      <a href="columns.html">Lees meer →</a>
+      <a href="denkstukken.html">Lees meer →</a>
     </section>
 
     <section class="content-box">
@@ -47,9 +50,9 @@
     </section>
 
     <section class="content-box">
-      <h2>Contribute</h2>
-      <p>Gebruikers die meeschrijven, linken of iets toevoegen – dat kan hier.</p>
-      <a href="contribute.html">Draag iets bij →</a>
+      <h2>Jouw Bijdrage</h2>
+      <p>Wil je ook iets schrijven, linken of een gedachte delen?</p>
+      <a href="bijdrage.html">Draag iets bij →</a>
     </section>
 
   </main>
@@ -66,7 +69,7 @@
     </section>
   </footer>
 
-  <!-- Actieve tab-script -->
+  <!-- Actieve tab -->
   <script>
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll(".main-nav a");
