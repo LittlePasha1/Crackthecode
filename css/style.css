@@ -303,7 +303,6 @@ body.mainpage {
   gap: 2rem;
   padding: 2rem;
 }
-
 .main-nav {
   background-color: rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid #D8D8D8;
@@ -336,16 +335,19 @@ body.mainpage {
   border: 1px solid transparent;
 }
 
+/* Hover = babyblauw */
 .main-nav a:hover {
   background-color: #B0E0E6; /* babyblauw */
   color: #234E52;
 }
 
+/* Actieve pagina = oranje */
 .main-nav a.active {
   background-color: #E77C3C; /* oranje */
   color: white;
   border: 1px solid #E77C3C;
 }
+
 
 
 .content-box {
