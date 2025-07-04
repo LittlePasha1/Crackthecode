@@ -380,16 +380,32 @@ body.mainpage {
   margin-bottom: 0.8rem;
 }
 
+/* Links binnen .content-box (zoals 'Lees meer', 'Draag iets bij', 'Bekijk ook') */
 .content-box a {
-  text-decoration: none;
-  color: #234E52;
+  color: #E77C3C;
   font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
 }
 
 .content-box a:hover {
-  color: #E77C3C;
+  color: #b24e1e;
+  text-decoration: underline;
 }
 
+/* Stijl pijltje als er eentje staat via pseudo-element */
+.content-box a::after {
+  content: "→";
+  font-weight: bold;
+  color: #E77C3C;
+  transition: color 0.3s ease;
+}
+.content-box a:hover::after {
+  color: #b24e1e;
+}
 
 .site-footer {
   background-color: #F4F1EE;
