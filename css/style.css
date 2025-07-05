@@ -331,7 +331,30 @@ body.mainpage {
   max-width: 500px;
   height: auto;
 }
+
 body.mainpage {
   background-color: #FFFBE4;
+}
+/* Community info blok */
+.community-info {
+  background-color: #F9F6EB; /* zachtere parelmoer, bijna onzichtbaar maar blokt toch af */
+  color: #375E54;
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  padding: 1.2rem;
+  margin: 2rem auto 0 auto;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  font-size: 1rem;
+}
+
+/* Footer zachter maken */
+.site-footer {
+  background-color: #F4F2E8; /* zachter, meer in lijn met de rest */
+  color: #415B4F;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
 }
 
