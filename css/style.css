@@ -50,14 +50,19 @@ header img {
 
 /* ========== NAVIGATIEBALK ========= */
 nav {
+nav {
   background-color: transparent;
   padding: 1.2rem 2rem;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
   border-radius: 0;
   margin-bottom: 2rem;
   width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
 }
 
 nav ul {
@@ -76,12 +81,13 @@ nav li {
 
 nav a {
   color: #f2793c;
-  padding: 0.7rem 1rem;
-  display: block;
+  padding: 0.8rem 1.5rem;
+  display: inline-block;
   text-decoration: none;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
   transition: color 0.3s ease;
+
 }
 
 nav a:hover {
@@ -212,10 +218,12 @@ nav a {
 nav::after {
   content: "";
   display: block;
-  height: 24px; /* pas aan naar wens */
+  height: 24px;
   background-image: url('images/divider-pattern.png');
   background-repeat: repeat-x;
   background-position: center;
   background-size: contain;
   margin-top: 0.5rem;
+  opacity: 0.85;
+
 }
