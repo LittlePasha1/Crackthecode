@@ -357,4 +357,74 @@ body.mainpage {
   padding: 2rem 1rem;
   font-size: 0.9rem;
 }
+/* BLOKVORM RONDOM NAVIGATIE */
+.nav-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.main-nav {
+  background-color: #fdfaf3; /* zelfde sfeer als andere blokken */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0.6rem 1.2rem;
+  display: inline-block;
+  border-bottom: 2px solid #4a6a6d; /* onderlijn in donkergroenblauw */
+  position: relative;
+}
+
+/* LIJSTSTRUCTUUR VOOR TABS */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* INDIVIDUELE TABS */
+.main-nav li {
+  position: relative;
+}
+
+/* VERTICALE LIJN TUSSEN TABS */
+.main-nav li:not(:last-child)::after {
+  content: "|";
+  color: #A9A097;
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+/* TABS: UITZICHT EN INTERACTIE */
+.main-nav a {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  color: #E77C3C;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+/* HOVER EFFECT */
+.main-nav a:hover {
+  background-color: #eee6dd;
+  color: #5A3925;
+}
+
+/* ACTIEVE PAGINA */
+.main-nav a.active {
+  background-color: #8B5E3C; /* koperbruin */
+  color: #fff;
+  font-weight: 600;
+}
+
 
