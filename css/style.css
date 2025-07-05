@@ -265,3 +265,43 @@ body.mainpage {
   font-size: 0.9rem;
   color: #415B4F;
 }
+
+/* FRONT PAGE — extra opmaak */
+
+.site-title {
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  color: #2b2b2b;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.2s;
+}
+
+.frontpage .page-header {
+  font-size: 1rem;
+  color: #2b2b2b;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0s;
+}
+
+.frontpage .impactquote {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #4a6a6d;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
