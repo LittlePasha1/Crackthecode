@@ -144,9 +144,11 @@ body.mainpage {
 /* TABS */
 .main-nav {
   background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #D8D8D8;
+  border-bottom: 1px solid #375E54; /* donkergroenblauw als onderlijn */
+  margin-top: 20px;
   padding: 0.5rem 0;
 }
+
 .main-nav ul {
   list-style: none;
   margin: 0;
@@ -155,39 +157,45 @@ body.mainpage {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 0.8rem;
 }
+
 .main-nav li {
+  display: flex;
+  align-items: center;
   position: relative;
-  margin: 0 0.3rem;
 }
+
 .main-nav li:not(:last-child)::after {
-  content: "‖";
-  color: #bbb;
-  position: absolute;
-  right: -0.9rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
+  content: "|";
+  color: #A8A29E; /* subtiele grijsbruine tint */
+  font-size: 1rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  position: relative;
+  top: -1px;
 }
+
 .main-nav a {
   display: inline-block;
-  padding: 0.6rem 1rem;
-  background-color: transparent;
+  padding: 0.4rem 0.6rem;
   color: #E77C3C;
   text-decoration: none;
-  border-radius: 20px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
 }
+
 .main-nav a:hover {
-  background-color: #B0E0E6;
-  color: #234E52;
+  color: #5BA4B0;
+  background-color: transparent;
+  text-decoration: underline;
 }
+
 .main-nav a.active {
-  background-color: #E77C3C;
   color: white;
-  border: 1px solid #E77C3C;
+  background-color: #E77C3C;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
 }
 
 /* INHOUDSRUBRIEKEN */
