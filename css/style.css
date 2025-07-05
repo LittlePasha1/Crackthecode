@@ -59,17 +59,8 @@ header img {
 /* ========== NAVIGATIE ========= */
 nav {
   background-color: transparent;
-  padding: 1.2rem 2rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  border-radius: 0;
-  margin-bottom: 2rem;
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  position: relative;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
 }
 
 nav ul {
@@ -77,40 +68,32 @@ nav ul {
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin: 0;
+  gap: 2rem;
   padding: 0;
-  flex-wrap: wrap;
-  gap: 1.6rem;
+  margin: 0;
 }
 
-nav li {
-  position: relative;
-}
-
-nav li:not(:last-child)::after {
-  content: "|";
-  position: absolute;
-  right: -1rem;
-  color: #c0b08c;
-  font-size: 1.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-nav a {
-  color: #f2793c;
-  padding: 0.8rem 1.5rem;
-  display: inline-block;
-  text-decoration: none;
+nav li a {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  transition: color 0.3s ease;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #f2793c;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
+nav li a:hover {
+  background-color: #fdfae9;
   color: #9dcbe0;
+  text-decoration: none;
 }
+nav li a.active-tab {
+  background-color: #f2793c;
+  color: white;
+}
+
 
 /* ========== LIJN ONDER NAVIGATIE ========= */
 nav::after {
