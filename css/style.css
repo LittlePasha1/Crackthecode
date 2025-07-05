@@ -220,8 +220,7 @@ body.mainpage {
   margin-bottom: 0.8rem;
 }
 
-.content-box a {
-  color: #E77C3C;
+  color: #E77C3C; /* warm oranje */
   font-weight: bold;
   text-decoration: none;
   display: inline-flex;
@@ -236,13 +235,23 @@ body.mainpage {
   color: #E77C3C;
   transition: color 0.3s ease;
 }
-
 .content-box a:hover {
-  color: #5BA4B0; /* babyblauw hover */
+  color: #648B84; /* warm grijsgroen */
 }
 
 .content-box a:hover::after {
-  color: #5BA4B0;
+  color: #648B84;
+  }
+
+.content-box a:active,
+.content-box a:focus {
+  color: #8B5E3C; /* koperbruin */
+  outline: none;
+}
+
+.content-box a:active::after,
+.content-box a:focus::after {
+  color: #8B5E3C;
 }
 
 /* ORANJE LINK LOS GEBRUIK */
