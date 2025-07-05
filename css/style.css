@@ -1,31 +1,50 @@
-/* ========== RESET ========== */
+/* ========== RESET ========= */
 *, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-/* ========== ALGEMENE STIJL ========== */
+/* ========== ALGEMENE STIJL ========= */
 body {
-  background-color: #f4f5f0;
+  margin: 0;
+  padding: 2rem 3rem;
   font-family: 'Lora', serif;
-  color: #234e52;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  padding: 2rem;
+  background-color: #f4f5f0;
+  color: #4a6a6d;
+  line-height: 1.7;
+  font-size: 1.15rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ========== SLOGAN ========== */
+/* ========== LINK STIJL ========= */
+a {
+  color: #f2793c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #9dcbe0;
+  text-decoration: underline;
+}
+
+/* ========== SLOGAN ========= */
 .slogan h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  color: #1e2d2f;
+  color: #234e52;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* ========== NAVIGATIEBALK ========== */
+/* ========== LOGO ========= */
+header img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* ========== NAVIGATIEBALK ========= */
 nav {
   background-color: #fdfae9;
   padding: 1rem 2rem;
@@ -35,40 +54,39 @@ nav {
   font-weight: 600;
   border-radius: 1rem;
   box-shadow: 0 4px 0 #2f4f4f;
-  margin: 1rem auto 2rem auto;
+  margin-bottom: 2rem;
   display: inline-block;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-nav li {
-  display: flex;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
   align-items: center;
 }
 
-nav a {
-  text-decoration: none;
-  color: #f2793c;
-  padding: 0.5rem 0.8rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #92c4e0;
-}
-
-.divider {
-  color: #2f4f4f;
+nav li {
   margin: 0 0.3rem;
 }
 
-/* ========== CONTENT BLOKKEN ========== */
+nav a {
+  color: #f2793c;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: #9dcbe0;
+}
+
+nav .divider {
+  color: #2f4f4f;
+  margin: 0 0.3rem;
+  font-weight: normal;
+}
+
+/* ========== CONTENT BLOKKEN ========= */
 .content-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -77,9 +95,9 @@ nav a:hover {
 
 .content-box {
   background-color: #fdfae9;
-  border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,47 +106,37 @@ nav a:hover {
 .content-box h2 {
   color: #234e52;
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .content-box p {
-  font-family: 'Lora', serif;
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  flex-grow: 1;
+  margin-bottom: 1rem;
 }
 
-/* ========== LINKS IN BLOKKEN ========= */
 .content-box a {
-  font-weight: bold;
-  text-decoration: none;
   color: #f2793c;
-  font-size: 1.05rem;
-  align-self: center;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .content-box a::after {
-  content: "→";
-  font-size: 1.1rem;
+  content: " →";
   color: #f2793c;
   transition: color 0.3s ease;
 }
 
 .content-box a:hover {
-  color: #92c4e0;
+  color: #9dcbe0;
 }
 
 .content-box a:hover::after {
-  color: #92c4e0;
+  color: #9dcbe0;
 }
 
-/* ========== FOOTER ========== */
+/* ========== FOOTER ========= */
 footer {
   background-color: #f1eee4;
   padding: 2rem;
