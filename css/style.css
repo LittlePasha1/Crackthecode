@@ -159,13 +159,7 @@ footer {
   line-height: 1.6;
   font-family: 'Lora', serif;
 }
-/* ========== 1. LOGO GROTER ========== */
-header img {
-  max-width: 240px;
-  height: auto;
-  display: block;
-  margin: 2rem auto 1rem;
-}
+
 
 /* ========== 2. VERWIJDER SLOGAN (H1) UIT BEELD ========== */
 .slogan {
