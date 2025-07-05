@@ -206,19 +206,20 @@ body.mainpage {
   padding: 2rem;
 }
 .content-box {
-  background-color: #f6f4ef;
+  background-color: #FDF4DE; /* Warm zandbeige */
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04); /* zachter en subtieler */
+  color: #375E54; /* donkergroen-blauwige tekstkleur */
 }
+
 .content-box h2 {
   font-family: 'Playfair Display', serif;
-  color: #234E52;
+  color: #234E52; /* donkergroenblauw, consistent met titels */
   font-size: 1.8rem;
   margin-bottom: 0.8rem;
 }
 
-/* Links in content-blokken */
 .content-box a {
   color: #E77C3C;
   font-weight: bold;
@@ -228,15 +229,18 @@ body.mainpage {
   gap: 0.4rem;
   transition: color 0.3s ease;
 }
+
 .content-box a::after {
   content: "→";
   font-weight: bold;
   color: #E77C3C;
   transition: color 0.3s ease;
 }
+
 .content-box a:hover {
-  color: #5BA4B0;
+  color: #5BA4B0; /* babyblauw hover */
 }
+
 .content-box a:hover::after {
   color: #5BA4B0;
 }
