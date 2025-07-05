@@ -1,487 +1,87 @@
-/* Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
+/* ========== NAVIGATIEBALK ========= */
+nav {
+  background-color: #fdfae9;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.05rem;
+  font-family: 'YourFont', sans-serif;
+  font-weight: 500;
+  border-radius: 1rem;
+  box-shadow: 0 4px 0 #2f4f4f;
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
-/* Algemene tekst */
-body {
-  margin: 0;
-  padding: 2rem 3rem;
-  font-family: 'Lora', serif;
-  background-color: #f4f5f0;
-  color: #4a6a6d;
-  line-height: 1.7;
-  font-size: 1.15rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Algemene linkstijl */
-a {
-  color: #E77C3C; /* Oranje */
+nav a {
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  color: #f2793c;
+  margin: 0 0.8rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
 }
 
-a:hover,
-a:focus {
-  color: #5BA4B0; /* Babyblauw */
-  text-decoration: underline;
+nav a:hover {
+  color: #b8774d;
 }
 
-/* Headers */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #234e52;
-  letter-spacing: 0.05em;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  line-height: 1.1;
-}
-h1 {
-  font-size: 4.5rem;
-  font-weight: 700;
-}
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-h3 {
-  font-size: 2rem;
-  font-weight: 700;
+nav a::after {
+  content: ' ||';
+  color: #2f4f4f;
+  margin-left: 0.8rem;
 }
 
-/* Paragrafen */
-p {
-  margin-top: 0;
+nav a:last-child::after {
+  content: '';
+}
+
+/* ========== LEEGTE ONDER SLOGAN VERKLEINEN ========= */
+.slogan {
   margin-bottom: 1.5rem;
 }
 
-/* Ondertitel */
-.subtitle {
-  font-size: 1.2rem;
-  color: #234e52;
-  font-style: italic;
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
+/* ========== BLOKKEN OP GELIJKE HOOGTE ========= */
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
 }
 
-/* FRONT PAGE */
-body.frontpage {
-  background-color: #f8f5f0;
-  color: #2b2b2b;
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  height: 100vh;
-  padding: 4rem 2rem;
+.grid-item {
+  background-color: #fdfae9;
+  padding: 2rem;
+  border-radius: 1rem;
+  flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
+  justify-content: space-between;
 }
 
-.frontpage .impactquote {
-  font-size: 2.5rem;
-  font-weight: 700;
-  max-width: 700px;
-  line-height: 1.4;
-  color: #2b2b2b;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.4s;
-}
-
-.frontpage .button-wrapper {
-  margin-top: 3rem;
-}
-.enter-button {
-  background-color: transparent;
-  border: 2px solid #2b2b2b;
-  color: #2b2b2b;
-  padding: 1.2rem 2.2rem;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 100px;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-}
-.enter-button:hover {
-  background-color: #2b2b2b;
-  color: #f8f5f0;
-  cursor: pointer;
-}
-
-/* MAIN PAGE */
-body.mainpage {
-  background-color: #F4F1EE;
-  font-family: 'Karla', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #375E54;
-}
-
-/* TITEL */
-.site-header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-}
-.site-header h1 {
-  font-family: 'IM Fell DW Pica SC', serif;
-  font-size: 2.5rem;
-  color: #4A6A6D;
-  margin: 0;
-}
-.subtitle {
-  font-family: 'UnifrakturMaguntia', cursive;
-  color: #8B5E3C;
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-/* TABS */
-.main-nav {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #375E54; /* donkergroenblauw als onderlijn */
-  margin-top: 20px;
-  padding: 0.5rem 0;
-}
-
-.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.main-nav li {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.main-nav li:not(:last-child)::after {
-  content: "|";
-  color: #A8A29E; /* subtiele grijsbruine tint */
-  font-size: 1rem;
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  position: relative;
-  top: -1px;
-}
-
-.main-nav a {
-  display: inline-block;
-  padding: 0.4rem 0.6rem;
-  color: #E77C3C;
-  text-decoration: none;
+/* Lees meer / bekijk / draag iets bij netjes onderaan */
+.grid-item a {
+  margin-top: auto;
+  align-self: flex-start;
+  color: #f2793c;
   font-weight: 600;
-  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.main-nav a:hover {
-  color: #5BA4B0;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-.main-nav a.active {
-  color: white;
-  background-color: #E77C3C;
-  border-radius: 20px;
-  padding: 0.4rem 0.8rem;
-}
-
-/* INHOUDSRUBRIEKEN */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+/* ========== FOOTER ========= */
+footer {
+  background-color: #f1eee4;
   padding: 2rem;
-}
-.content-box {
-  background-color: #FDF4DE; /* Warm zandbeige */
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04); /* zachter en subtieler */
-  color: #375E54; /* donkergroen-blauwige tekstkleur */
-}
-
-.content-box h2 {
-  font-family: 'Playfair Display', serif;
-  color: #234E52; /* donkergroenblauw, consistent met titels */
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-}
-
-  color: #E77C3C; /* warm oranje */
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.3s ease;
-}
-
-.content-box a::after {
-  content: "→";
-  font-weight: bold;
-  color: #E77C3C;
-  transition: color 0.3s ease;
-}
-.content-box a:hover {
-  color: #648B84; /* warm grijsgroen */
-}
-
-.content-box a:hover::after {
-  color: #648B84;
-  }
-
-.content-box a:active,
-.content-box a:focus {
-  color: #8B5E3C; /* koperbruin */
-  outline: none;
-}
-
-.content-box a:active::after,
-.content-box a:focus::after {
-  color: #8B5E3C;
-}
-
-/* ORANJE LINK LOS GEBRUIK */
-.orange-link {
-  color: #E77C3C;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.3s ease;
-}
-.orange-link::after {
-  content: "→";
-  font-weight: bold;
-  color: #E77C3C;
-  transition: color 0.3s ease;
-}
-.orange-link:hover {
-  color: #5BA4B0;
-  text-decoration: underline;
-}
-.orange-link:hover::after {
-  color: #5BA4B0;
-}
-
-/* FOOTER */
-.site-footer {
-  background-color: #F4F1EE;
   text-align: center;
-  padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: #415B4F;
-}
-
-/* FRONT PAGE — extra opmaak */
-
-.site-title {
-  font-size: 2.8rem;
-  font-family: 'Playfair Display', serif;
-  color: #2b2b2b;
-  margin: 0 0 1rem 0;
-  letter-spacing: 0.5px;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.2s;
-}
-
-.frontpage .page-header {
-  font-size: 1rem;
-  color: #2b2b2b;
-  opacity: 0.85;
-  margin-bottom: 1rem;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0s;
-}
-
-.frontpage .impactquote {
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 400;
-  color: #4a6a6d;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.5;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.4s;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-.site-logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 500px;
-  height: auto;
-}
-
-body.mainpage {
-  background-color: #FFFBE4;
-}
-/* Community info blok */
-.community-info {
-  background-color: #F9F6EB; /* zachtere parelmoer, bijna onzichtbaar maar blokt toch af */
-  color: #375E54;
-  font-family: 'Karla', sans-serif;
-  text-align: center;
-  padding: 1.2rem;
-  margin: 2rem auto 0 auto;
-  max-width: 700px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  font-size: 1rem;
-}
-
-/* Footer zachter maken */
-.site-footer {
-  background-color: #F4F2E8; /* zachter, meer in lijn met de rest */
-  color: #415B4F;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-}
-/* BLOKVORM RONDOM NAVIGATIE */
-.nav-block {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.main-nav {
-  background-color: #fdfaf3; /* zelfde sfeer als andere blokken */
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 0.6rem 1.2rem;
-  display: inline-block;
-  border-bottom: 2px solid #4a6a6d; /* onderlijn in donkergroenblauw */
-  position: relative;
-}
-
-/* LIJSTSTRUCTUUR VOOR TABS */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 0.8rem;
-  margin: 0;
-  padding: 0;
-}
-
-/* INDIVIDUELE TABS */
-.main-nav li {
-  position: relative;
-}
-
-/* VERTICALE LIJN TUSSEN TABS */
-.main-nav li:not(:last-child)::after {
-  content: "|";
-  color: #A9A097;
-  position: absolute;
-  right: -0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-}
-
-/* TABS: UITZICHT EN INTERACTIE */
-.main-nav a {
-  font-family: 'Karla', sans-serif;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-  padding: 0.4rem 0.7rem;
-  border-radius: 6px;
-  color: #E77C3C;
-  transition: all 0.3s ease;
-  background-color: transparent;
-}
-
-/* HOVER EFFECT */
-.main-nav a:hover {
-  background-color: #eee6dd;
-  color: #5A3925;
-}
-
-/* ACTIEVE PAGINA */
-.main-nav a.active {
-  background-color: #8B5E3C; /* koperbruin */
-  color: #fff;
-  font-weight: 600;
-}
-/* Content blokjes layout */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  padding: 60px 20px 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Content-box uiterlijk */
-.content-box {
-  background-color: #fef6e9;
-  padding: 30px 25px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.content-box:hover {
-  transform: translateY(-3px);
-}
-
-.content-box h2 {
-  font-family: 'IM Fell DW Pica SC', serif;
-  font-size: 26px;
-  color: #133c3a;
-  margin-bottom: 15px;
-}
-
-.content-box p {
-  font-family: 'Karla', sans-serif;
   color: #2f4f4f;
-  font-size: 17px;
-  margin-bottom: 20px;
+  margin-top: 3rem;
+  line-height: 1.6;
+  font-family: 'YourFont', sans-serif;
 }
 
-.content-box a {
-  font-family: 'Karla', sans-serif;
-  color: #ea773b;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.content-box a:hover {
-  text-decoration: underline;
-}
-
-/* Footer netjes en subtiel */
-.site-footer {
-  background-color: #FFFBE4;
+/* ========== BONUS: CENTREREN TEKST BLOKKEN ========= */
+.grid-item h2,
+.grid-item p {
   text-align: center;
-  padding: 30px 15px 50px;
-  font-family: 'Karla', sans-serif;
-  font-size: 15px;
-  color: #444;
-  border-top: 1px solid #ccc;
-  margin-top: 60px;
 }
