@@ -161,11 +161,6 @@ footer {
 }
 
 
-/* ========== 2. VERWIJDER SLOGAN (H1) UIT BEELD ========== */
-.slogan {
-  display: none;
-}
-
 /* ========== 3. NAVIGATIE: LETTERGROOTTE EN VETTER ========== */
 nav a {
   font-size: 1.1rem;
