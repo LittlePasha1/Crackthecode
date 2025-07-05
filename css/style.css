@@ -153,3 +153,44 @@ footer {
   line-height: 1.6;
   font-family: 'Lora', serif;
 }
+/* ========== 1. LOGO GROTER ========== */
+header img {
+  max-width: 240px;
+  height: auto;
+  display: block;
+  margin: 2rem auto 1rem;
+}
+
+/* ========== 2. VERWIJDER SLOGAN (H1) UIT BEELD ========== */
+.slogan {
+  display: none;
+}
+
+/* ========== 3. NAVIGATIE: LETTERGROOTTE EN VETTER ========== */
+nav a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.6rem 0.8rem;
+}
+
+/* ========== 4. LEES MEER → Pijl enkelvoudig ========== */
+.content-box a::after {
+  content: " →";
+  color: #f2793c;
+}
+
+/* ========== 5. BLOKKEN ALS ZACHTE TEKSTBALLONNETJES ========== */
+.content-box {
+  background-color: #fdfae9;
+  padding: 2.2rem;
+  border-radius: 1.6rem 1.6rem 1.6rem 0.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+}
