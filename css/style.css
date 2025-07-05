@@ -176,3 +176,39 @@ footer {
   line-height: 1.6;
   font-family: 'Lora', serif;
 }
+/* --- Nieuwe stijl voor tabs --- */
+.nav-wrapper {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.custom-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-flex;
+  gap: 2.5rem;
+  border-bottom: 2px solid #CD7F32; /* fijne bronzen lijn onder de tabs */
+}
+
+.custom-tabs li a {
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: #e86e27; /* warm oranje */
+  font-size: 1.15rem;
+  padding-bottom: 0.4rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.custom-tabs li a:hover {
+  color: #104F55; /* donkergroenblauw */
+  border-bottom: 2px solid #104F55; /* onderlijning bij hover */
+}
+
+.custom-tabs li a.active {
+  color: #104F55;
+  border-bottom: 2px solid #CD7F32; /* bronzen lijn bij actieve tab */
+}
+
