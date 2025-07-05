@@ -426,5 +426,62 @@ body.mainpage {
   color: #fff;
   font-weight: 600;
 }
+/* Content blokjes layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 60px 20px 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+/* Content-box uiterlijk */
+.content-box {
+  background-color: #fef6e9;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
 
+.content-box:hover {
+  transform: translateY(-3px);
+}
+
+.content-box h2 {
+  font-family: 'IM Fell DW Pica SC', serif;
+  font-size: 26px;
+  color: #133c3a;
+  margin-bottom: 15px;
+}
+
+.content-box p {
+  font-family: 'Karla', sans-serif;
+  color: #2f4f4f;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.content-box a {
+  font-family: 'Karla', sans-serif;
+  color: #ea773b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.content-box a:hover {
+  text-decoration: underline;
+}
+
+/* Footer netjes en subtiel */
+.site-footer {
+  background-color: #FFFBE4;
+  text-align: center;
+  padding: 30px 15px 50px;
+  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+  color: #444;
+  border-top: 1px solid #ccc;
+  margin-top: 60px;
+}
