@@ -310,4 +310,7 @@ body.mainpage {
   max-width: 500px;
   height: auto;
 }
+body.mainpage {
+  background-color: #FFFBE4;
+}
 
