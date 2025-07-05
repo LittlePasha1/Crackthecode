@@ -50,12 +50,15 @@ header img {
 
 /* ========== NAVIGATIEBALK ========= */
 nav {
-  background-color: #fbf9ef;
+  background-color: transparent;
   padding: 1.2rem 2rem;
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 600;
-  box-shadow: 0 4px 0 #2f4f4f;
+  border-bottom: 4px solid #2f4f4f;
+border-image: url('images/divider.svg') 30 stretch;
+border-image-slice: 30;
+border-image-repeat: repeat;
   border-radius: 0;
   margin-bottom: 2rem;
   width: 100%;
