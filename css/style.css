@@ -41,10 +41,11 @@ a:hover {
 
 /* ========== LOGO ========= */
 header img {
-  max-width: 150px;
+  max-width: 400px;    /* of 400px als je wil dat het nog groter is */
   height: auto;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 2rem auto 1.5rem;
+
 }
 
 /* ========== NAVIGATIEBALK ========= */
