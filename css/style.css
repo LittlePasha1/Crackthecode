@@ -304,4 +304,10 @@ body.mainpage {
     opacity: 1;
   }
 }
+.site-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  height: auto;
+}
 
