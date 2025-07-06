@@ -183,3 +183,6 @@ nav::after {
   background-position: center;
   background-size: contain;
 }
+.frontpage {
+  background-color: pink;
+}
