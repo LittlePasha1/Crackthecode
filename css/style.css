@@ -170,3 +170,12 @@ footer {
   line-height: 1.6;
   font-family: 'Lora', serif;
 }
+nav::after {
+  content: "";
+  display: block;
+  height: 60px; /* even groter voor test */
+  background-image: url('images/divider-pattern.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
