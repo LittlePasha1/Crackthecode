@@ -173,9 +173,10 @@ footer {
 nav::after {
   content: "";
   display: block;
-  height: 60px; /* even groter voor test */
+  height: 100px;
+  background-color: red; /* testkleur */
   background-image: url('images/divider-pattern.png');
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  background-size: contain;
 }
