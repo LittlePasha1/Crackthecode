@@ -248,4 +248,11 @@ nav::after {
   margin-top: 1rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
+.content-box a::before {
+  content: '🌀 ';
+  transition: color 0.3s ease;
+}
 
+.content-box a:hover::before {
+  color: #9dcbe0;
+}
