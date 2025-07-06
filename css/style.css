@@ -236,4 +236,16 @@ nav::after {
   background-size: contain;
   opacity: 0.85;
 }
+/* ========== FULL-WIDTH & HIGHLIGHT BOX ========= */
+.full-width {
+  grid-column: 1 / -1; /* laat het over alle kolommen lopen */
+}
+
+.highlight-box {
+  background-color: #fef6dc; /* zachtere, warme tint */
+  border-left: 6px solid #cd7f32;
+  padding: 3rem 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
 
