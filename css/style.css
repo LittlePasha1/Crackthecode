@@ -186,6 +186,7 @@ nav::after {
   background-position: center;
   background-size: contain;
 }
-.frontpage {
-  background-color: pink;
+/* Frontpage override background */
+body.frontpage {
+  background-color: pink !important;
 }
