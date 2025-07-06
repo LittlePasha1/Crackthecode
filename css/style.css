@@ -4,23 +4,19 @@
 }
 
 /* ========== BODY ========= */
-  body {
+body {
+  background-color: hotpink !important;
   margin: 0;
   padding: 2rem 3rem;
   font-family: 'Lora', serif;
-  background-color: #fffbe4;
   color: #4a6a6d;
   line-height: 1.7;
   font-size: 1.15rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-/* Frontpage override */
-.frontpage {
-  background-color: pink !important;
-  padding: 2rem 3rem;
-}
 
 /* ========== LINKS ========= */
 a {
