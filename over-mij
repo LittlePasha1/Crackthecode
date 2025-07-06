@@ -2,35 +2,26 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <title>Over mij</title>
-  <link rel="stylesheet" href="/Crackthecode/css/style.css">
+  <title>Over Mij – De Onwijze Wijsheid</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<nav>
-  <a href="/Crackthecode/">Home</a> |
-  <a href="/Crackthecode/about/">Over mij</a> |
-  <a href="/Crackthecode/artikels/">Artikels</a>
-</nav>
+  <main class="content-container">
 
-<hr>
+    <h1>Welkom bij De Onwijze Wijsheid</h1>
+    <p>Jouw digitale ontmoetingsplek voor kritische denkers, dromers en doeners. Dit is geen saaie informatiebron, maar een open source platform waar iedereen welkom is om te praten, lachen, twijfelen en groeien. We geloven in de kracht van verbinding: elkaar uitdagen, versterken en samen nieuwe inzichten ontdekken. Hier creëren we ruimte om vrij te communiceren en open gesprekken te voeren die inspireren.</p>
 
-<h1>Dag lezer, ik ben Nancy</h1>
+    <h2>Wie zit er achter De Onwijze Wijsheid?</h2>
+    <p>Dat ben ik, Nancy. Mijn hoofd staat nooit stil en ik ben vastbesloten alles wat ik ontdek te delen met wie het aandurft. Voorlopig ben ik alleen, maar hopelijk niet voor lang! De dingen die ik de afgelopen jaren ontdekte, hebben me op een kantelpunt gebracht. Puzzelstukjes vielen op hun plaats en ik kreeg steeds helderder zicht op hoe onze maatschappij, ook achter de schermen, functioneert — terwijl ik tegelijkertijd hypotheses ontwikkelde over hoe de wereld er ook anders uit zou kunnen zien. Dit platform begint als mijn persoonlijke dagboek, maar is bedoeld als een plek waar jij en velen mee kunnen schrijven, meedenken en bouwen aan een toekomst die er echt toe doet. Maar laat mij dat alvast niet voor jou invullen natuurlijk.</p>
 
-<p>En als je hier bent, is dat misschien omdat er ergens iets in jou ook rammelt. Iets wat zegt: wacht eens even... klopt dit wel?</p>
+    <h2>Waarom dit platform?</h2>
+    <p>De Onwijze Wijsheid is een duurzaam initiatief met enorm groeipotentieel en maatschappelijke relevantie. Het draait om het verbinden van mensen – ook degenen die soms achterblijven. Naarmate het platform groeit, openen zich eindeloze kansen om samen iets moois neer te zetten: lokale banden smeden, nieuwe ontmoetingsplekken creëren en zelfs nieuwe communities laten ontstaan. We geloven dat echte rijkdom ontstaat wanneer mensen samenkomen, want alleen dan wordt onze ziel echt gezien.</p>
 
-<p>Ik herinner mijn kantelpunt, opgesloten in een dorp genaamd Port Hedland, Australië — tussen rode rotsen en eindeloze road trains van 1,5 kilometer lang. Tussen 72-uren-weken, eenzaamheid en supermarkt-escapisme ontdekte ik iets: voeding was niet wat ik dacht dat het was. En wat ik toen nog niet wist, is dat deze kleine inzicht een domino-effect zou veroorzaken. </p>
+    <h2>Onze visie</h2>
+    <p>Over vijf jaar is De Onwijze Wijsheid dé plek waar een diverse community durft te praten over wat écht telt – van persoonlijke groei tot maatschappelijke impact. Het is een platform dat niet bang is om te prikkelen, te lachen en kritisch te zijn, met ruimte voor feiten, meningen en satire. We verbinden mensen lokaal en wereldwijd, zodat ze elkaar vinden op basis van talenten, interesses en gedeelde waarden. Samen bouwen we aan een bewustere en rechtvaardigere maatschappij.</p>
 
-<p>Niet alleen in mijn buik, maar ook in mijn hoofd. Wat we eten, wat we geloven, wat we normaal vinden — alles bleek doordrenkt met belangen, marketing en halve waarheden. En ineens klopte de puzzel van mijn verwarring wél. Ik voelde me niet langer gek, ik voelde me wakker.</p>
-
-<p>Vandaag geloof ik dat we op een kantelpunt staan. Tussen wurgende wetten en beperkte financiële vrijheden, of terug naar iets wat we altijd al deden: samen leven. Niet op papier. Maar echt. Met aarde aan onze voeten, eten dat we delen, en ruimte om onszelf te zijn — ook als dat haaks staat op wat ‘normaal’ heet.</p>
-
-<p>We hebben duizenden jaren geleefd in kleine groepen. Zonder handleidingen. Zonder CEO's. En het werkte. Dus waarom doen we nu alsof dat verleden achterhaald is?</p>
-
-<p>Misschien is het tijd dat we weer naast elkaar gaan staan. Niet online, maar echt. Gewoon... bij een vuurtje. Of een tafel. En dat we iets nieuws maken van iets ouds. Niet omdat het hip is. Maar omdat het klopt.</p>
-
-<p>🔍 “Ik weet niks zeker, maar ik weet wel dat ik vragen blijf stellen.”</p>
+  </main>
 
 </body>
-
 </html>
