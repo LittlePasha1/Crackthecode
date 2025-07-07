@@ -247,3 +247,11 @@ footer {
   line-height: 1.6;
   font-family: 'Lora', serif;
 }
+.highlight-box {
+  background-color: #fef6dc; /* een warmere tint dan de standaard content-box */
+  border-left: 6px solid #cd7f32;
+  padding: 3rem 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border-radius: 1.5rem;
+}
