@@ -50,7 +50,7 @@ a:hover {
 }
 
 .site-logo {
-  max-width: 400px;
+  max-width: 800px;
   width: 100%;
   display: block;
   margin: 0 auto 1rem;
@@ -279,3 +279,41 @@ footer {
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   border-radius: 1.5rem;
 }
+/* ========== RESPONSIVE AANPASSINGEN ========== */
+
+@media (max-width: 1024px) {
+  .site-logo {
+    max-width: 320px;
+  }
+
+  .main-navigation ul {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-logo {
+    max-width: 280px;
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .main-navigation li:not(:last-child)::after {
+    content: none;
+  }
+
+  .content-container {
+    grid-template-columns: 1fr !important;
+    padding: 1rem;
+  }
+
+  .content-box,
+  .highlight-box {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
