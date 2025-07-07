@@ -333,5 +333,6 @@ footer {
   background-position: bottom right;
   background-size: 180px;
   background-blend-mode: overlay;
+    background-color: #fdfae9;
   opacity: 0.96; /* net niet helemaal dekkend, voor zachtheid */
 }
