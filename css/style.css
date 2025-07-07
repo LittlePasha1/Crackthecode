@@ -313,7 +313,21 @@ footer {
     width: 100%;
     margin-bottom: 2rem;
   }
+/* =============================== */
+/* ACCENT: Groene rand en spiraal */
+/* =============================== */
+
 .green-border {
-  border-left: 6px solid #2b5c5b; /* donkergroenblauw */
+  border-left: 6px solid #2b5c5b; /* zelfde kleur als site-titel */
   padding-left: 2rem;
+}
+
+/* Achtergrond met spiraal */
+.spiral-bg {
+  background-image: url('/images/spiral-pattern.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 180px;
+  background-blend-mode: overlay;
+  opacity: 0.96; /* net niet helemaal dekkend, voor zachtheid */
 }
