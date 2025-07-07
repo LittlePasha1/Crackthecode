@@ -378,3 +378,64 @@ nav::after {
   background-color: #d7f4e1;
   color: #006f41;
 }
+/* Denkstukken: GRID LAYOUT */
+.denkstukken-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Denkkaart algemeen */
+.denkkaart {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+.denkkaart:hover {
+  transform: scale(1.01);
+}
+
+/* Tags visueel bovenaan */
+.denk-tags {
+  margin-bottom: 0.5rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.4rem;
+  color: white;
+}
+
+/* TAG Kleuren */
+.tag-persoonlijk {
+  background-color: #f2c94c; /* Geel */
+}
+.tag-intiem {
+  background-color: #e57373; /* Rood */
+}
+.tag-informatief {
+  background-color: #6abf69; /* Groen */
+}
+.tag-column {
+  background-color: #a586d7; /* Paars */
+}
+
+/* Denkkaarten in tagkleur tint */
+.denkkaart.tag-persoonlijk {
+  background-color: #fff9e6;
+}
+.denkkaart.tag-intiem {
+  background-color: #fdecea;
+}
+.denkkaart.tag-informatief {
+  background-color: #e7f7ea;
+}
+.denkkaart.tag-column {
+  background-color: #f3f0fa;
+}
