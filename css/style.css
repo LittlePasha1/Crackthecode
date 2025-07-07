@@ -168,3 +168,82 @@ a:hover {
   transform: translateX(3px);
   transition: transform 0.3s ease;
 }
+/* Weg met lelijke lijnen */
+.header-topbar,
+.slogan-divider {
+  display: none;
+}
+
+/* Zorg dat logo zichtbaar is */
+.site-logo {
+  display: block;
+  max-width: 280px;
+  margin: 0 auto 1rem;
+}
+
+/* Titels en slogans groter + mooier */
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f5454;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.site-slogan {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #8b4c25;
+  font-style: italic;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+/* Navigatie zonder vieze blok */
+.main-navigation {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.main-navigation ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  gap: 2.5rem;
+  border-top: none;
+  border-bottom: none;
+}
+
+.main-navigation li {
+  position: relative;
+}
+
+.main-navigation li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -1.5rem;
+  color: #cd7f32;
+  font-size: 1.2rem;
+}
+
+/* Navigatie links stijl */
+.main-navigation a {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #e0632b;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active-tab {
+  color: #9dcbe0;
+}
