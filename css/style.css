@@ -41,11 +41,7 @@ a:hover {
 }
 
 /* ========== HEADER & SLOGAN ========= */
-.header-topbar {
-  height: 20px;
-  background-color: transparent;
-  border-bottom: 2px solid var(--donkerblauw);
-}
+
 
 .site-header {
   text-align: center;
@@ -76,12 +72,6 @@ a:hover {
   margin-bottom: 1.2rem;
 }
 
-.slogan-divider {
-  height: 3px;
-  background-color: var(--donkerblauw);
-  width: 80%;
-  margin: 1rem auto;
-}
 
 /* ========== NAVIGATIE ========= */
 .main-navigation {
