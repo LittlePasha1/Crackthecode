@@ -482,3 +482,76 @@ nav::after {
 .tag-column {
   background-color: #6fa8dc;
 }
+/* Donkerblauw uit je titel/logo */
+:root {
+  --donkerblauw: #1f5454;
+  --bronskleur: #8b4f27;
+  --parelmoer: #fffbe4;
+}
+
+/* Extra lijn bovenaan (voor iconen later) */
+.header-topbar {
+  height: 20px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--donkerblauw);
+}
+
+/* Logo + slogan gecentreerd */
+.logo-container {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.site-logo {
+  max-width: 280px;
+}
+
+.site-slogan {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--bronskleur);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Slogan divider lijn */
+.slogan-divider {
+  height: 2px;
+  background-color: var(--donkerblauw);
+  width: 80%;
+  margin: 1rem auto;
+}
+
+/* Navigatieblok met kader en kleur */
+.main-navigation {
+  background-color: #fdf1dd; /* zachtere bronskleurige achtergrond */
+  border: 2px solid var(--bronskleur);
+  border-radius: 0.5rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.main-navigation ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation li a {
+  font-family: 'Playfair Display', serif;
+  color: var(--bronskleur);
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  position: relative;
+}
+
+.main-navigation li a.active-tab,
+.main-navigation li a:hover {
+  font-weight: bold;
+  border-bottom: 2px solid var(--bronskleur);
+}
