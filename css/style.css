@@ -247,3 +247,13 @@ a:hover {
 .main-navigation a.active-tab {
   color: #9dcbe0;
 }
+footer {
+  background-color: #2f4f4f;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fffbe4;
+  margin-top: 3rem;
+  line-height: 1.6;
+  font-family: 'Lora', serif;
+}
