@@ -54,6 +54,8 @@ a:hover {
   max-width: 700px; /* dit bepaalt de maximale grootte */
   display: block;
   margin: 0 auto 0.3rem; /* centreren + kleine marge onderaan */
+  /* Subtiele schaduw onder het logo */
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
 }
 
 
@@ -83,12 +85,9 @@ a:hover {
   border-bottom: 2px solid var(--donkerblauw);
   background-color: #fdf1dd;
   padding: 1rem 0;
+    margin-top: -0.5rem; /* afstand t.o.v. het logo erboven */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-.main-navigation {
-  margin-top: 0.5rem; /* afstand t.o.v. het logo erboven */
-}
-
 
 .main-navigation ul {
   display: flex;
