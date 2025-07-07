@@ -318,8 +318,12 @@ footer {
 /* =============================== */
 
 .green-border {
-  border-left: 6px solid #2b5c5b; /* zelfde kleur als site-titel */
+  border-left: 6px solid #2b5c5b;
   padding-left: 2rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+
+
 }
 
 /* Achtergrond met spiraal */
