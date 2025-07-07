@@ -50,11 +50,18 @@ a:hover {
 }
 
 .site-logo {
-  max-width: 320px;
+  max-width: 400px;
   width: 100%;
   display: block;
   margin: 0 auto 1rem;
 }
+.site-logo {
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
 
 .site-title {
   font-family: 'Playfair Display', serif;
@@ -85,11 +92,13 @@ a:hover {
 
 .main-navigation ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: 2rem; /* ruimte tussen tabs */
+  padding: 1.5rem 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .main-navigation li a {
@@ -103,8 +112,9 @@ a:hover {
 }
 
 .main-navigation li a.active-tab,
-.main-navigation li a:hover {
-  border-bottom: 3px solid var(--bronskleur);
+.main-navigation a:hover {
+  color: #1f4d4d; /* donkergroenblauw, zelfde als titel */
+  border-bottom: 2px solid #1f4d4d;
   font-weight: 700;
 }
 
@@ -162,13 +172,7 @@ a:hover {
 .header-topbar,
 .slogan-divider {
   display: none;
-}
 
-/* Zorg dat logo zichtbaar is */
-.site-logo {
-  display: block;
-  max-width: 280px;
-  margin: 0 auto 1rem;
 }
 
 /* Titels en slogans groter + mooier */
@@ -235,8 +239,28 @@ a:hover {
 
 .main-navigation a:hover,
 .main-navigation a.active-tab {
-  color: #9dcbe0;
+  color: #2b5c5c; /* donkergroenblauw zoals titel */
 }
+
+/* Onderlijning bij hover */
+.main-navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #cd7f32; /* oranje onderlijning */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.main-navigation a:hover::after,
+.main-navigation a.active-tab::after {
+  transform: scaleX(1);
+}
+
 footer {
   background-color: #2f4f4f;
   padding: 2rem;
