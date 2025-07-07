@@ -313,4 +313,7 @@ footer {
     width: 100%;
     margin-bottom: 2rem;
   }
-
+.green-border {
+  border-left: 6px solid #2b5c5b; /* donkergroenblauw */
+  padding-left: 2rem;
+}
