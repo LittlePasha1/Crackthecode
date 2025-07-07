@@ -79,11 +79,16 @@ a:hover {
 .main-navigation {
   width: 100%;
   border-top: 2px solid var(--donkerblauw);
+
   border-bottom: 2px solid var(--donkerblauw);
   background-color: #fdf1dd;
   padding: 1rem 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+.main-navigation {
+  margin-top: 0.5rem; /* afstand t.o.v. het logo erboven */
+}
+
 
 .main-navigation ul {
   display: flex;
