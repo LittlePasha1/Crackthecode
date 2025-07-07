@@ -55,12 +55,6 @@ a:hover {
   display: block;
   margin: 0 auto 1rem;
 }
-.site-logo {
-  max-width: 400px;
-  width: 100%;
-  display: block;
-  margin: 0 auto 1rem;
-}
 
 
 .site-title {
@@ -134,6 +128,9 @@ a:hover {
   border-radius: 1rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+}
+.full-width {
+  grid-column: 1 / -1;
 }
 
 .content-box:hover {
