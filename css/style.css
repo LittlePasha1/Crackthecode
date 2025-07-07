@@ -328,7 +328,7 @@ footer {
 
 /* Achtergrond met spiraal */
 .spiral-bg {
-  background-image: url('/images/spiral-pattern.png');
+  background-image: url('/Crackthecode/images/spiral-pattern.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 180px;
