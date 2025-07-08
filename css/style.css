@@ -417,14 +417,23 @@ footer {
 /* ====== ALGEMENE LAYOUT ====== */
 .denkstukken-logo-container {
   text-align: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
+  margin-top: 0.5rem; /* spatie weghalen tussen 0.5 en rem */
+  padding-top: 0;
 }
 
 .denkstukken-logo {
-  max-width: 300px;
+  max-width: 150px;
   height: auto;
+  margin-top: 0.25rem; /* komma vervangen door punt */
 }
+
+/* main hoort **buiten** een selector te staan */
+main {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 
 .denkstukken-grid {
   display: grid;
