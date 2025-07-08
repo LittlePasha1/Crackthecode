@@ -344,13 +344,13 @@ footer {
 
 /* Achtergrond met spiraal */
 .spiral-bg {
-  background-image: url('/images/spiral-pattern.png');
+  background-image: url('../images/spiral-pattern.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 180px;
   background-blend-mode: overlay;
     background-color: #fdfae9;
-  opacity: 0.96; /* net niet helemaal dekkend, voor zachtheid */
+  background-color: rgba(253, 250, 233, 0.96); /* zo blijft tekst 100% zichtbaar */
 }
 .highlight-box.full-width {
   width: 100vw !important;
