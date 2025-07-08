@@ -53,9 +53,8 @@ a:hover {
   width: 100%;
   max-width: 700px; /* dit bepaalt de maximale grootte */
   display: block;
-  margin: 0 auto 0.2rem; /* centreren + kleine marge onderaan */
-  /* Subtiele schaduw onder het logo */
-  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.07)); /* iets subtieler */
+  margin: 0 auto 0; /* ← hier! ondermarge weghalen */
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08)); /* iets subtieler */
 }
 
 .site-title {
@@ -82,7 +81,7 @@ a:hover {
   border-bottom: 2px solid var(--donkerblauw);
   background-color: #fdf1dd;
   padding: 0.4rem 0;
-    margin-top: -0.8rem; /* afstand t.o.v. het logo erboven */
+    margin-top: -1.2rem; /* afstand t.o.v. het logo erboven */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
