@@ -152,21 +152,29 @@ a:hover {
 
 .content-box a {
   font-weight: bold;
-  color: #f2793c;
+  color: var(--donkerblauw); /* zachtere kleur dan fel oranje */
   font-size: 1.1rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .content-box a::after {
   content: " →";
-  color: #f2793c;
-  transition: color 0.3s ease;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-left: 0.2rem;
+}
+
+.content-box a:hover {
+  color: var(--bronskleur); /* of kies een andere zachte highlightkleur */
+  text-decoration: underline;
 }
 
 .content-box a:hover::after {
-  color: #9dcbe0;
-  transform: translateX(3px);
-  transition: transform 0.3s ease;
+  transform: translateX(4px); /* pijl schuift iets mee naar rechts */
 }
+
 /* Weg met lelijke lijnen */
 .header-topbar,
 .slogan-divider {
