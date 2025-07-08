@@ -410,4 +410,82 @@ footer {
 .about-content p {
   margin-bottom: 1.8rem;
 }
+/* ====== ALGEMENE LAYOUT ====== */
+.denkstukken-logo-container {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.denkstukken-logo {
+  max-width: 300px;
+  height: auto;
+}
+
+.denkstukken-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* ====== DENKKAART BLOKKEN ====== */
+.denkkaart {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 400px;
+  width: 100%;
+}
+
+.denkkaart:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== TAGS ====== */
+.denk-tags {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #334;
+  font-size: 0.85rem;
+  font-style: italic;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  margin-right: 0.5rem;
+}
+
+/* ====== TITELS EN PARAGRAFEN ====== */
+.denkkaart h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2f4f4f;
+}
+
+.denkkaart p {
+  color: #4f6f6f;
+  line-height: 1.5;
+}
+
+/* ====== LEES MEER LINK ====== */
+.leesmeer {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #d2691e;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.leesmeer:hover {
+  color: #a0522d;
+}
 
