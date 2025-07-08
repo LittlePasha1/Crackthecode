@@ -328,6 +328,8 @@ footer {
     width: 100%;
     margin-bottom: 2rem;
   }
+
+  
 /* =============================== */
 /* ACCENT: Groene rand en spiraal */
 /* =============================== */
@@ -349,4 +351,10 @@ footer {
   background-blend-mode: overlay;
     background-color: #fdfae9;
   opacity: 0.96; /* net niet helemaal dekkend, voor zachtheid */
+}
+.highlight-box.full-width {
+  width: 100vw !important;
+  max-width: 100%;
+  margin-left: calc(-50vw + 50%);
+  border-radius: 0;
 }
