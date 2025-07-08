@@ -406,6 +406,10 @@ footer {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
+  body {
+  border: 5px solid red;
+}
+
 
 .about-content p {
   margin-bottom: 1.8rem;
