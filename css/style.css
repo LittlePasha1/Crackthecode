@@ -443,6 +443,16 @@ main {
   justify-items: center;
 }
 
+/* ====== GRID VOOR DENKSTUKKEN ====== */
+.denkstukken-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+  
 /* ====== DENKKAART BLOKKEN ====== */
 .denkkaart {
   background-color: white;
