@@ -50,6 +50,8 @@ a:hover {
 }
 .site-logo-container {
   display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* ruimte tussen logo, titel en slogan */
   justify-content: center;
   align-items: center;
   margin-bottom: -0.4rem;
