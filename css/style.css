@@ -511,4 +511,11 @@ main {
 .leesmeer:hover {
   color: #a0522d;
 }
+@media (max-width: 768px) {
+  .denkstukken-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
