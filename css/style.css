@@ -53,19 +53,17 @@ a:hover {
   width: 100%;
   max-width: 700px; /* dit bepaalt de maximale grootte */
   display: block;
-  margin: 0 auto 0.3rem; /* centreren + kleine marge onderaan */
+  margin: 0 auto 0.2rem; /* centreren + kleine marge onderaan */
   /* Subtiele schaduw onder het logo */
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.07)); /* iets subtieler */
 }
-
-
 
 .site-title {
   font-family: 'Playfair Display', serif;
   font-size: 3.8rem;
   font-weight: bold;
   color: var(--donkerblauw);
-  margin: 0.8rem 0 0.2rem;
+  margin: 0.5rem 0 0.1rem;
 }
 
 .site-slogan {
@@ -73,7 +71,7 @@ a:hover {
   font-size: 1.6rem;
   font-style: italic;
   color: var(--bronskleur);
-  margin-bottom: 1.2rem;
+  margin: 0 0 0.6rem; /* geen top margin, minder onderaan */
 }
 
 
