@@ -48,6 +48,12 @@ a:hover {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.site-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -0.4rem;
+}
 
 .site-logo {
   width: 100%;
