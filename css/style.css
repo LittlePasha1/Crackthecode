@@ -561,7 +561,7 @@ body.denkstukken-overzicht-page {
   color: #a0522d;
 }
 @media (max-width: 768px) {
-  .denkstukken-grid {
+  .denkstukken-overzicht grid {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
