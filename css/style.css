@@ -494,6 +494,44 @@ zo
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
+
+  /* ==== STIJL VOOR DENKSTUKKEN ==== */
+
+body.denkstuk-page {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #1a1a1a;
+}
+
+.denkkaart h2,
+.denkkaart h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.denkkaart p {
+  color: #4a6a6d;
+  margin-bottom: 1.3rem;
+}
+
+.quote-blok {
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+
 /* ====== TAGS ====== */
 .denk-tags {
   margin-bottom: 1rem;
