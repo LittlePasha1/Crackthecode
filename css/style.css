@@ -420,14 +420,14 @@ footer {
   margin-bottom: 1.8rem;
 }
 /* ====== ALGEMENE LAYOUT ====== */
-.denkstukken-logo-container {
+.denkstukken-overzicht-logo-container {
   text-align: center;
   margin-bottom: 2rem;
   margin-top: 0.5rem; /* spatie weghalen tussen 0.5 en rem */
   padding-top: 0;
 }
 
-.denkstukken-logo {
+.denkstukken-overzicht-logo {
   max-width: 150px;
   height: auto;
   margin-top: 0.25rem; /* komma vervangen door punt */
@@ -441,7 +441,7 @@ main {
 
 /* ====== GRID VOOR DENKSTUKKEN ====== */
 
-.denkstukken-grid {
+.denkstukken-overzicht grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -451,8 +451,8 @@ main {
   padding-bottom: 4rem;
 }
 
-/* ====== DENKKAART BLOKKEN ====== */
-.denkkaart {
+/* ====== denk-teaser BLOKKEN ====== */
+.denk-teaser {
   background-color: white;
   border-radius: 1.5rem;
   padding: 2.2rem;
@@ -461,31 +461,28 @@ main {
   max-width: 420px;
   width: 100%;
 }
-.denkkaart h2 {
-  color: #1a1a1a;
-}zo
 
   
-.denkkaart a {
+.denk-teaser a {
   color: #d47a42;
 }
-.denkkaart a:hover {
+.denk-teaser a:hover {
   color: #b35f2f;
 }
 
   
   .content-box p,
-.denkkaart p {
+.denk-teaser p {
   color: #4a6a6d;
 }
 zo
 
-  .denkkaart.alt {
+  .denk-teaser.alt {
   background-color: #fffdf7;
 }
 
 
-.denkkaart:hover {
+.denk-teaser:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
@@ -493,25 +490,12 @@ zo
 
   /* ==== STIJL VOOR DENKSTUKKEN ==== */
 
-body.denkstuk-page {
+body.denkstukken-overzicht-page {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   line-height: 1.8;
   color: #1a1a1a;
-}
 
-.denkkaart h2,
-.denkkaart h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-}
-
-.denkkaart p {
-  color: #4a6a6d;
-  margin-bottom: 1.3rem;
 }
 
 .quote-blok {
@@ -549,15 +533,17 @@ body.denkstuk-page {
 
 
 /* ====== TITELS EN PARAGRAFEN ====== */
-.denkkaart h2 {
+.denk-teaser h2,
+  .denk-teaser h3 {
   font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1 rem;
   color: #2f4f4f;
 }
 
-.denkkaart p {
+.denk-teaser p {
   color: #4f6f6f;
+    margin-bottom: 1.3rem;
   line-height: 1.5;
 }
 
@@ -576,8 +562,8 @@ body.denkstuk-page {
 }
 @media (max-width: 768px) {
   .denkstukken-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
 }
 
