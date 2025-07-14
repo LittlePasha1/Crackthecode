@@ -1,2 +1,11 @@
-title: Crack the Code
-theme: jekyll-theme-merlot
+theme: null
+title: De Onwijze Wijsheden
+description: Tussen onzin en openbaring
+baseurl: "/Crackthecode"   # alleen als je repo Crackthecode heet (check!)
+url: "https://jouwgebruikersnaam.github.io"  # vervang met je echte gebruikersnaam
+theme: null
+
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
