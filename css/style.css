@@ -12,6 +12,11 @@
 
 /* ========== BODY ========= */
 body {
+  background-color: #ffe4e1 !important; /* zacht roze om te checken of het werkt */
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
   margin: 0;
   padding: 2rem 3rem;
   font-family: 'Lora', serif;
