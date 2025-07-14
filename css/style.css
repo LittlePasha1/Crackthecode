@@ -439,6 +439,7 @@ main {
   padding-top: 0;
 }
 
+/* ====== GRID VOOR DENKSTUKKEN ====== */
 
 .denkstukken-grid {
   display: grid;
@@ -446,20 +447,10 @@ main {
   gap: 2rem;
   padding: 2rem;
   justify-items: center;
-    margin-top: 3rem;
+  margin-top: 3rem;
   padding-bottom: 4rem;
 }
 
-/* ====== GRID VOOR DENKSTUKKEN ====== */
-.denkstukken-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  padding: 2rem;
-}
-
-  
 /* ====== DENKKAART BLOKKEN ====== */
 .denkkaart {
   background-color: white;
