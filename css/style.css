@@ -15,8 +15,8 @@ body {
   margin: 0;
   padding: 2rem 3rem;
   font-family: 'Lora', serif;
-  background-color: var(--parelmoer);
-  color: #4a6a6d;
+background-color: #FAFAFA;
+color: #1a1a1a;
   line-height: 1.7;
   font-size: 1.15rem;
   -webkit-font-smoothing: antialiased;
@@ -441,6 +441,8 @@ main {
   gap: 2rem;
   padding: 2rem;
   justify-items: center;
+    margin-top: 3rem;
+  padding-bottom: 4rem;
 }
 
 /* ====== GRID VOOR DENKSTUKKEN ====== */
@@ -456,13 +458,36 @@ main {
 /* ====== DENKKAART BLOKKEN ====== */
 .denkkaart {
   background-color: white;
-  border-radius: 2rem;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-width: 400px;
+  border-radius: 1.5rem;
+  padding: 2.2rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+  max-width: 420px;
   width: 100%;
 }
+.denkkaart h2 {
+  color: #1a1a1a;
+}zo
+
+  
+.denkkaart a {
+  color: #d47a42;
+}
+.denkkaart a:hover {
+  color: #b35f2f;
+}
+
+  
+  .content-box p,
+.denkkaart p {
+  color: #4a6a6d;
+}
+zo
+
+  .denkkaart.alt {
+  background-color: #fffdf7;
+}
+
 
 .denkkaart:hover {
   transform: translateY(-8px);
@@ -476,14 +501,18 @@ main {
 
 .tag {
   display: inline-block;
-  background-color: #e0e0e0;
-  color: #334;
-  font-size: 0.85rem;
-  font-style: italic;
+  background-color: #dcefea;
+  color: #2b5c5b;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
   border-radius: 999px;
-  padding: 0.2rem 0.75rem;
+  padding: 0.3rem 0.9rem;
   margin-right: 0.5rem;
+  letter-spacing: 0.5px;
+  text-transform: lowercase;
 }
+
 
 /* ====== TITELS EN PARAGRAFEN ====== */
 .denkkaart h2 {
