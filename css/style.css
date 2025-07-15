@@ -28,9 +28,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.frontpage {
-  background-color: #fdfae9;
-  padding: 4rem 3rem;
+body.home-page {
+  background-color: #FFFBE4; /* parelmoer */
+  padding: 2rem 3rem;
+  font-family: 'Lora', serif;
+  color: #1a1a1a;
+  line-height: 1.7;
+  font-size: 1.15rem;
 }
 
 body.denkstukken-overzicht-page {
