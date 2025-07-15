@@ -33,13 +33,11 @@ body.frontpage {
   padding: 4rem 3rem;
 }
 
-body.over-page {
-  background-image: url('../images/spiral-pattern.png');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 180px;
-  background-blend-mode: overlay;
-  background-color: rgba(253, 250, 233, 0.96);
+body.denkstukken-overzicht-page {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #1a1a1a;
 }
 
 /* ========== LINKS ========= */
@@ -53,7 +51,6 @@ a:hover {
   color: #9dcbe0;
   text-decoration: underline;
 }
-
 
 .site-logo-container {
   display: flex;
@@ -82,8 +79,6 @@ main {
   margin-top: 0;
   padding-top: 0;
 }
-
-
 
 /* STAP 2 – NAVIGATIE EN TABS */
 
@@ -149,7 +144,6 @@ main {
 .main-navigation a.active-tab::after {
   transform: scaleX(1);
 }
-
 
 /* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS */
 
@@ -246,24 +240,6 @@ main {
   line-height: 1.7;
 }
 
-.about-content {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #2a2a2a;
-}
-
-.about-content h2 {
-  color: var(--donkerblauw);
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-content p {
-  margin-bottom: 1.8rem;
-}
-
 /* STAP 5 – FOOTER EN HIGHLIGHT BOX */
 
 footer {
@@ -286,8 +262,7 @@ footer {
   border-radius: 1.5rem;
 }
 
-
-.denkstukken-overzicht-grid {
+.denkstukken-overzicht {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -297,10 +272,7 @@ footer {
   padding-bottom: 4rem;
 }
 
-
-
-/* ====== denk-teaser BLOKKEN ====== */
-.denk-teaser {
+.denkblok {
   background-color: white;
   border-radius: 1.5rem;
   padding: 2.2rem;
@@ -310,92 +282,37 @@ footer {
   width: 100%;
 }
 
-  
-.denk-teaser a {
+.denkblok a {
   color: #d47a42;
 }
-.denk-teaser a:hover {
+
+.denkblok a:hover {
   color: #b35f2f;
 }
 
-  
-  .content-box p,
-.denk-teaser p {
+.denkblok p {
   color: #4a6a6d;
+  margin-bottom: 1.3rem;
+  line-height: 1.5;
 }
-zo
 
-  .denk-teaser.alt {
+.denkblok.alt {
   background-color: #fffdf7;
 }
 
-
-.denk-teaser:hover {
+.denkblok:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-
-  /* ==== STIJL VOOR DENKSTUKKEN ==== */
-
-body.denkstukken-overzicht-page {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #1a1a1a;
-
-}
-
-.quote-blok {
-  font-style: italic;
-  font-family: 'Cormorant Garamond', serif;
-  background-color: white;
-  border-radius: 1.5rem;
-  padding: 2rem 2.5rem;
-  text-align: center;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.06);
-  margin-top: 3rem;
-  font-size: 1.3rem;
-  color: #1a1a1a;
-}
-
-
-/* ====== TAGS ====== */
-.denk-tags {
-  margin-bottom: 1rem;
-}
-
-.tag {
-  display: inline-block;
-  background-color: #dcefea;
-  color: #2b5c5b;
-  font-size: 0.9rem;
-  font-style: normal;
-  font-weight: 600;
-  border-radius: 999px;
-  padding: 0.3rem 0.9rem;
-  margin-right: 0.5rem;
-  letter-spacing: 0.5px;
-  text-transform: lowercase;
-}
-
-
-/* ====== TITELS EN PARAGRAFEN ====== */
-.denk-teaser h2,
-  .denk-teaser h3 {
+.denkblok h2,
+.denkblok h3 {
   font-family: "Playfair Display", serif;
   font-size: 1.6rem;
   margin-bottom: 1rem;
   color: #2f4f4f;
 }
 
-.denk-teaser p {
-  color: #4f6f6f;
-    margin-bottom: 1.3rem;
-  line-height: 1.5;
-}
-
-/* ====== LEES MEER LINK ====== */
 .leesmeer {
   display: inline-block;
   margin-top: 1rem;
@@ -408,8 +325,9 @@ body.denkstukken-overzicht-page {
 .leesmeer:hover {
   color: #a0522d;
 }
+
 @media (max-width: 768px) {
-  .denkstukken-overzicht grid {
+  .denkstukken-overzicht {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
