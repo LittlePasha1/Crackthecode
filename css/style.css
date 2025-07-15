@@ -220,6 +220,25 @@ main {
 
 /* STAP 4 – ABOUT PAGINA OPMAAK */
 
+.about-page .about-content {
+  background-color: #fffdf7;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  margin-bottom: 3rem;
+}
+.about-page .about-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--donkerblauw);
+  margin-bottom: 1rem;
+}
+.about-page .about-content p {
+  color: #4a6a6d;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
 .about-page {
   max-width: 860px;
   margin: 4rem auto;
