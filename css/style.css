@@ -70,8 +70,9 @@ a:hover {
 .site-logo {
   width: 100%;
   max-width: 700px;
+  height: auto;
   display: block;
-  margin: 0 auto 0;
+  margin: 0 auto;
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
 }
 
@@ -262,6 +263,20 @@ footer {
   border-radius: 1.5rem;
 }
 
+.denkstukken-logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto 1rem;
+  max-width: 800px;
+}
+
+.denkstukken-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+}
+
 .denkstukken-overzicht {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -270,6 +285,15 @@ footer {
   justify-items: center;
   margin-top: 3rem;
   padding-bottom: 4rem;
+}
+.denkstukken-uitleg {
+  max-width: 720px;
+  margin: 2rem auto;
+  text-align: center;
+  font-style: italic;
+  color: #4a6a6d;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .denkblok {
@@ -331,4 +355,9 @@ footer {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
+@media (max-width: 768px) {
+  .site-logo {
+    max-width: 90vw;
+  }
 }
+
