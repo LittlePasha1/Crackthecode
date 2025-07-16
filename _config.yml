@@ -2,7 +2,7 @@ theme: null
 title: De Onwijze Wijsheden
 description: Tussen onzin en openbaring
 baseurl: "/Crackthecode"   # alleen als je repo Crackthecode heet (check!)
-url: "https://jouwgebruikersnaam.github.io"  # vervang met je echte gebruikersnaam
+url: "https://littlepasha1.github.io/Crackthecode/"  # vervang met je echte gebruikersnaam
 markdown: kramdown
 highlighter: rouge
 plugins:
