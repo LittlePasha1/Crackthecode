@@ -343,7 +343,7 @@ main {
 /* STAP 5 – FOOTER EN HIGHLIGHT BOX */
 
 footer {
-  background-color: #2f4f4f;
+  background-color: #8b5e3c;
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
@@ -375,12 +375,11 @@ footer {
   color: #4a6a6d;
   margin-bottom: 1.2rem;
 }
-
 .footer-socials {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .footer-socials img {
