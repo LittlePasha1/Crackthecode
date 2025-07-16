@@ -352,6 +352,47 @@ footer {
   line-height: 1.6;
   font-family: 'Lora', serif;
 }
+.footer-top p {
+  margin: 0 0 0.8rem;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: #4a6a6d;
+  margin: 1rem auto;
+  max-width: 300px;
+  opacity: 0.5;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 0.9rem;
+  color: #4a6a6d;
+  margin-bottom: 1.2rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.footer-socials img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(395%) hue-rotate(145deg) brightness(95%) contrast(85%);
+  transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.15);
+}
 
 .highlight-box {
   background-color: #fef6dc;
