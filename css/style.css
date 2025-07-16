@@ -296,6 +296,50 @@ main {
   color: var(--tekstkleur);
   line-height: 1.6;
 }
+.about-visualblok {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.about–afbeelding2 img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #a67844;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.vintage-box {
+  background-color: #fef6e0;
+  border: 2px solid #5e4727;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: 'Lora', serif;
+  color: #2e2b20;
+  max-width: 600px;
+  box-shadow: inset 0 0 0 1px #dfcba7, 0 4px 8px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+
+.vintage-box h2,
+.vintage-box h3 {
+  color: #3a2e1f;
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.vintage-box p {
+  margin-bottom: 1.2rem;
+}
+.vintage-box:hover {
+  box-shadow: inset 0 0 0 1px #dfcba7, 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
 /* STAP 5 – FOOTER EN HIGHLIGHT BOX */
 
 footer {
@@ -413,6 +457,16 @@ footer {
 @media (max-width: 768px) {
   .site-logo {
     max-width: 90vw;
+  }
+}
+@media (max-width: 768px) {
+  .about-visualblok {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vintage-box {
+    max-width: 100%;
   }
 }
 
