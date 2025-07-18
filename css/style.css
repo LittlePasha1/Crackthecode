@@ -3,8 +3,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-/* ========== VARIABELEN ========= */
 :root {
   --donkerblauw: #1f5454;
   --bronskleur: #8b4f27;
@@ -12,6 +10,11 @@
   --oranje: #d47a42;
   --oranje-hover: #b35f2f;
   --groenblauw: #2b5c5c;
+
+  /* Ontbrekende vars toevoegen */
+  --cream: #fdfae9;
+  --diepgroenblauw: #1f5454;
+  --bronsbruin: #8b4f27;
 }
 
 /* ========== BODY ========= */
@@ -36,7 +39,7 @@ body.home-page {
   font-size: 1.15rem;
 }
 
-body.denkstukken-overzicht-page {
+body.denkstukken-page {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   line-height: 1.8;
@@ -55,29 +58,23 @@ a:hover {
   text-decoration: underline;
 }
 
+
 .site-logo-container {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
   justify-content: center;
   align-items: center;
-  margin-bottom: -0.4rem;
-  text-align: center;
-  margin-top: 0.5rem;
-  padding-top: 0;
-  max-width: 150px;
-  height: auto;
-  margin-top: 0.25rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .site-logo {
+  max-width: 600px;   /* ← Pas dit aan om groter/kleiner te maken */
   width: 100%;
-  max-width: 700px;
   height: auto;
   display: block;
-  margin: 0 auto;
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
 }
+
 
 main {
   margin-top: 0;
@@ -107,13 +104,8 @@ main {
   position: relative;
 }
 
-.main-navigation li:not(:last-child)::after {
-  content: "|";
-  position: absolute;
-  right: -1.5rem;
-  color: #cd7f32;
-  font-size: 1.2rem;
-}
+/* VERWIJDER VERTICALE STREPEN TUSSEN TABS */
+/* main-navigation li:not(:last-child)::after wordt verwijderd */
 
 .main-navigation a {
   font-family: 'Playfair Display', serif;
@@ -131,18 +123,46 @@ main {
   color: var(--groenblauw);
 }
 
+/* HOVER EFFECT MET BEWEGENDE RANDEN EN GLOEI */
+.main-navigation a::before,
 .main-navigation a::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
   width: 100%;
+  height: 2px;
   background-color: var(--bronskleur);
+  top: 0;
+  left: 0;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
+
+.main-navigation a::after {
+  top: auto;
+  bottom: 0;
+  background-color: var(--groenblauw);
+}
+
+.main-navigation a:hover::before,
+.main-navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+.main-navigation a:hover {
+  box-shadow: 0 0 8px rgba(31, 77, 77, 0.3);
+  outline: 2px solid var(--bronskleur);
+  outline-offset: 3px;
+}
+
+/* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS */
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 
 .main-navigation a:hover::after,
 .main-navigation a.active-tab::after {
@@ -338,24 +358,28 @@ main {
   box-shadow: inset 0 0 0 1px #dfcba7, 0 8px 16px rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.3s ease;
 }
-
 /* STAP 5 – FOOTER EN HIGHLIGHT BOX */
 
 footer {
-  background-color: #8b5e3c;
+  background: linear-gradient(145deg, #fffdf6, #e7d4bd);
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #fffbe4;
+  color: #4a3c2c;
   margin-top: 3rem;
   line-height: 1.6;
   font-family: 'Lora', serif;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
 }
+
 .footer-top p {
   margin: 0 0 0.8rem;
   font-style: italic;
   font-size: 0.95rem;
 }
+
 .footer-divider {
   border: none;
   border-top: 1px solid var(--bronslijn);
@@ -370,24 +394,27 @@ footer {
   gap: 0.7rem;
   font-size: 0.9rem;
   color: #4a6a6d;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
+
 .footer-socials {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 .footer-socials img {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.85;
   filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(395%) hue-rotate(145deg) brightness(95%) contrast(85%);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .footer-socials img:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
+  filter: brightness(1.2) drop-shadow(0 0 3px rgba(255, 180, 90, 0.5));
 }
 
 .highlight-box {
@@ -486,17 +513,15 @@ footer {
   color: #a0522d;
 }
 
-@media (max-width: 768px) {
   .denkstukken-overzicht {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
-@media (max-width: 768px) {
+
   .site-logo {
     max-width: 90vw;
   }
-}
-@media (max-width: 768px) {
+
   .about-visualblok {
     flex-direction: column;
     align-items: center;
@@ -505,5 +530,247 @@ footer {
   .vintage-box {
     max-width: 100%;
   }
+
+/* ========== DENKBOX ========== */
+
+.denktextbalk{
+background-color: var(--parelmoer);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4rem;
+  position: relative;
 }
 
+.denktext-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+color: var(--donkerblauw);
+  text-align: center;
+}
+
+.denkstuk-meta {
+  font-size: 0.9rem;
+  color: var(--bronsbruin);
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.denktext {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+.denktext ul {
+  list-style: disc inside;
+  margin: 1.5rem 0;
+}
+
+.link {
+  color: var(--oranje);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #ab5e00; /* iets donkerder oranje */
+  text-decoration: underline;
+}
+
+.hashtags {
+  font-size: 0.85rem;
+  color: var(--bronsbruin);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+.hashtags span {
+  margin: 0 0.3rem;
+  background: rgba(205, 127, 50, 0.1); /* lichte bronstint */
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+
+.kus {
+  text-align: right;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: var(--bronsbruin);
+}
+.frontpage {
+  margin: 0;
+  padding: 0;
+  background-color: #1e3c2e; /* Donker olijfgroen, bijna zwart-groen */
+  font-family: 'Playfair Display', serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero-image {
+  background-image: url('img/hero.png'); /* pas aan naar jouw pad */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* donker overlay */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.page-header {
+  position: absolute;
+  top: 2rem;
+  font-size: 0.9rem;
+  color: white;
+  text-transform: uppercase;
+    margin-bottom: 1rem;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+.site-title {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1.1rem;
+  color: white;
+  opacity: 0.8;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.2rem;
+}
+
+
+.impactquote {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #d57938; /* Frietjeskleur mosterdgeel */
+  margin-bottom: 6rem;
+  text-shadow: 0 0 10px #ffae42, 0 0 20px #ffae42;
+  animation: flame 2s infinite alternate, fireGlow 3s infinite;
+  max-width: 200%;
+}
+@keyframes flame {
+  0% {
+    text-shadow: 0 0 8px #ffb347, 0 0 15px #ffcc33;
+  }
+  100% {
+    text-shadow: 0 0 12px #ff8000, 0 0 30px #ffd700;
+  }
+}
+.button-wrapper {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.enter-button {
+  display: inline-block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+    line-height: 100px;
+  background-image: url('images/enter.png');
+  background-size: cover;
+  background-position: center;
+  border: 4px solid #5a3e2b; /* Dof bruin */
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.enter-button:hover {
+  border-color: #ffd700; /* Fel goudgeel */
+  transform: rotate(360deg);
+  transition: all 1s ease-in-out;
+  filter: brightness(1.4);
+}
+@media (max-width: 768px) {
+  .impactquote {
+    font-size: 1.2rem;
+  }
+
+  .enter-button {
+    width: 90px;
+    height: 90px;
+  }
+
+  .page-header {
+    font-size: 0.8rem;
+  }
+}
+  .denktextbalk {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .main-navigation li {
+    display: block;
+    margin: 0.25rem 0;
+  }
+
+  .main-navigation a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .denktext-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .denkstuk-meta {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .denktext {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .denktext blockquote {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+  }
+
+  .site-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+@keyframes fireGlow {
+  0%   { text-shadow: 0 0 2px #f5c100, 0 0 6px #f5c100, 0 0 12px #ff8c00; }
+  50%  { text-shadow: 0 0 4px #f5c100, 0 0 8px #ffa500, 0 0 20px #ff4500; }
+  100% { text-shadow: 0 0 2px #f5c100, 0 0 6px #f5c100, 0 0 12px #ff8c00; }
+}
