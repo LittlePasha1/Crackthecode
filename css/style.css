@@ -1,39 +1,65 @@
 
-/* ========== RESET ========= */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* ========== ROOT VARIABELEN ========== */
 :root {
-  --donkerblauw: #1f5454;
-  --bronskleur: #8b4f27;
-  --parelmoer: #fffbe4;
-  --oranje: #d47a42;
-  --oranje-hover: #b35f2f;
-  --groenblauw: #2b5c5c;
-
-  /* Ontbrekende vars toevoegen */
   --cream: #fdfae9;
-  --diepgroenblauw: #1f5454;
-  --bronsbruin: #8b4f27;
+  --diepgroenblauw: #1f5454;  /* hoofdgroenblauw */
+  --bronsbruin: #b08d57;      /* nieuwe goudkleur */
+  --accentkleur: #9c744c;     /* zachtere bronskleur */
+  --oranje-hover: #b4511e;
+
+  --footer-grad-left: #fffbe4;
+  --footer-grad-mid: #f0d5a5;
+  --footer-grad-right: #c49c6b;
+  --nav-achtergrond: #fffdf5;      /* zachte warm-witte achtergrond (prima zo) */
+  --nav-achtergrond: #fffdf5;
+  --nav-tekst: #8b4f27;
+  --nav-hover: #cd7f32;
+  --nav-border: #1f5454;
 }
 /* ========== UNIVERSELE BODY STIJL ========= */
 body,
-body.home-page,
+body.home-page {
+  --home-bg: #fcfcfc;
+  --home-container: #fbf7ed;
+  --spiral-bg: #fff4dd;
+  --shadower: #b08d57;
+  --highlight-blok: #1f5454;
+  --border-blok: #b08d57;
+  --title-home: #1f5454;
+  --tekstkleur-home: #31444b;
+  --link-home: #b08d57;
+  --leesmeer-hover: #9c744c;
+  --footer-top: #fbf7ed;
+  --footer-info: #3a2f2f;
+  --footer-icon: #3a2f2f;
+
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Lora', serif;
+
+  background-color: var(--home-bg);
+  color: var(--tekstkleur-home);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 2rem 3rem;
+}
+
+/* ========== ABOUT & DENKSTUKKEN PAGINA ========= */
 body.about-page,
 body.denkstukken-page {
   --denk-bg: #fcfcfc;
-  --titlebox-bg: #284c4e;
+  --titlebox-bg: #1f5454;
   --title-color: #f4eadb;
   --meta-color: #f4eadb;
-  --hashtag-bg: #edb8bc;
+  --hashtag-bg: #e3c6a1;
   --hashtag-text: #3a2f2f;
   --body-text: #3a2f2f;
-  --accent-sterk: #934c17;
-  --accent-zacht: #c0b283;
+  --accent-sterk: #b08d57;
+  --accent-zacht: #dbc6a6;
   --citaat: #d1bba4;
-  --afbeelding-bg: #e1c070;
+  --afbeelding-bg: #d8b373;
   --reageer-bg: #f4eadb;
-  --reageer-tekst: #f4eadb;
+  --reageer-tekst: #1f5454;
 
   --font-title: 'Fraunces', serif;
   --font-meta: 'Lora', serif;
@@ -48,7 +74,6 @@ body.denkstukken-page {
   line-height: 1.8;
   padding: 2rem 3rem;
 }
-
 /* ========== LINKS ========= */
 a {
   color: #f2793c;
@@ -60,56 +85,57 @@ a:hover {
   color: #9dcbe0;
   text-decoration: underline;
 }
-
-
-.site-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 1rem;
-  padding: 0;
-   margin-bottom: 0.5rem;
-}
-
-.site-logo {
-  max-width: 400%;   /* ← Pas dit aan om groter/kleiner te maken */
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.2rem;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
-}
-.slogan-divider {
-  margin-bottom: 0.5rem; /* of minder */
-}
 /* ========== ROOT KLEUREN ========== */
 :root {
   --groenblauw: #284C4E;
   --bronskleur: #cd7f32;
   --oranje: #b35f2f;
 }
-
-/* ========== HEADER ALIGNERING ========== */
+/* ========== HEADER FIX: KILL DIE WITRUIMTE ========== */
+body {
+  margin: 0;
+  padding: 0;
+}
 header {
+  padding: 0.5rem 0 1rem 0; /* boven / onder ruimte */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
 }
-/* ========== MAIN NAVIGATIE ========== */
+.header-topbar,
+.slogan-divider {
+  display: none;
+  }
+.site-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* géén extra witruimte */
+  padding: 0;
+}
+
+.site-logo {
+  max-width: 600px;   /* of kleiner als het logo te groot is */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ========== MAIN NAVIGATIE STIJL ========== */
 .main-navigation {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
   padding: 1.5rem 2.5rem;
   margin: 3rem auto;
   position: relative;
-  border: 2px solid var(--groenblauw);
+  border: 2px solid var(--nav-border);
   border-radius: 12px;
-  background-color: #fff;
-  width: fit-content;
-  max-width: 95%;
+  background-color: var(--nav-achtergrond);
+  width: 100%;
+  max-width: 960px; /* <- pas dit aan naar je content-container */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
@@ -117,7 +143,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -128,53 +154,43 @@ header {
   flex: 1;
   text-align: center;
 }
-
 .main-navigation a {
   position: relative;
   display: inline-block;
-  text-decoration: none;
   padding: 0.5em 1em;
   font-weight: 700;
-  font-size: 2.2rem;
-  color: #5b4032;
-  font-family: 'Marcellus', serif;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-  z-index: 2;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-family: var(--font-titel);
+  color: var(--nav-tekst);
+  transition: all 0.3s ease;
 }
-
-
 .main-navigation a:hover {
-  color: var(--oranje);
+  color: var(--nav-hover);
 }
-
-.main-navigation a::before,
+/* ========== HOVER ENKEL ONDERLIJN ========== */
 .main-navigation a::after {
   content: '';
   position: absolute;
-  width: 100%;
   height: 2px;
-  background-color: var(--bronskleur);
+  width: 100%;
+  background-color: var(--nav-hover);
   left: 0;
+  bottom: -6px;
   transform: scaleX(0);
+  transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-.main-navigation a::before {
-  top: 0;
-  transform-origin: left;
-}
-
-.main-navigation a::after {
-  bottom: 0;
-  transform-origin: right;
+.main-navigation a:hover::after {
+  transform: scaleX(1);
 }
 
 .main-navigation a:hover::before,
 .main-navigation a:hover::after {
   transform: scaleX(1);
 }
-/* ========== ACTIEVE TAB: 2 DIKKE LIJNEN ONDER ELKAAR ========== */
+/* ========== ACTIEVE TAB: 2 ONDERLIJNEN ========== */
 .main-navigation a.active-tab::before,
 .main-navigation a.active-tab::after {
   content: '';
@@ -186,102 +202,15 @@ header {
 }
 
 .main-navigation a.active-tab::before {
-  background-color: var(--groenblauw);
+  background-color: var(--nav-border);  /* donkergroenblauw */
   bottom: -4px;
 }
 
 .main-navigation a.active-tab::after {
-  background-color: var(--bronskleur);
+  background-color: var(--nav-hover);  /* goud */
   bottom: -10px;
 }
-
-/* ========== 8-LIJNEN BORDER EFFECT (HOVER & ACTIEF) ========== */
-.border-line {
-  position: absolute;
-  background-color: var(--groenblauw);
-  opacity: 0;
-  transform: scale(0.8);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.line-top, .line-bottom,
-.line-left, .line-right,
-.line-top-extra, .line-bottom-extra,
-.line-left-extra, .line-right-extra {
-  position: absolute;
-}
-
-.line-top, .line-bottom {
-  height: 3px;
-  width: 100%;
-  left: 0;
-}
-
-.line-top {
-  top: -8px;
-  background-color: var(--groenblauw);
-}
-
-.line-bottom {
-  bottom: -6px;
-  background-color: var(--bronskleur);
-}
-
-.line-left, .line-right {
-  width: 3px;
-  height: 100%;
-  top: 0;
-}
-
-.line-left {
-  left: -8px;
-  background-color: var(--bronskleur);
-}
-
-.line-right {
-  right: -8px;
-  background-color: var(--bronskleur);
-}
-
-.line-top-extra, .line-bottom-extra {
-  height: 3px;
-  width: calc(100% + 12px);
-  left: -6px;
-}
-
-.line-top-extra {
-  top: -12px;
-  background-color: var(--groenblauw);
-}
-
-.line-bottom-extra {
-  bottom: -12px;
-  background-color: var(--bronskleur);
-}
-
-.line-left-extra, .line-right-extra {
-  width: 3px;
-  height: calc(100% + 12px);
-  top: -6px;
-}
-
-.line-left-extra {
-  left: -12px;
-  background-color: var(--groenblauw);
-}
-
-.line-right-extra {
-  right: -12px;
-  background-color: var(--bronskleur);
-}
-
-.main-navigation a:hover .border-line,
-.main-navigation a.active-tab .border-line {
-  opacity: 1;
-  transform: scale(1);
-}
-/* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS */
-
+/* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS - MAIN */
 .content-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -296,63 +225,65 @@ header {
 }
 
 .content-box {
-  background-color: #fdfae9;
+  background-color: var(--boxkleur);
   padding: 2rem;
   border-radius: 1rem;
+  border: 1px solid var(--borderkleur);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.full-width {
-  grid-column: 1 / -1;
+/* SPIRAL ACHTERGROND */
+.spiral-bg {
+  background-image: url('images/spiral.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* SHADOWER */
+.shadower {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.content-box:hover {
-  transform: translateY(-5px);
+/* BORDER – voor linkse + rechtse rand */
+.border {
+  border-left: 3px solid var(--borderkleur);
+  border-right: 3px solid var(--borderkleur);
 }
-
+/* TITELS & LINKS */
+/* H2 in content-box */
 .content-box h2 {
-  color: var(--donkerblauw);
-  font-family: 'Playfair Display', serif;
+  color: var(--title-home);
+  font-family: var(--font-title);
   font-size: 1.6rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
-/* Titel-link styling zonder oranje kleur of streep */
+
+/* Titel die ook een link is */
 .title-link {
   text-decoration: none;
-  color: var(--donkerblauw);
-  font-family: 'Playfair Display', serif;
+  color: var(--title-home);
+  font-family: var(--font-title);
   font-size: 1.6rem;
 }
 
 .title-link:hover {
-  color: var(--donkerblauw); /* geen hover-effect nodig */
+  color: var(--accent-sterk);
+  text-decoration: underline;
 }
-
-
-/* Titel-links binnen content-box */
-.content-box h2 a.title-link {
-  color: inherit;
-  text-decoration: none;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-}
-
-.content-box h2 a.title-link:hover {
-  color: var(--oranje-hover); /* optioneel: kleine verandering bij hover */
-}
-
+/* Paragraaf onder titel */
 .content-box p {
   margin-bottom: 1rem;
-  color: #4a6a6d;
+  color: var(--tekstkleur-home);
+  text-align: center;
 }
 
+/* Links */
 .content-box a {
-  color: var(--oranje);
+  color: var(--linkkleur);
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
@@ -361,30 +292,86 @@ header {
   margin-top: auto;
   position: relative;
 }
-.content-box .box-title a {
-  text-decoration: none;
-  color: inherit;
-}
+* Hover effect voor alle links */
 .content-box a:hover {
   color: var(--oranje-hover);
 }
+
+/* Pijltje na alle links behalve titel-link */
 .content-box a:not(.title-link)::after {
   content: " →";
   display: inline-block;
   transition: transform 0.2s ease;
 }
 
-
 .content-box a:hover::after {
   transform: translateX(4px);
 }
-.content-box spiral-bg {
-  background-image: url('images/spiral-pattern.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
+/* Volledige breedte blok */
+.full-width {
+  grid-column: 1 / -1;
 }
 
+/* Highlight box (bv. Meer over deze site) */
+.highlight-box {
+  background-color: var(--highlightkleur);
+  border-left: 6px solid var(--borderkleur);
+  padding: 3rem 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(to right, #fffbe4 0%, #f0d5a5 50%, #c49c6b 100%);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--footer-info, #3a2f2f);
+  margin-top: 3rem;
+  line-height: 1.6;
+  font-family: var(--font-body, 'Lora', serif);
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.footer-top p {
+  margin: 0 0 0.8rem;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+  color: var(--footer-info);
+  margin-bottom: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-socials img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.85;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(395%) hue-rotate(145deg) brightness(95%) contrast(85%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2) drop-shadow(0 0 3px rgba(255, 180, 90, 0.5));
+}
 /* STAP 4 – ABOUT PAGINA OPMAAK */
 
 .about-page .about-content {
@@ -505,73 +492,6 @@ header {
   box-shadow: inset 0 0 0 1px #dfcba7, 0 8px 16px rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.3s ease;
 }
-/* STAP 5 – FOOTER EN HIGHLIGHT BOX */
-
-footer {
-  background: linear-gradient(145deg, #fffdf6, #e7d4bd);
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #4a3c2c;
-  margin-top: 3rem;
-  line-height: 1.6;
-  font-family: 'Lora', serif;
-  position: sticky;
-  bottom: 0;
-  z-index: 10;
-}
-
-.footer-top p {
-  margin: 0 0 0.8rem;
-  font-style: italic;
-  font-size: 0.95rem;
-}
-
-.footer-divider {
-  border: none;
-  border-top: 1px solid var(--bronslijn);
-  margin: 1rem auto;
-  max-width: 400px;
-  opacity: 0.5;
-}
-
-.footer-info {
-  display: flex;
-  justify-content: center;
-  gap: 0.7rem;
-  font-size: 0.9rem;
-  color: #4a6a6d;
-  margin-bottom: 1rem;
-}
-
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 0.2rem;
-}
-
-.footer-socials img {
-  width: 20px;
-  height: 20px;
-  opacity: 0.85;
-  filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(395%) hue-rotate(145deg) brightness(95%) contrast(85%);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.footer-socials img:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2) drop-shadow(0 0 3px rgba(255, 180, 90, 0.5));
-}
-
-.highlight-box {
-  background-color: #fef6dc;
-  border-left: 6px solid #cd7f32;
-  padding: 3rem 2rem;
-  margin-top: 1rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  border-radius: 1.5rem;
-}
 
 .denkstukken-logo-container {
   display: flex;
@@ -647,19 +567,31 @@ footer {
   color: #2f4f4f;
 }
 
+/* Lees meer link */
 .leesmeer {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #d2691e;
-  text-decoration: none;
+  color: var(--link-home);
   font-weight: bold;
-  transition: color 0.2s ease;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  position: relative;
 }
 
 .leesmeer:hover {
-  color: #a0522d;
+  color: var(--leesmeer-hover);
 }
 
+.leesmeer::after {
+  content: " →";
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.leesmeer:hover::after {
+  transform: translateX(4px);
+}
   .about-visualblok {
     flex-direction: column;
     align-items: center;
@@ -880,12 +812,14 @@ footer {
     color: var(--donkergroenblauw);
   }
 /* ========== KUS ========== */
-.kus 
- {
-  text-align: right;
-  font-size: 1.5rem;
-  background: url('images/nancy.png');
-  margin-top: 2rem;
+.kus {
+  background-image: url('images/nancy.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px; /* pas dit aan naar de hoogte die mooi uitkomt */
+  width: 100%;
+  margin: 2rem auto 0 auto;
 }
 /* === FILTER BUTTONS (HASHTAGS) === */
 .filter-container {
