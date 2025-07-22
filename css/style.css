@@ -83,25 +83,41 @@ a:hover {
 .slogan-divider {
   margin-bottom: 0.5rem; /* of minder */
 }
+/* ========== ROOT KLEUREN ========== */
+:root {
+  --groenblauw: #284C4E;
+  --bronskleur: #cd7f32;
+  --oranje: #b35f2f;
+}
 
-/* === MAIN NAVIGATIE === */
+/* ========== HEADER ALIGNERING ========== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* ========== MAIN NAVIGATIE ========== */
 .main-navigation {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 1rem auto 0 auto;
-  gap: 40px;
-  background-color: transparent;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 2rem 6rem;
+  margin: 2rem auto 0 auto;
   font-family: 'Marcellus', serif;
-  border: none;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  background-color: transparent;
+  border: 2px solid var(--groenblauw);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  max-width: 1400px;
 }
 
 .main-navigation ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-evenly;
   align-items: center;
   gap: 3rem;
@@ -119,50 +135,21 @@ a:hover {
 .main-navigation a {
   position: relative;
   display: inline-block;
-  font-family: 'Marcellus', serif;     /* Correct font */
-  font-weight: 700;                    /* Normale dikte, Marcellus is elegant genoeg zo */
+  font-family: 'Marcellus', serif;
+  font-weight: 700;
   font-size: 2rem;
-  color: #5b4032;                      /* Donkerbruin zoals afgesproken */
+  color: #5b4032; /* donkerbruin */
   text-decoration: none;
   padding: 1rem 2rem;
+  white-space: nowrap;
   transition: color 0.3s ease;
 }
 
-/* Hover en active-tab kleur */
-.main-navigation a:hover,
-.main-navigation a.active-tab {
-  color: var(--oranje); /* Of gebruik: #b35f2f voor zachtere toon */
+/* ========== HOVER EFFECT ========== */
+.main-navigation a:hover {
+  color: var(--oranje);
 }
 
-/* Extra hover-animatie: lijnen boven & onder */
-/* ========== MODERNE NAVIGATIE MET 8-LIJNEN ANIMATIE ========== */
-.main-navigation {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  margin-top: 2rem;
-  padding-bottom: 1rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  position: relative;
-  z-index: 10;
-}
-
-.main-navigation a {
-  position: relative;
-  padding: 0.75rem 1.2rem;
-  text-decoration: none;
-  color: var(--diepgroenblauw);
-  transition: color 0.3s ease;
-}
-
-.main-navigation a:hover,
-.main-navigation a.active-tab {
-  color: var(--bronskleur);
-}
-
-/* Hover underline animatie (boven & onder) */
 .main-navigation a::before,
 .main-navigation a::after {
   content: '';
@@ -174,20 +161,43 @@ a:hover {
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
+
 .main-navigation a::before {
   top: 0;
   transform-origin: left;
 }
+
 .main-navigation a::after {
   bottom: 0;
   transform-origin: right;
 }
+
 .main-navigation a:hover::before,
 .main-navigation a:hover::after {
   transform: scaleX(1);
 }
 
-/* Acht lijnen */
+/* ========== ACTIEVE TAB: 2 DIKKE LIJNEN ONDER ELKAAR ========== */
+.main-navigation a.active-tab::before,
+.main-navigation a.active-tab::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0;
+}
+
+.main-navigation a.active-tab::before {
+  background-color: var(--groenblauw);
+  bottom: 10px;
+}
+
+.main-navigation a.active-tab::after {
+  background-color: var(--bronskleur);
+  bottom: 2px;
+}
+
+/* ========== 8-LIJNEN BORDER EFFECT (HOVER & ACTIEF) ========== */
 .border-line {
   position: absolute;
   background-color: var(--groenblauw);
@@ -196,9 +206,14 @@ a:hover {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Basislijnen */
-.line-top,
-.line-bottom {
+.line-top, .line-bottom,
+.line-left, .line-right,
+.line-top-extra, .line-bottom-extra,
+.line-left-extra, .line-right-extra {
+  position: absolute;
+}
+
+.line-top, .line-bottom {
   height: 3px;
   width: 100%;
   left: 0;
@@ -212,9 +227,7 @@ a:hover {
   background-color: var(--bronskleur);
 }
 
-/* Verticale lijnen */
-.line-left,
-.line-right {
+.line-left, .line-right {
   width: 3px;
   height: 100%;
   top: 0;
@@ -228,9 +241,7 @@ a:hover {
   background-color: var(--bronskleur);
 }
 
-/* Extra buitenlijnen */
-.line-top-extra,
-.line-bottom-extra {
+.line-top-extra, .line-bottom-extra {
   height: 3px;
   width: calc(100% + 12px);
   left: -6px;
@@ -243,8 +254,8 @@ a:hover {
   bottom: -12px;
   background-color: var(--bronskleur);
 }
-.line-left-extra,
-.line-right-extra {
+
+.line-left-extra, .line-right-extra {
   width: 3px;
   height: calc(100% + 12px);
   top: -6px;
@@ -258,20 +269,11 @@ a:hover {
   background-color: var(--bronskleur);
 }
 
-/* Actieve tab of hover = lijnen zichtbaar */
 .main-navigation a:hover .border-line,
 .main-navigation a.active-tab .border-line {
   opacity: 1;
   transform: scale(1);
 }
-/* Header alignering */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
 /* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS */
 
 .content-container {
@@ -908,7 +910,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('/images/hero.png');
+  background: url('images/hero.png');
   background-size: cover;
   background-position: center;
   display: flex;
