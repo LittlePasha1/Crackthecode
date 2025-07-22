@@ -16,7 +16,10 @@
   --diepgroenblauw: #1f5454;
   --bronsbruin: #8b4f27;
 }
-/* ========== DENKSTUKKEN-PAGE ROOT ========== */
+/* ========== UNIVERSELE BODY STIJL ========= */
+body,
+body.home-page,
+body.about-page,
 body.denkstukken-page {
   --denk-bg: #fcfcfc;
   --titlebox-bg: #284c4e;
@@ -38,34 +41,14 @@ body.denkstukken-page {
   --font-body: 'Lora', serif;
   --font-kus: 'Marcellus SC', serif;
 
-    background-color: var(--denk-bg);
-  padding: 2rem 3rem;
+  background-color: var(--denk-bg);
+  color: var(--body-text);
   font-family: var(--font-body);
   font-size: 1.2rem;
   line-height: 1.8;
-  color: var(--body-text);
-}
-/* ========== BODY ========= */
-body {
-  margin: 0;
   padding: 2rem 3rem;
-  font-family: 'Lora', serif;
-  background-color: #FAFAFA;
-  color: #1a1a1a;
-  line-height: 1.7;
-  font-size: 1.15rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-/* ========== HOMEPAGE BODY-STIJL ========= */
-body.home-page {
-  background-color: #FFFBE4; /* parelmoer */
-  padding: 2rem 3rem;
-  font-family: 'Lora', serif;
-  color: #1a1a1a;
-  line-height: 1.7;
-  font-size: 1.15rem;
-}
+
 /* ========== LINKS ========= */
 a {
   color: #f2793c;
@@ -107,24 +90,26 @@ a:hover {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin: 2rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   gap: 40px;
   background-color: transparent;
   font-family: 'Marcellus', serif;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
 }
 
 .main-navigation ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 3rem;
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .main-navigation li {
@@ -136,10 +121,10 @@ a:hover {
   display: inline-block;
   font-family: 'Marcellus', serif;     /* Correct font */
   font-weight: 700;                    /* Normale dikte, Marcellus is elegant genoeg zo */
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #5b4032;                      /* Donkerbruin zoals afgesproken */
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   transition: color 0.3s ease;
 }
 
@@ -150,13 +135,41 @@ a:hover {
 }
 
 /* Extra hover-animatie: lijnen boven & onder */
+/* ========== MODERNE NAVIGATIE MET 8-LIJNEN ANIMATIE ========== */
+.main-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.main-navigation a {
+  position: relative;
+  padding: 0.75rem 1.2rem;
+  text-decoration: none;
+  color: var(--diepgroenblauw);
+  transition: color 0.3s ease;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active-tab {
+  color: var(--bronskleur);
+}
+
+/* Hover underline animatie (boven & onder) */
 .main-navigation a::before,
 .main-navigation a::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #5b4032; /* Zelfde kleur als tekst */
+  background-color: var(--bronskleur);
   left: 0;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -174,7 +187,7 @@ a:hover {
   transform: scaleX(1);
 }
 
-/* Acht lijnen animatie */
+/* Acht lijnen */
 .border-line {
   position: absolute;
   background-color: var(--groenblauw);
@@ -215,7 +228,7 @@ a:hover {
   background-color: var(--bronskleur);
 }
 
-/* Extra lijnen buiten de box */
+/* Extra buitenlijnen */
 .line-top-extra,
 .line-bottom-extra {
   height: 3px;
@@ -230,7 +243,6 @@ a:hover {
   bottom: -12px;
   background-color: var(--bronskleur);
 }
-
 .line-left-extra,
 .line-right-extra {
   width: 3px;
@@ -246,13 +258,12 @@ a:hover {
   background-color: var(--bronskleur);
 }
 
-/* Lijnen tonen bij hover */
+/* Actieve tab of hover = lijnen zichtbaar */
 .main-navigation a:hover .border-line,
 .main-navigation a.active-tab .border-line {
-  opacity: 1; 
+  opacity: 1;
   transform: scale(1);
 }
-
 /* Header alignering */
 header {
   display: flex;
