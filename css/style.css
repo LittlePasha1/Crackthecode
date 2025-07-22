@@ -1,5 +1,4 @@
 
-
 /* ========== RESET ========= */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -17,7 +16,35 @@
   --diepgroenblauw: #1f5454;
   --bronsbruin: #8b4f27;
 }
+/* ========== DENKSTUKKEN-PAGE ROOT ========== */
+body.denkstukken-page {
+  --denk-bg: #fcfcfc;
+  --titlebox-bg: #284c4e;
+  --title-color: #f4eadb;
+  --meta-color: #f4eadb;
+  --hashtag-bg: #edb8bc;
+  --hashtag-text: #3a2f2f;
+  --body-text: #3a2f2f;
+  --accent-sterk: #934c17;
+  --accent-zacht: #c0b283;
+  --citaat: #d1bba4;
+  --afbeelding-bg: #e1c070;
+  --reageer-bg: #f4eadb;
+  --reageer-tekst: #f4eadb;
 
+  --font-title: 'Fraunces', serif;
+  --font-meta: 'Lora', serif;
+  --font-hashtag: 'Marcellus SC', serif;
+  --font-body: 'Lora', serif;
+  --font-kus: 'Marcellus SC', serif;
+
+    background-color: var(--denk-bg);
+  padding: 2rem 3rem;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--body-text);
+}
 /* ========== BODY ========= */
 body {
   margin: 0;
@@ -30,7 +57,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* ========== HOMEPAGE BODY-STIJL ========= */
 body.home-page {
   background-color: #FFFBE4; /* parelmoer */
   padding: 2rem 3rem;
@@ -39,14 +66,6 @@ body.home-page {
   line-height: 1.7;
   font-size: 1.15rem;
 }
-
-body.denkstukken-page {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #1a1a1a;
-}
-
 /* ========== LINKS ========= */
 a {
   color: #f2793c;
@@ -75,7 +94,7 @@ a:hover {
   height: auto;
   display: block;
   margin: 0 auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2rem;
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
 }
 .slogan-divider {
@@ -89,19 +108,20 @@ a:hover {
   justify-content: center;
   padding: 0;
   margin: 2rem auto 0 auto;
-  margin-top: 0;
+  gap: 40px;
   background-color: transparent;
+  font-family: 'Marcellus', serif;
   border: none;
   box-shadow: none;
-} /* ← haakje toegevoegd hier! */
-
+}
 
 .main-navigation ul {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3rem;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -114,21 +134,47 @@ a:hover {
 .main-navigation a {
   position: relative;
   display: inline-block;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--oranje);
+  font-family: 'Marcellus', serif;     /* Correct font */
+  font-weight: 700;                    /* Normale dikte, Marcellus is elegant genoeg zo */
+  font-size: 1.5rem;
+  color: #5b4032;                      /* Donkerbruin zoals afgesproken */
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   transition: color 0.3s ease;
 }
 
+/* Hover en active-tab kleur */
 .main-navigation a:hover,
 .main-navigation a.active-tab {
-  color: var(--groenblauw);
+  color: var(--oranje); /* Of gebruik: #b35f2f voor zachtere toon */
 }
 
-/* 8 lijnen */
+/* Extra hover-animatie: lijnen boven & onder */
+.main-navigation a::before,
+.main-navigation a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #5b4032; /* Zelfde kleur als tekst */
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.main-navigation a::before {
+  top: 0;
+  transform-origin: left;
+}
+.main-navigation a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+.main-navigation a:hover::before,
+.main-navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Acht lijnen animatie */
 .border-line {
   position: absolute;
   background-color: var(--groenblauw);
@@ -137,74 +183,83 @@ a:hover {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Basislijnen */
 .line-top,
 .line-bottom {
-  height: 2px;
+  height: 3px;
   width: 100%;
   left: 0;
 }
 .line-top {
-  top: -6px;
+  top: -8px;
+  background-color: var(--groenblauw);
 }
 .line-bottom {
   bottom: -6px;
   background-color: var(--bronskleur);
 }
 
+/* Verticale lijnen */
 .line-left,
 .line-right {
-  width: 2px;
+  width: 3px;
   height: 100%;
   top: 0;
 }
 .line-left {
-  left: -6px;
+  left: -8px;
   background-color: var(--bronskleur);
 }
 .line-right {
-  right: -6px;
+  right: -8px;
   background-color: var(--bronskleur);
 }
 
+/* Extra lijnen buiten de box */
 .line-top-extra,
 .line-bottom-extra {
-  height: 2px;
+  height: 3px;
   width: calc(100% + 12px);
   left: -6px;
 }
 .line-top-extra {
-  top: -10px;
+  top: -12px;
+  background-color: var(--groenblauw);
 }
 .line-bottom-extra {
-  bottom: -10px;
+  bottom: -12px;
   background-color: var(--bronskleur);
 }
 
 .line-left-extra,
 .line-right-extra {
-  width: 2px;
+  width: 3px;
   height: calc(100% + 12px);
   top: -6px;
 }
 .line-left-extra {
-  left: -10px;
+  left: -12px;
+  background-color: var(--groenblauw);
 }
 .line-right-extra {
-  right: -10px;
+  right: -12px;
+  background-color: var(--bronskleur);
 }
 
+/* Lijnen tonen bij hover */
 .main-navigation a:hover .border-line,
 .main-navigation a.active-tab .border-line {
   opacity: 1; 
   transform: scale(1);
 }
+
+/* Header alignering */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
 }
-
 
 /* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS */
 
@@ -246,6 +301,31 @@ header {
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
+/* Titel-link styling zonder oranje kleur of streep */
+.title-link {
+  text-decoration: none;
+  color: var(--donkerblauw);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+
+.title-link:hover {
+  color: var(--donkerblauw); /* geen hover-effect nodig */
+}
+
+
+/* Titel-links binnen content-box */
+.content-box h2 a.title-link {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.content-box h2 a.title-link:hover {
+  color: var(--oranje-hover); /* optioneel: kleine verandering bij hover */
+}
 
 .content-box p {
   margin-bottom: 1rem;
@@ -269,15 +349,21 @@ header {
 .content-box a:hover {
   color: var(--oranje-hover);
 }
-
-.content-box a::after {
+.content-box a:not(.title-link)::after {
   content: " →";
   display: inline-block;
   transition: transform 0.2s ease;
 }
 
+
 .content-box a:hover::after {
   transform: translateX(4px);
+}
+.content-box spiral-bg {
+  background-image: url('images/spiral-pattern.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* STAP 4 – ABOUT PAGINA OPMAAK */
@@ -555,11 +641,6 @@ footer {
   color: #a0522d;
 }
 
-  .denkstukken-overzicht {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
   .about-visualblok {
     flex-direction: column;
     align-items: center;
@@ -568,82 +649,227 @@ footer {
   .vintage-box {
     max-width: 100%;
   }
-
-/* ========== DENKBOX ========== */
-
-.denktextbalk{
-background-color: var(--parelmoer);
-  padding: 2rem;
+/* ========== DENKBOX CONTAINER ========== */
+.denkbox-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1rem 1rem; 
+    background-color: var(--denk-bg);
+  border: 2px solid var(--titlebox-bg);
   border-radius: 1rem;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 4rem;
-  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* ========== TITELBOX ========== */
+.title-box {
+  width: 100%;
+  background-color: var(--titlebox-bg);
+  border-radius: 0;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin: 0;
+  border-bottom: none;
 }
 
 .denktext-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--title-color);
+  font-family: var(--font-title);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.denktext-meta {
+  font-family: var(--font-meta);
+  font-size: 1rem;
+  color: var(--meta-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+.hashtags {
+  font-size: 0.95rem;
+  color: var(--hashtag-text);
   margin-bottom: 1rem;
-color: var(--donkerblauw);
   text-align: center;
+  font-family: var(--font-hashtag);
+  letter-spacing: 0.4px;
 }
 
-.denkstuk-meta {
-  font-size: 0.9rem;
-  color: var(--bronsbruin);
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 2rem;
+.hashtags span {
+  margin: 0 0.3rem;
+  background: var(--hashtag-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
 }
 
+.hashtag-balloon {
+  display: inline-block;
+  background-color: var(--oranje);
+  color: white;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 0.85rem;
+  font-family: var(--font-hashtag);
+}
+
+/* ========== DENKBOX-BODY (TEKST + AFBEELDING) ========== */
+.denkbox-box {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+/* ========== TEKST ========== */
 .denktext {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: var(--body-text);
   text-align: justify;
-  padding: 0 1rem;
+   margin: 0 auto;
+  padding: 0 1rem; /* meer ruimte rondom */
+  min-width: 300px;
+  max-width: 700px;          /* Niet te breed, voor makkelijk lezen */
 }
 
 .denktext ul {
-  list-style: disc inside;
+  list-style: none; /* Geen standaard bolletjes */
   margin: 1.5rem 0;
+  padding-left: 0; /* Geen extra inspringing */
 }
 
+.denktext ul li {
+  position: relative;
+  padding-left: 1.6rem; /* Ruimte voor custom bullet */
+  margin-bottom: 1rem; /* Meer ruimte tussen items */
+  line-height: 1.6;
+  font-size: 1.15rem;
+}
+
+.denktext ul li::before {
+  content: "■"; /* Custom bullet, kan je ook vervangen door emoji of symbool */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--donkerblauw);  /* Of een andere kleur die past */
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.denktext ul li strong {
+  color: var(--donkerblauw); /* Maak de koppen duidelijker */
+}
+
+/* AFBEELDING */
+.ingesloten-afbeelding {
+  float: right;
+  width: 240px;
+  margin: 0 0 1.5rem 2rem;
+  background-color: var(--afbeelding-bg);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  display: block;
+  opacity: 0.95;
+}
+
+/* ========== INGESLOTEN AFBEELDING RECHTS ========== */
+.afbeelding-onderaan {
+  width: 100%;
+  max-width: 300px;
+  margin: 2.5rem auto 0 auto;
+  background-color: var(--afbeelding-bg);
+  padding: 0.6rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  opacity: 0.96;
+}
+
+.afbeelding-onderaan img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.afbeelding-oderaan img:hover {
+  opacity: 1;
+}
+/* ========== LINK STIJL ========== */
 .link {
-  color: var(--oranje);
+  color: var(--accent-sterk);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .link:hover {
-  color: #ab5e00; /* iets donkerder oranje */
+  color: var(--accent-zacht);
   text-decoration: underline;
 }
 
-.hashtags {
-  font-size: 0.85rem;
-  color: var(--bronsbruin);
-  margin-bottom: 1rem;
+
+/* ========== REAGEERBOX ========== */
+.reageer-box {
+  width: 100%;
+  margin-top: 3rem;
+  background-color: var(--titlebox-bg);
+  padding: 1.5rem;
+  border-top: 1px solid var(--accentkleur); /* optioneel lijntje */
   text-align: center;
-  font-family: 'Lora', serif;
+  font-family: var(--font-body);
+    font-size: 1rem;
+  color: var(--reageer-tekst);
 }
 
-.hashtags span {
-  margin: 0 0.3rem;
-  background: rgba(205, 127, 50, 0.1); /* lichte bronstint */
-  padding: 0.2rem 0.5rem;
-  border-radius: 999px;
+.reageer-box p {
+  font-size: 1.15rem;
+  color: var(--reageer-tekst);
 }
 
+.reageer-box a {
+  color: var(--accent-sterk);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.reageer-box a:hover {
+  text-decoration: underline;
+}
+.afsluitzin {
+  text-align: center;
+  font-style: italic;
+    font-weight: bold;
+    margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+  .denktext blockquote {
+    margin: 2rem;
+    padding: 1rem 2rem;
+    background-color: #fffdf8;
+    border-left: 4px solid var(--oranje);
+    font-style: italic, bold;
+}
+  .highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--donkergroenblauw);
+  }
+/* ========== KUS ========== */
 .kus {
   text-align: right;
   font-size: 1.5rem;
   margin-top: 2rem;
   color: var(--bronsbruin);
+  font-family: var(--font-kus);
 }
+/* ========== FRONTPAGE LAY-OUT ========== */
+
 .frontpage {
   margin: 0;
   padding: 0;
@@ -748,38 +974,115 @@ color: var(--donkerblauw);
   transform: rotate(360deg);
   transition: all 1s ease-in-out;
   filter: brightness(1.4);
+
 }
+/* === FILTER BUTTONS (HASHTAGS) === */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 2rem 0 3rem;
+}
+
+.filter-btn {
+  background-color: #f5f1e6;
+  border: 1px solid var(--bronskleur);
+  color: var(--bronskleur);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--bronskleur);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Titel groter */
+.groot-titel {
+  font-size: 3.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.rem;
+}
+
+/* Makkelijker leesbaar lettertype voor columns */
+.denktext {
+  font-family: 'Spectral', serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
+
   .impactquote {
     font-size: 1.2rem;
   }
 
   .enter-button {
-    width: 90px;header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-}
+    width: 90px;
+  }
 
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
     height: 90px;
   }
 
-  .denktextbalk {
+  .denktext-body {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 0 1rem;
   }
 
-  .main-navigation ul 
- .main-navigation ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  gap: 2.5rem;
-  flex-wrap: nowrap;
+  .denktext {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .denktext-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .denktext-meta {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .denktext-tags {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hashtag-balloon {
+    background-color: #eaa166;
+    color: white;
+    text-decoration: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    margin: 0 0.3rem;
+    font-size: 0.85rem;
+    display: inline-block;
+  }
+  .main-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    gap: 2.5rem;
+    flex-wrap: nowrap;
   }
 
   .main-navigation a {
@@ -789,36 +1092,22 @@ color: var(--donkerblauw);
 
   .main-navigation li {
     display: block;
+    
     margin: 0.25rem 0;
   }
-
-
-  .denktext-title {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 1rem 0;
-  }
-
-  .denkstuk-meta {
-    text-align: center;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-  }
-
   .denktext {
-    padding: 1rem;
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.05rem;
   }
-
-  .denktext blockquote {
-    font-size: 1.1rem;
-    margin: 1.5rem 0;
+  .denkbox-box {
+    flex-direction: column;
+    align-items: center;
+     margin-left: auto;
+  margin-right: auto
   }
-
-@keyframes fireGlow {
-  0%   { text-shadow: 0 0 2px #f5c100, 0 0 6px #f5c100, 0 0 12px #ff8c00; }
-  50%  { text-shadow: 0 0 4px #f5c100, 0 0 8px #ffa500, 0 0 20px #ff4500; }
-  100% { text-shadow: 0 0 2px #f5c100, 0 0 6px #f5c100, 0 0 12px #ff8c00; }
+  
 }
-}
+  @keyframes fireGlow {
+    0%   { text-shadow: 0 0 2px #f5c100, 0 0 6px #f5c100, 0 0 12px #ff8c00; }
+    50%  { text-shadow: 0 0 4px #f5c100, 0 0 8px #ffa500, 0 0 20px #ff4500; }
+    100% { text-shadow: 0 0 2px #f5c100, 0 0 6px #f5c100, 0 0 12px #ff8c00; }
+  }
