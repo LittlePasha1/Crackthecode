@@ -97,55 +97,53 @@ header {
   align-items: center;
   margin-bottom: 2rem;
 }
-
 /* ========== MAIN NAVIGATIE ========== */
 .main-navigation {
-  width: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 5rem;
-  padding: 2rem 6rem;
-  margin: 2rem auto 0 auto;
-  font-family: 'Marcellus', serif;
-  background-color: transparent;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  margin: 3rem auto;
+  position: relative;
   border: 2px solid var(--groenblauw);
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  max-width: 1400px;
+  border-radius: 12px;
+  background-color: #fff;
+  width: fit-content;
+  max-width: 95%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
 .main-navigation ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   padding: 0;
   margin: 0;
   list-style: none;
-  width: 100%;
-  max-width: 1000px;
 }
 
 .main-navigation li {
   position: relative;
+  flex: 1;
+  text-align: center;
 }
 
 .main-navigation a {
   position: relative;
   display: inline-block;
-  font-family: 'Marcellus', serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #5b4032; /* donkerbruin */
   text-decoration: none;
-  padding: 1rem 2rem;
+  padding: 0.5em 1em;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #5b4032;
+  font-family: 'Marcellus', serif;
   white-space: nowrap;
   transition: color 0.3s ease;
+  z-index: 2;
 }
 
-/* ========== HOVER EFFECT ========== */
+
 .main-navigation a:hover {
   color: var(--oranje);
 }
@@ -176,25 +174,25 @@ header {
 .main-navigation a:hover::after {
   transform: scaleX(1);
 }
-
 /* ========== ACTIEVE TAB: 2 DIKKE LIJNEN ONDER ELKAAR ========== */
 .main-navigation a.active-tab::before,
 .main-navigation a.active-tab::after {
   content: '';
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   left: 0;
+  border-radius: 2px;
 }
 
 .main-navigation a.active-tab::before {
   background-color: var(--groenblauw);
-  bottom: 10px;
+  bottom: -4px;
 }
 
 .main-navigation a.active-tab::after {
   background-color: var(--bronskleur);
-  bottom: 2px;
+  bottom: -10px;
 }
 
 /* ========== 8-LIJNEN BORDER EFFECT (HOVER & ACTIEF) ========== */
@@ -218,10 +216,12 @@ header {
   width: 100%;
   left: 0;
 }
+
 .line-top {
   top: -8px;
   background-color: var(--groenblauw);
 }
+
 .line-bottom {
   bottom: -6px;
   background-color: var(--bronskleur);
@@ -232,10 +232,12 @@ header {
   height: 100%;
   top: 0;
 }
+
 .line-left {
   left: -8px;
   background-color: var(--bronskleur);
 }
+
 .line-right {
   right: -8px;
   background-color: var(--bronskleur);
@@ -246,10 +248,12 @@ header {
   width: calc(100% + 12px);
   left: -6px;
 }
+
 .line-top-extra {
   top: -12px;
   background-color: var(--groenblauw);
 }
+
 .line-bottom-extra {
   bottom: -12px;
   background-color: var(--bronskleur);
@@ -260,10 +264,12 @@ header {
   height: calc(100% + 12px);
   top: -6px;
 }
+
 .line-left-extra {
   left: -12px;
   background-color: var(--groenblauw);
 }
+
 .line-right-extra {
   right: -12px;
   background-color: var(--bronskleur);
@@ -874,12 +880,12 @@ footer {
     color: var(--donkergroenblauw);
   }
 /* ========== KUS ========== */
-.kus {
+.kus 
+ {
   text-align: right;
   font-size: 1.5rem;
+  background: url('images/nancy.png');
   margin-top: 2rem;
-  color: var(--bronsbruin);
-  font-family: var(--font-kus);
 }
 /* === FILTER BUTTONS (HASHTAGS) === */
 .filter-container {
@@ -1145,89 +1151,4 @@ body {
   font-family: 'Spectral', serif;
   font-size: 1.1rem;
   line-height: 1.75;
-}
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-
-
-  .enter-button {
-    width: 90px;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-    height: 90px;
-  }
-
-  .denktext-body {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
-    padding: 0 1rem;
-  }
-
-  .denktext {
-    padding: 1rem;
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .denktext-title {
-    font-size: 2.2rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .denktext-meta {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .denktext-tags {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .hashtag-balloon {
-    background-color: #eaa166;
-    color: white;
-    text-decoration: none;
-    padding: 0.3rem 0.7rem;
-    border-radius: 20px;
-    margin: 0 0.3rem;
-    font-size: 0.85rem;
-    display: inline-block;
-  }
-  .main-navigation ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    gap: 2.5rem;
-    flex-wrap: nowrap;
-  }
-
-  .main-navigation a {
-    font-size: 1rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .main-navigation li {
-    display: block;
-    
-    margin: 0.25rem 0;
-  }
-  .denktext {
-    font-size: 1.05rem;
-  }
-  .denkbox-box {
-    flex-direction: column;
-    align-items: center;
-     margin-left: auto;
-  margin-right: auto
-  }
 }
