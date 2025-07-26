@@ -25,13 +25,14 @@ body.home-page {
   --shadower: #b08d57;
   --highlight-blok: #1f5454;
   --border-blok: #b08d57;
-  --title-home: #1f5454;
+  --title-home: #095757;
   --tekstkleur-home: #31444b;
   --link-home: #b08d57;
   --leesmeer-hover: #9c744c;
   --footer-top: #fbf7ed;
   --footer-info: #3a2f2f;
   --footer-icon: #3a2f2f;
+  --home-container: #fbf7ed;
 
   --font-title: 'Playfair Display', serif;
   --font-body: 'Lora', serif;
@@ -210,6 +211,31 @@ header {
   background-color: var(--nav-hover);  /* goud */
   bottom: -10px;
 }
+
+.welkom-intro {
+  background-color: var(--home-container); /* of kies bv. #fbf7ed */
+  color: var(--tekstkleur-home);
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-top: 2px solid #cd7f32;
+  border-bottom: 2px solid #cd7f32;
+}
+
+.intro-link {
+  color: #cd7f32;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px dashed #cd7f32;
+}
+
+.intro-link:hover {
+  color: #00eeff;
+  border-bottom: 1px solid #15d7c7;
+}
+
 /* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS - MAIN */
 .content-container {
   max-width: 1200px;
@@ -237,7 +263,7 @@ header {
 }
 /* SPIRAL ACHTERGROND */
 .spiral-bg {
-  background-image: url('images/spiral.png');
+background: url('../images/spiral.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -374,82 +400,40 @@ footer {
 }
 /* STAP 4 – ABOUT PAGINA OPMAAK */
 
-.about-page .about-content {
-  background-color: #fffdf7;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  margin-bottom: 3rem;
-}
-.about-page .about-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: var(--donkerblauw);
-  margin-bottom: 1rem;
-}
-.about-page .about-content p {
-  color: #4a6a6d;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
+/* ABOUT-PAGINA OPMAAK (GEBASEERD OP NIEUWE HTML) */
 
 .about-page {
-  max-width: 860px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+  --accent-brons: #cd7f32;
+  --donkergroenblauw: #1f5454;
+  --achtergrondlicht: #fef6e0;
+  --tekstkleur: #2e2b20;
 }
-
-.about-intro {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  align-items: center;
+.welkom-box {
+  background-color: #fbf7ed; /* zachte crème */
+  border: 2px solid #1f5454; /* donkergroenblauwe rand */
   padding: 3rem 2rem;
-  background-color: var(--background-light); /* bv. #fef6dc */
-  border-left: 6px solid var(--accent-brons); /* bv. #cd7f32 */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  margin-bottom: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: 4rem auto; /* gecentreerd */
+  box-shadow: 0 8px 20px rgba(31, 84, 84, 0.2); /* warme gloed */
+  text-align: center;
+  font-family: 'Lora', serif;
 }
 
-.about-page .intro h1 {
-  font-size: 3rem;
-  color: var(--donkerblauw);
+.welkom-box-title {
   font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: #1f5454;
   margin-bottom: 1.5rem;
 }
 
-
-.about-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-logo {
-  max-width: 150px;
-  height: auto;
-}
-
-.about-zin-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.about-zin {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: var(--donkergroenblauw); /* bv. #1b3c36 */
-  margin: 0;
-}
-
-.about-text {
+.welkom-box-text {
+  color: #1f5454;
   font-family: 'Lora', serif;
-  font-style: italic;
-  color: var(--tekstkleur);
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
-.about-visualblok {
+.about-visualbox {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -458,39 +442,103 @@ footer {
   margin: 3rem 0;
 }
 
-.about-afbeelding2 img {
-  max-width: 100%;
-  height: auto;
+.about-visualbox img {
+  width: 100%;
+  max-width: 880px;
+  border-radius: 0.6rem;
   border: 1px solid #a67844;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.about-box {
+  background: linear-gradient(to bottom right, #ffffff, #f2f7f5);
+  padding: 3rem 2rem;
+  border: 1px solid #cdd5d2;
+  border-radius: 1.2rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  margin: 4rem auto;
+  max-width: 800px;
+  font-family: 'Lora', serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.vintage-box {
-  background-color: #fef6e0;
-  border: 2px solid #5e4727;
+.about-box::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, #d6f3ed 0%, transparent 70%);
+  opacity: 0.3;
+}
+
+.about-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--donkergroenblauw);
+  margin-bottom: 1rem;
+}
+
+.about-box p {
+  color: #395f5f;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.future-box {
+  background: linear-gradient(to bottom, #fef6e0, #f9ebc6);
+  border: 2px double #5e4727;
   border-radius: 1rem;
   padding: 2rem;
   font-family: 'Lora', serif;
   color: #2e2b20;
   max-width: 600px;
-  box-shadow: inset 0 0 0 1px #dfcba7, 0 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 0 1px #dfcba7,
+              0 4px 8px rgba(0, 0, 0, 0.08),
+              0 0 0 3px rgba(94, 71, 39, 0.08);
   line-height: 1.6;
+  background-image: url("images/spiral-pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  text-align: center;
 }
 
-.vintage-box h2,
-.vintage-box h3 {
+.future-box-title {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  text-align: center;
   color: #3a2e1f;
-  margin-top: 0;
-  font-family: 'Playfair Display', serif;
+}
+.future-box-title::before {
+  content: "❧";
+  font-size: 1.4rem;
+  position: absolute;
+  top: -1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #a67844;
+  opacity: 0.8;
 }
 
-.vintage-box p {
+.future-box-text {
   margin-bottom: 1.2rem;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #4c3a27;
 }
-.vintage-box:hover {
-  box-shadow: inset 0 0 0 1px #dfcba7, 0 8px 16px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.3s ease;
+
+.future-box:hover {
+  box-shadow: inset 0 0 0 1px #dfcba7,
+              0 8px 16px rgba(0, 0, 0, 0.15),
+              0 0 8px #e0c9a0;
+  transition: all 0.3s ease;
 }
 
 .denkstukken-logo-container {
@@ -734,7 +782,7 @@ footer {
 .afbeelding-onderaan {
   width: 100%;
   max-width: 350px;
-  margin: rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   background-color: var(--afbeelding-bg);
   padding: 0.6rem;
   border-radius: 1rem;
@@ -748,7 +796,8 @@ footer {
   border-radius: 8px;
   display: block;
 }
-.afbeelding-oderaan img:hover {
+
+.afbeelding-onderaan img:hover {
   opacity: 1;
 }
 /* ========== LINK STIJL ========== */
@@ -848,18 +897,20 @@ body {
 }
 .hero-image {
   position: relative;
+  z-index: 0;
   width: 100%;
   height: 100vh;
-  background: url('images/hero.png');
+  background: url('../images/hero.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .hero-overlay {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
@@ -885,7 +936,8 @@ body {
 }
 .impactquote {
   display: inline-block;
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: clamp(6rem, 8vw, 6rem);
+  font-family: 'Unna', serif;
   font-weight: bold;
   color: #FF5C00;
   text-align: center;
@@ -896,7 +948,7 @@ body {
   animation: fireGlow 4s ease-in-out infinite;
   margin: 2rem auto;
   line-height: 1.4;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   max-width: 100vw;
   z-index: 3;
   position: relative;
@@ -938,33 +990,45 @@ body {
 }
 .smoke {
   position: absolute;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 70%, rgba(255,255,255,0) 100%);
-  filter: blur(40px);
-  border-radius: 50%;
-  animation: floatSmoke 60s ease-in-out infinite;
-  opacity: 0.4;
-  z-index: 2;
+  height: 180px;
+  width: 100%;
+  background: radial-gradient(ellipse at center, 
+    rgba(255, 240, 220, 0.05) 0%, 
+    rgba(255, 200, 180, 0.03) 40%, 
+    rgba(255, 180, 120, 0.01) 80%, 
+    rgba(255, 160, 80, 0) 100%);
+  filter: blur(45px);
+  opacity: 0.5;
   pointer-events: none;
   mix-blend-mode: screen;
+  z-index: 2;
+  animation: quoteSmokeDrift 60s ease-in-out infinite;
 }
 
 .smoke1 {
-  top: 40%;
-  left: 30%;
+  top: -30px;
+  left: -10%;
+  width: 120%;
+  height: 200px;
+  animation: quoteSmokeDrift 60s ease-in-out infinite;
   animation-delay: 0s;
 }
 
 .smoke2 {
-  top: 50%;
-  right: 25%;
+  top: -40px;
+  left: -20%;
+  width: 140%;
+  height: 250px;
+  animation: quoteSmokeDrift 70s ease-in-out infinite;
   animation-delay: 10s;
 }
 
 .smoke3 {
-  bottom: 20%;
-  left: 45%;
+  top: -50px;
+  left: -30%;
+  width: 160%;
+  height: 230px;
+  animation: quoteSmokeDrift 80s ease-in-out infinite;
   animation-delay: 20s;
 }
 
@@ -995,6 +1059,20 @@ body {
   50% { box-shadow: 0 0 30px rgba(255, 92, 0, 0.6); }
   100% { box-shadow: 0 0 15px rgba(255, 92, 0, 0.3); }
 }
+@keyframes quoteSmokeDrift {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px) scale(1.05);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.3;
+  }
+}
 .enter-button img {
   display: inline-block;
   width: 280px;
@@ -1010,6 +1088,28 @@ body {
   filter: brightness(1.4) drop-shadow(0 0 30px rgba(255, 150, 0, 0.7));
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
 }
+
+.enter-smoke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, 
+    rgba(255, 200, 160, 0.05) 0%, 
+    rgba(255, 160, 100, 0.04) 40%, 
+    rgba(255, 130, 80, 0.02) 80%, 
+    rgba(255, 100, 60, 0) 100%);
+  filter: blur(60px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatSmoke 40s ease-in-out infinite;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
 @keyframes circleExpand {
   0% {
     transform: translate(-50%, -50%) scale(1);
