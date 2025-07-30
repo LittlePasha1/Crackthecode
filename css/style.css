@@ -1383,4 +1383,85 @@ body {
   .content-box {
     padding: 2rem;
   }
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  h1, .denktext-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+
+  nav.main-navigation ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  nav.main-navigation li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-logo-container img {
+    max-width: 160px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .denkbox-container {
+    padding: 1rem;
+  }
+
+  .title-box {
+    padding: 1rem;
+  }
+
+  .hashtags {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: center;
+  }
+
+  .hashtag-balloon {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .denktext p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .blockquote,
+  .impactquote,
+  .accentstuk-sterk,
+  .accentstuk-zwak {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .reageer-box,
+  .afbeelding-box {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+    text-align: center;
+  }
 }
