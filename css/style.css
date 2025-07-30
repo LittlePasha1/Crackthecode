@@ -1250,38 +1250,55 @@ body {
   font-size: 1.1rem;
   line-height: 1.75;
 }
+/* =================== MOBIEL (tot 768px) =================== */
 @media (max-width: 768px) {
   body {
     font-size: 1rem;
-    padding: 1.2rem;
+    padding: 1.5rem;
   }
 
   header {
     padding: 0.5rem 0;
   }
 
-  .site-logo {
+  .site-logo,
+  .site-logo-container img {
     width: 150px;
+    max-width: 160px;
     margin: 0 auto;
     display: block;
+    height: auto;
   }
 
-  .main-navigation ul {
+  nav.main-navigation ul {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    padding: 1rem 0;
   }
 
+  nav.main-navigation li,
   .main-navigation ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
     margin: 0.3rem 0;
   }
 
   .denktext-title,
   .about-title,
-  .onderwerp-title {
-    font-size: 1.6rem;
+  .onderwerp-title,
+  h1 {
+    font-size: 1.8rem;
     line-height: 1.3;
     text-align: center;
+  }
+
+  .denktext h2,
+  .about-box h2,
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
   }
 
   .denktext,
@@ -1294,10 +1311,15 @@ body {
     padding: 1rem;
   }
 
-  .denktext h2,
-  .about-box h2 {
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
+  .denkbox-container,
+  .title-box {
+    padding: 1rem;
+  }
+
+  .hashtags {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: center;
   }
 
   .hashtag-balloon {
@@ -1306,17 +1328,21 @@ body {
   }
 
   .blockquote,
+  .impactquote,
   .accentstuk-sterk,
   .accentstuk-zwak,
   .citaat {
-    font-size: 1.1rem;
-    padding: 0.5rem;
+    font-size: 1.05rem;
+    padding: 0.8rem;
+    margin: 1.2rem 0;
   }
 
   .noot {
     font-size: 0.95rem;
     padding: 1rem;
     margin: 1.5rem 0;
+    font-style: italic;
+    opacity: 0.9;
   }
 
   .content-box h3 {
@@ -1324,9 +1350,17 @@ body {
     text-align: center;
   }
 
+  .reageer-box,
+  .afbeelding-box {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  footer,
   .footer {
     font-size: 0.9rem;
     padding: 1rem;
+    text-align: center;
     flex-direction: column;
     align-items: center;
   }
@@ -1335,13 +1369,15 @@ body {
     margin-top: 1rem;
   }
 }
+
+/* =================== TABLETS (769px tot 1024px) =================== */
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
     font-size: 1.1rem;
     padding: 2rem;
   }
 
-  .main-navigation ul {
+  nav.main-navigation ul {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
@@ -1366,6 +1402,8 @@ body {
     padding: 1.5rem 2rem;
   }
 }
+
+/* =================== DESKTOP XL (1200px en hoger) =================== */
 @media (min-width: 1200px) {
   body {
     max-width: 1200px;
@@ -1382,86 +1420,5 @@ body {
 
   .content-box {
     padding: 2rem;
-  }
-@media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-    padding: 1.5rem;
-  }
-
-  h1, .denktext-title {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    margin-top: 2rem;
-  }
-
-  nav.main-navigation ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 0;
-  }
-
-  nav.main-navigation li {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  .site-logo-container img {
-    max-width: 160px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .denkbox-container {
-    padding: 1rem;
-  }
-
-  .title-box {
-    padding: 1rem;
-  }
-
-  .hashtags {
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    justify-content: center;
-  }
-
-  .hashtag-balloon {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
-  }
-
-  .denktext p {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .blockquote,
-  .impactquote,
-  .accentstuk-sterk,
-  .accentstuk-zwak {
-    font-size: 1rem;
-    padding: 1rem;
-    margin: 1.5rem 0;
-  }
-
-  .reageer-box,
-  .afbeelding-box {
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-
-  footer {
-    font-size: 0.9rem;
-    padding: 1rem;
-    text-align: center;
   }
 }
