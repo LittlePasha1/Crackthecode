@@ -1250,3 +1250,137 @@ body {
   font-size: 1.1rem;
   line-height: 1.75;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  header {
+    padding: 0.5rem 0;
+  }
+
+  .site-logo {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .main-navigation ul li {
+    margin: 0.3rem 0;
+  }
+
+  .denktext-title,
+  .about-title,
+  .onderwerp-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .denktext,
+  .about-box,
+  .future-box,
+  .welkom-box,
+  .content-box {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 1rem;
+  }
+
+  .denktext h2,
+  .about-box h2 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+
+  .hashtag-balloon {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .blockquote,
+  .accentstuk-sterk,
+  .accentstuk-zwak,
+  .citaat {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+
+  .noot {
+    font-size: 0.95rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .content-box h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-icons {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+    padding: 2rem;
+  }
+
+  .main-navigation ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .denktext-title,
+  .about-title,
+  .onderwerp-title {
+    font-size: 2rem;
+  }
+
+  .denktext h2,
+  .about-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .hashtag-balloon {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 1.5rem 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .denktext-title {
+    font-size: 2.5rem;
+  }
+
+  .denktext h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-box {
+    padding: 2rem;
+  }
+}
