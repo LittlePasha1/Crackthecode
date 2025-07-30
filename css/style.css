@@ -1,38 +1,38 @@
-
-/* ========== ROOT VARIABELEN ========== */
 :root {
   --cream: #fdfae9;
-  --diepgroenblauw: #1f5454;  /* hoofdgroenblauw */
-  --bronsbruin: #b08d57;      /* nieuwe goudkleur */
-  --accentkleur: #9c744c;     /* zachtere bronskleur */
-  --oranje-hover: #b4511e;
+  --diepgroenblauw: #1f5454;     /* hoofdgroenblauw */
+  --bronsbruin: #a8804f;         /* zachtere, minder gele bronskleur */
+  --accentkleur: #a57440;        /* warme, zachte accentkleur */
+  --oranje-hover: #9a5b2f;
 
-  --footer-grad-left: #fffbe4;
-  --footer-grad-mid: #f0d5a5;
-  --footer-grad-right: #c49c6b;
-  --nav-achtergrond: #fffdf5;      /* zachte warm-witte achtergrond (prima zo) */
-  --nav-achtergrond: #fffdf5;
+  --footer-grad-left: #fdfae9;
+  --footer-grad-mid: #eddcc2;
+  --footer-grad-right: #e7d7bb;
+
+  --nav-achtergrond: #fefbf3;
   --nav-tekst: #8b4f27;
   --nav-hover: #cd7f32;
   --nav-border: #1f5454;
+
+  --main-width: 960px;
 }
+
 /* ========== UNIVERSELE BODY STIJL ========= */
 body,
 body.home-page {
   --home-bg: #fcfcfc;
-  --home-container: #fbf7ed;
+  --home-container: #fefbf3;
   --spiral-bg: #fff4dd;
-  --shadower: #b08d57;
+  --shadower: #a8804f;
   --highlight-blok: #1f5454;
-  --border-blok: #b08d57;
-  --title-home: #095757;
+  --border-blok: #a8804f;
+  --title-home: #1f5454;
   --tekstkleur-home: #31444b;
-  --link-home: #b08d57;
-  --leesmeer-hover: #9c744c;
-  --footer-top: #fbf7ed;
+  --link-home: #a8804f;
+  --leesmeer-hover: #a57440;
+  --footer-top: #fefbf3;
   --footer-info: #3a2f2f;
   --footer-icon: #3a2f2f;
-  --home-container: #fbf7ed;
 
   --font-title: 'Playfair Display', serif;
   --font-body: 'Lora', serif;
@@ -44,7 +44,14 @@ body.home-page {
   line-height: 1.8;
   padding: 2rem 3rem;
 }
-
+/* Containers max 960px + centreren */
+.main-container,
+.intro-container,
+.content {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* ========== ABOUT & DENKSTUKKEN PAGINA ========= */
 body.about-page,
 body.denkstukken-page {
@@ -211,29 +218,49 @@ header {
   background-color: var(--nav-hover);  /* goud */
   bottom: -10px;
 }
-
+.intro-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
 .welkom-intro {
-  background-color: var(--home-container); /* of kies bv. #fbf7ed */
+  background-color: var(--home-container);
   color: var(--tekstkleur-home);
   text-align: center;
   font-size: 1.1rem;
   font-family: var(--font-body);
-  padding: 1rem 2rem;
-  margin-bottom: 2rem;
-  border-top: 2px solid #cd7f32;
-  border-bottom: 2px solid #cd7f32;
+  padding: 1.2rem 2rem;
+  margin: 2rem auto;
+  border-top: 2px solid var(--border-blok);
+  border-bottom: 2px solid var(--border-blok);
+  max-width: 960px;
+  width: 100%;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
 }
-
 .intro-link {
-  color: #cd7f32;
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--link-home);
+  font-weight: 500;
   text-decoration: none;
-  font-weight: bold;
-  border-bottom: 1px dashed #cd7f32;
+  border-bottom: 1px dashed var(--link-home);
+  transition: color 0.2s ease;
 }
 
 .intro-link:hover {
-  color: #00eeff;
-  border-bottom: 1px solid #15d7c7;
+  color: var(--leesmeer-hover);
+  border-bottom-color: var(--leesmeer-hover);
+}
+
+.welkom-intro, .intro-container, .intro-link, .intro-container * {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* STAP 3 – CONTENT STRUCTUUR EN ROOSTERS - MAIN */
@@ -293,7 +320,7 @@ background: url('../images/spiral.png');
   text-decoration: none;
   color: var(--title-home);
   font-family: var(--font-title);
-  font-size: 1.6rem;
+  font-size: 3rem;
 }
 
 .title-link:hover {
@@ -409,112 +436,89 @@ footer {
   --tekstkleur: #2e2b20;
 }
 .welkom-box {
-  background-color: #fbf7ed; /* zachte crème */
-  border: 2px solid #1f5454; /* donkergroenblauwe rand */
+  background-color: var(--achtergrondlicht);
+  border: 2px solid var(--accent-brons);
   padding: 3rem 2rem;
   border-radius: 1rem;
-  max-width: 800px;
-  margin: 4rem auto; /* gecentreerd */
-  box-shadow: 0 8px 20px rgba(31, 84, 84, 0.2); /* warme gloed */
-  text-align: center;
+  max-width: var(--main-width);
+  margin: 3rem auto;
+  box-shadow: 0 8px 20px rgba(205, 127, 50, 0.15);
+  text-align: justify;
   font-family: 'Lora', serif;
 }
-
 .welkom-box-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  color: #1f5454;
+  font-size: 2rem;
+  color: var(--donkergroenblauw);
   margin-bottom: 1.5rem;
 }
-
 .welkom-box-text {
-  color: #1f5454;
-  font-family: 'Lora', serif;
+  color: var(--tekstkleur);
   font-size: 1.1rem;
   line-height: 1.8;
 }
-.about-visualbox {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 3rem 0;
-}
 
+.about-title {
+  content: "❧";
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--donkergroenblauw);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about-visualbox {
+  max-width: var(--main-width);
+  margin: 3rem auto;
+  text-align: center;
+}
 .about-visualbox img {
   width: 100%;
-  max-width: 880px;
   border-radius: 0.6rem;
-  border: 1px solid #a67844;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--accent-brons);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
+
 .about-box {
-  background: linear-gradient(to bottom right, #ffffff, #f2f7f5);
+  background-color: #fdf8ec;
   padding: 3rem 2rem;
-  border: 1px solid #cdd5d2;
-  border-radius: 1.2rem;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-  margin: 4rem auto;
-  max-width: 800px;
+  border: 2px solid var(--accent-brons);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+  margin: 3rem auto;
+  max-width: var(--main-width);
   font-family: 'Lora', serif;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  text-align: justify;
 }
-
-.about-box::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  left: -80px;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, #d6f3ed 0%, transparent 70%);
-  opacity: 0.3;
-}
-
 .about-box h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   color: var(--donkergroenblauw);
   margin-bottom: 1rem;
 }
-
 .about-box p {
-  color: #395f5f;
+  color: var(--tekstkleur);
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 1.2rem;
 }
-
 .future-box {
-  background: linear-gradient(to bottom, #fef6e0, #f9ebc6);
-  border: 2px double #5e4727;
+  background: linear-gradient(to bottom, #fef6e0, #faedd0);
+  border: 2px solid var(--accent-brons);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 6px 14px rgba(205, 127, 50, 0.12);
   font-family: 'Lora', serif;
-  color: #2e2b20;
-  max-width: 600px;
-  box-shadow: inset 0 0 0 1px #dfcba7,
-              0 4px 8px rgba(0, 0, 0, 0.08),
-              0 0 0 3px rgba(94, 71, 39, 0.08);
-  line-height: 1.6;
-  background-image: url("images/spiral-pattern.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  text-align: center;
+  text-align: justify;
+  color: var(--tekstkleur);
+  max-width: var(--main-width);
+  margin: 3rem auto;
 }
-
 .future-box-title {
   font-size: 2rem;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 0.6rem;
-  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  color: #3a2e1f;
+  color: var(--donkergroenblauw);
+  margin-bottom: 1rem;
+  position: relative;
 }
 .future-box-title::before {
   content: "❧";
@@ -523,22 +527,20 @@ footer {
   top: -1.6rem;
   left: 50%;
   transform: translateX(-50%);
-  color: #a67844;
+  color: var(--accent-brons);
   opacity: 0.8;
 }
-
 .future-box-text {
-  margin-bottom: 1.2rem;
-  font-family: 'Lora', serif;
   font-size: 1.1rem;
-  color: #4c3a27;
+  color: var(--tekstkleur);
+  line-height: 1.8;
 }
-
-.future-box:hover {
-  box-shadow: inset 0 0 0 1px #dfcba7,
-              0 8px 16px rgba(0, 0, 0, 0.15),
-              0 0 8px #e0c9a0;
-  transition: all 0.3s ease;
+.future-afbeelding img {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid var(--accent-brons);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
 }
 
 .denkstukken-logo-container {
@@ -878,6 +880,68 @@ footer {
   gap: 0.8rem;
   margin: 2rem 0 3rem;
 }
+
+/* ===== ACCENTSTUKKEN ===== */
+.accentstuk-sterk {
+  color: var(--accent-sterk);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.9;
+  margin: 2rem 0;
+}
+
+.accentstuk-zwak {
+  color: var(--accent-zacht);
+  font-style: italic;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.strong {
+  font-weight: 700;
+  color: var(--accent-sterk);
+}
+
+.citaat {
+  color: var(--citaat);
+  font-style: italic;
+}
+
+.blockquote {
+  border-left: 4px solid var(--accent-sterk);
+  padding-left: 1rem;
+  margin: 2rem 0;
+  background-color: #fdf9f2;
+  font-style: italic;
+  color: var(--body-text);
+  font-size: 1.15rem;
+}
+.fluister {
+  font-size: 1.05rem;
+  color: #a49383;
+  font-style: italic;
+  opacity: 0.85;
+}
+.tussenkop {
+  text-transform: uppercase;
+  font-family: var(--font-meta);
+  font-size: 0.9rem;
+  color: var(--accent-zacht);
+  letter-spacing: 0.1rem;
+  margin-top: 2.5rem;
+}.noot {
+  background-color: #f4eadb;
+  border-left: 4px solid var(--accent-zacht);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--body-text);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
 /* ========== INDEX LAY-OUT ========== */
 .index-page {
   margin: 0;
