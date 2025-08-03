@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ontdek jouw Dier — De Onwijze Wijsheden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Marcellus+SC&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="denkstukken-page">
+<header>
+  <div class="header-topbar"></div>
+  <div class="site-logo-container">
+    <img src="images/logo.png" alt="De Onwijze Wijsheid logo" class="site-logo">
+  </div>
+  <div class="slogan-divider"></div>
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="denkstukken.html">Denkstukken</a></li>
+      <li><a href="onderwerpen.html">Onderwerpen</a></li>
+      <li><a href="forum.html">Forum</a></li>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><a href="jouw-bijdrage.html">Jouw Bijdrage</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="quiz-container">
+  <h1>Ontdek jouw innerlijk dier</h1>
+  <form id="dierQuiz">
+    <div class="quiz-question">
+      <p>1. Hoe breng jij het liefst tijd door?</p>
+      <label><input type="radio" name="vraag1" value="windvos"> Alleen, turend naar de hemel</label><br>
+      <label><input type="radio" name="vraag1" value="stormpanter"> In beweging, liefst met wind in je gezicht</label><br>
+      <label><input type="radio" name="vraag1" value="raaf"> In een diep gesprek vol verborgen lagen</label><br>
+      <label><input type="radio" name="vraag1" value="maanhert"> In stilte, kijkend en voelend</label><br>
+      <label><input type="radio" name="vraag1" value="zwaluw"> Dansend, reizend, springend</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>2. Wat zegt men vaak over jou?</p>
+      <label><input type="radio" name="vraag2" value="maanhert"> Je hebt scherpe voelsprieten</label><br>
+      <label><input type="radio" name="vraag2" value="stormpanter"> Je bent een vurige geest</label><br>
+      <label><input type="radio" name="vraag2" value="raaf"> Je zegt rare dingen maar raakt altijd iets</label><br>
+      <label><input type="radio" name="vraag2" value="windvos"> Je bent een stille kracht</label><br>
+      <label><input type="radio" name="vraag2" value="zwaluw"> Je bent altijd onderweg</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>3. Wat is jouw grootste kracht?</p>
+      <label><input type="radio" name="vraag3" value="maanhert"> Intuïtie</label><br>
+      <label><input type="radio" name="vraag3" value="stormpanter"> Wildheid</label><br>
+      <label><input type="radio" name="vraag3" value="raaf"> Woorden</label><br>
+      <label><input type="radio" name="vraag3" value="windvos"> Aanwezigheid</label><br>
+      <label><input type="radio" name="vraag3" value="zwaluw"> Vrijheid</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>4. Waar schuilt jouw pijn?</p>
+      <label><input type="radio" name="vraag4" value="maanhert"> In onzichtbaarheid</label><br>
+      <label><input type="radio" name="vraag4" value="stormpanter"> In te veel denken</label><br>
+      <label><input type="radio" name="vraag4" value="raaf"> In niet gehoord worden</label><br>
+      <label><input type="radio" name="vraag4" value="windvos"> In te veel voelen</label><br>
+      <label><input type="radio" name="vraag4" value="zwaluw"> In geen plek vinden</label>
+    </div>
+
+    <div class="quiz-question">
+  <p>5. Wat is jouw plek in een groep, wanneer alles vanzelf lijkt te gaan?</p>
+  <label><input type="radio" name="vraag5" value="windvos"> Ik zie wie zich ongemakkelijk voelt en ga ernaast zitten</label><br>
+  <label><input type="radio" name="vraag5" value="stormpanter"> Ik neem het voortouw, maar zonder de aandacht te willen</label><br>
+  <label><input type="radio" name="vraag5" value="raaf"> Ik observeer stil, en stel dan één rake vraag</label><br>
+  <label><input type="radio" name="vraag5" value="maanhert"> Ik bied rust zonder iets te zeggen</label><br>
+  <label><input type="radio" name="vraag5" value="zwaluw"> Ik verdwijn even — en kom dan terug met iets onverwachts</label>
+</div>
+
+    <button type="submit">Ontdek mijn dier</button>
+  </form>
+
+  <div id="resultaat" class="profielkaart" style="display:none">
+    <h2>Jij bent een <span id="dierNaam"></span>!</h2>
+    <img id="dierAfbeelding" src="" alt="dier afbeelding">
+    <p><strong>Geslacht:</strong> <span id="dierGeslacht"></span></p>
+    <p><strong>Geboren:</strong> Tussen onzin en openbaring</p>
+  </div>
+</main>
+
+<script src="js/quiz.js"></script>
+</body>
+</html>
