@@ -52,6 +52,40 @@ body.home-page {
   margin-left: auto;
   margin-right: auto;
 }
+/* ========== QUIZ ========= */
+.quiz-container {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  font-family: var(--main-font, 'Lora', serif);
+}
+
+.quiz-question {
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.quiz-question p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.profielkaart {
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 2px solid var(--accentkleur);
+  border-radius: 1rem;
+  background-color: var(--cream, #fdfae9);
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.profiel-dier {
+  width: 220px;
+  height: auto;
+  margin: 1rem 0;
+}
+/* ========== PROFIEL ========= */
+
 /* ========== ABOUT & DENKSTUKKEN PAGINA ========= */
 body.about-page,
 body.denkstukken-page {
