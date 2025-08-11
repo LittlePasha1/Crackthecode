@@ -704,16 +704,17 @@ footer {
   text-align: center;
   padding: 1.5rem 2rem;
   margin: 0;
-  border-bottom: none;
+  text-align: center;
+  margin-bottom: 2rem;
+
 }
 
 .denktext-title {
-  font-size: 3rem;
-  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(10rem, 6vw, 5rem);
   color: var(--title-color);
-  font-family: var(--font-title);
-  margin-bottom: 0.5rem;
-  text-align: center;
+  margin:0 0 .4rem 0;
+  line-height:1.2;
 }
 
 .denktext-meta {
@@ -725,23 +726,42 @@ footer {
   font-style: normal;
   letter-spacing: 0.5px;
 }
+.denktext p:last-child {
+  margin-bottom: 0;
+}
+/* === OnderTitel Denkstukken === */
+.denktext-subtitle {
+  font-family: 'Spectral', serif;  /* Of 'Playfair Display' als je het chiquer wil */
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--bronsbruin);  /* Prachtig warm brons, past bij je site */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Zorg dat de hele title-box gecentreerd is */
+.title-box {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 
 .hashtags {
   font-size: 0.95rem;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center; /* centreren */
+  gap: 0.6rem; /* ruimte tussen hashtags */
   color: var(--hashtag-text);
   margin-bottom: 1rem;
+   margin-top: 1rem;
+  margin:.2rem 0 0;
   text-align: center;
   font-family: var(--font-hashtag);
   letter-spacing: 0.4px;
 }
-
-.hashtags span {
-  margin: 0 0.3rem;
-  background: var(--hashtag-bg);
-  padding: 0.2rem 0.5rem;
-  border-radius: 999px;
-}
-
 .hashtag-balloon {
   display: inline-block;
   background-color: var(--oranje);
@@ -880,31 +900,110 @@ footer {
 .afsluitzin {
   text-align: center;
   font-style: italic;
-    font-weight: bold;
-    margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1.3rem; /* iets groter zodat het een statement wordt */
+  line-height: 1.6;
+  margin-top: 3rem; /* meer ruimte erboven */
+  margin-bottom: 2rem; /* iets meer lucht naar de handtekening */
+  color: var(--diepgroenblauw); /* kan ook var(--bronsbruin) of donkerbruin voor warmte */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
-  .denktext blockquote {
-    margin: 2rem;
-    padding: 1rem 2rem;
-    background-color: #fffdf8;
-    border-left: 4px solid var(--oranje);
-    font-style: italic, bold;
+
+/* Extra effectje: subtiele fade-in bij laden */
+.afsluitzin {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease forwards;
 }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.denktext blockquote,
+.blockquote {
+  margin: 1.4rem 0;
+  padding: 1rem 1.2rem;
+  background-color: #fff9f1;
+  border-left: 6px solid var(--accent-sterk);
+  font-style: italic;
+  font-weight: 600;        /* i.p.v. 'italic, bold' */
+  color: var(--body-text);
+  border-radius: 6px;
+}
+.blocknote{
+  background: #fffaf2;
+  border: 1px solid #ead9c1;
+  border-left: 6px solid var(--bronsbruin);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  font-style: italic;
+  color: #6b5440;
+  border-radius: 6px; /* zelfde als .blockquote */
+  box-shadow: 0 1px 0 rgba(0,0,0,.03) inset;
+}
+/* Nieuwe knallerstijl */
+.knaller {
+  display: block;
+  text-align: center;
+  font-family: 'Unna', 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 1.15;
+  color: #ff5c00; /* feloranje */
+  text-shadow:
+    0 0 12px rgba(255, 92, 0, 0.45),
+    0 0 28px rgba(255, 92, 0, 0.25);
+  margin: 1.5rem auto;
+  padding: 0.5rem 1rem;
+  background: transparent;
+}
+
   .highlight {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--donkergroenblauw);
   }
-/* ========== KUS ========== */
+/* ========== KUS (klikbaar, zonder achtergrond) ========== */
 .kus {
-  background-image: url('images/nancy.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100px; /* pas dit aan naar de hoogte die mooi uitkomt */
   width: 100%;
-  margin: 2rem auto 0 auto;
+  max-width: 350px;
+  margin: 1.5rem auto;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.kus a {
+  display: block;            /* Hele afbeelding is klikbaar */
+  text-decoration: none;     /* Geen underline */
+}
+
+.kus img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.kus img:hover {
+  opacity: 0.9;               /* Subtiele fade bij hover */
+  transform: scale(1.02);     /* Heel licht inzoomen bij hover */
+}
+/* Bounce animatie */
+@keyframes kusBounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.15); }
+  50%  { transform: scale(0.95); }
+  70%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
 /* === FILTER BUTTONS (HASHTAGS) === */
 .filter-container {
@@ -923,23 +1022,30 @@ footer {
   line-height: 1.9;
   margin: 2rem 0;
 }
-
-.accentstuk-zwak {
-  color: var(--accent-zacht);
-  font-style: italic;
-  font-size: 1.2rem;
-  display: inline-block;
-  margin: 1rem 0;
+.accentstuk-sterker {
+  color: #8b693f; /* donkerdere variant */
+  font-weight: bold;
 }
-
+.accentstuk-zwak{
+  color: #6b5440;           /* donkerder dan var(--accent-zacht) */
+  font-style: italic;
+  font-size: 1.15rem;
+  display: inline-block;
+  margin: 0.8rem 0;
+}
 .strong {
   font-weight: 700;
   color: var(--accent-sterk);
+  letter-spacing: .2px;
+  display: block;
+  margin: 1rem 0;
 }
 
 .citaat {
-  color: var(--citaat);
-  font-style: italic;
+   font-style: italic;
+  opacity: .9;
+  display: block;
+  margin: 1rem 0;
 }
 
 .blockquote {
@@ -1344,12 +1450,6 @@ body {
     line-height: 1.7;
     padding: 1rem;
   }
-
-  .denkbox-container,
-  .title-box {
-    padding: 1rem;
-  }
-
   .hashtags {
     flex-wrap: wrap;
     gap: 0.3rem;
