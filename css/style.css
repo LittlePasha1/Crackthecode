@@ -379,7 +379,7 @@ background: url('../images/spiral.png');
   margin-top: auto;
   position: relative;
 }
-* Hover effect voor alle links */
+/* Hover effect voor alle links */
 .content-box a:hover {
   color: var(--oranje-hover);
 }
@@ -480,18 +480,21 @@ footer {
   text-align: justify;
   font-family: 'Lora', serif;
 }
+
 .welkom-box-title {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   color: var(--donkergroenblauw);
   margin-bottom: 1.5rem;
+  text-align: center;  /* alleen de titel in het midden */
 }
+
 .welkom-box-text {
   color: var(--tekstkleur);
   font-size: 1.1rem;
   line-height: 1.8;
+  text-align: justify;  /* tekst blijft netjes uitgevuld */
 }
-
 .about-title {
   content: "❧";
   font-size: 2rem;
@@ -835,6 +838,7 @@ footer {
 }
 
 /* ========== INGESLOTEN AFBEELDING RECHTS ========== */
+/* ========== INGESLOTEN AFBEELDING RECHTS ========== */
 .afbeelding-onderaan {
   width: 100%;
   max-width: 350px;
@@ -845,17 +849,38 @@ footer {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
   opacity: 0.96;
 }
-
 .afbeelding-onderaan img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   display: block;
 }
-
 .afbeelding-onderaan img:hover {
   opacity: 1;
 }
+
+/* ========== INGESLOTEN AFBEELDING BOVENAAN ========== */
+.afbeelding-bovenaan {
+  width: 100%;
+  max-width: 350px;
+  margin: 1rem auto 1.25rem auto;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  background-color: var(--afbeelding-bg); /* dat wordt het randje */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.afbeelding-bovenaan img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0; /* geen extra radius → volgt de container */
+}
+
+.afbeelding-bovenaan img:hover {
+  opacity: 1;
+}
+
 /* ========== LINK STIJL ========== */
 .link {
   color: var(--accent-sterk);
@@ -1080,6 +1105,42 @@ footer {
   color: var(--body-text);
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.dialoog {
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--bronsbruin);
+  font-style: italic;
+}
+
+.dialoog .spreker {
+  font-weight: bold;
+  color: var(--diepgroenblauw);
+}
+.nancy-onderweg {
+  font-family: 'Dancing Script', cursive; /* voorbeeld, kan ook een ander scriptfont */
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #1f2d55; /* die donkerblauwe kleur van je voorbeeld */
+  letter-spacing: 0.5px;
+}
+.onwijze-wijsheden {
+  font-family: 'Playfair Display', serif; /* of Fraunces, afhankelijk van wat jij mooier vindt */
+  font-weight: 700;       /* bold, stevig */
+  text-transform: uppercase;
+  font-size: 2.2rem;      /* schaal naar wens */
+  line-height: 1.1;
+  color: var(--diepgroenblauw);
+  letter-spacing: 1px;    /* subtiele ruimte */
+}
+.persoonlijk {
+  color: #2c2c2c;              /* donker, intens */
+  font-style: italic;          /* persoonlijk, intiem */
+  font-weight: 600;            /* steviger dan .citaat */
+  border-left: 3px solid #a57440; /* subtiel accent (koperkleur bij je site) */
+  padding-left: 0.6rem;        /* ruimte naast de streep */
+  margin: 1rem 0;
+  display: block;
 }
 
 /* ========== INDEX LAY-OUT ========== */
