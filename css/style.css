@@ -862,24 +862,21 @@ footer {
 /* ========== INGESLOTEN AFBEELDING BOVENAAN ========== */
 .afbeelding-bovenaan {
   width: 100%;
-  max-width: 350px;
-  margin: 1rem auto 1.25rem auto;
-  padding: 0.6rem;
-  border-radius: 1rem;
-  background-color: var(--afbeelding-bg); /* dat wordt het randje */
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0.3rem;              /* klein randje */
+  border-radius: 0.5rem;        /* licht afgerond */
+  background: #fffdf8;          /* zachte neutrale tint ipv opvallend */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* subtiele diepte */
 }
 
 .afbeelding-bovenaan img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 0; /* geen extra radius → volgt de container */
+  border-radius: 0.4rem;
 }
 
-.afbeelding-bovenaan img:hover {
-  opacity: 1;
-}
 
 /* ========== LINK STIJL ========== */
 .link {
