@@ -8,35 +8,16 @@
 </head>
 
 <body class="onderwerpen-page">
-
-  <!-- HEADER -->
+  <!-- === HEADER === -->
   <header>
-    <div class="header-topbar"></div>
-
     <div class="site-logo-container">
-      <img src="images/logo.png" alt="De Onwijze Wijsheid logo" class="site-logo">
+      <img src="images/logo.png" alt="De Onwijze Wijsheid" class="site-logo">
     </div>
-
-    <div class="slogan-divider"></div>
-
-    <!-- NAVIGATIE -->
     <nav class="main-navigation">
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="denkstukken.html">Denkstukken</a></li>
-        <li>
-          <a href="onderwerpen.html" class="active-tab">
-            Onderwerpen
-            <span class="border-line line-top"></span>
-            <span class="border-line line-bottom"></span>
-            <span class="border-line line-left"></span>
-            <span class="border-line line-right"></span>
-            <span class="border-line line-top-extra"></span>
-            <span class="border-line line-bottom-extra"></span>
-            <span class="border-line line-left-extra"></span>
-            <span class="border-line line-right-extra"></span>
-          </a>
-        </li>
+        <li><a href="onderwerpen.html" class="active-tab">Onderwerpen</a></li>
         <li><a href="forum.html">Forum</a></li>
         <li><a href="manifest.html">Manifest</a></li>
         <li><a href="jouw-bijdrage.html">Jouw Bijdrage</a></li>
@@ -44,22 +25,162 @@
     </nav>
   </header>
 
-  <!-- INHOUD -->
-  <main class="denkbox-container onderwerpen-page">
-    <div class="title-box">
-      <h1 class="denktext-title">Thema’s & Onderzoek</h1>
-      <p class="denktext-meta"><em>⚠️ Deze pagina is nog in opbouw. Binnenkort kan je hier diepgaande thema’s verkennen met links naar denkstukken, bronnen en andere bijdrages.</em></p>
-      <div class="hashtags">
-        <span class="hashtag-balloon">#Thematisch</span>
-        <span class="hashtag-balloon">#Onderzoek</span>
-        <span class="hashtag-balloon">#Bronnen</span>
-      </div>
-    </div>
+  <!-- === INHOUD === -->
+  <main class="onderwerpen-container">
+    <h1 class="onderwerpen-title">Onderwerpen</h1>
+    <p class="onderwerpen-intro">
+      Kennisbank met heldere definities, context en bronnen. Tik een term in of kies via het alfabet.
+    </p>
 
-    <div class="denktext">
-      <!-- Hier komen later de thematische onderwerpen -->
+    <!-- Zoekbank -->
+    <div class="onderwerpen-search">
+      <input id="zoekveld" type="search" placeholder="Zoek een onderwerp… (bv. neuroplasticiteit, trauma, hormonen)" autocomplete="off">
+      <button id="wisZoek" aria-label="wis zoeken">×</button>
     </div>
+    <p id="zoekStatus" class="zoek-status" hidden>0 resultaten</p>
+
+    <!-- Alfabetische index -->
+    <nav class="onderwerpen-index">
+      <a href="#A">A</a> | <a href="#B">B</a> | <a href="#C">C</a> | <a href="#D">D</a> | <a href="#E">E</a> |
+      <a href="#F">F</a> | <a href="#G">G</a> | <a href="#H">H</a> | <a href="#I">I</a> | <a href="#J">J</a> |
+      <a href="#K">K</a> | <a href="#L">L</a> | <a href="#M">M</a> | <a href="#N">N</a> | <a href="#O">O</a> |
+      <a href="#P">P</a> | <a href="#Q">Q</a> | <a href="#R">R</a> | <a href="#S">S</a> | <a href="#T">T</a> |
+      <a href="#U">U</a> | <a href="#V">V</a> | <a href="#W">W</a> | <a href="#X">X</a> | <a href="#Y">Y</a> |
+      <a href="#Z">Z</a>
+    </nav>
+
+    <!-- Lijsten per letter -->
+    <section class="onderwerpen-lijst">
+      <h2 id="N">N</h2>
+      <ul>
+        <li>
+          <a href="onderwerpen/neuroplasticiteit.html"
+             data-tags="brein, hersenen, leren, gewoonte, synapsen, gedrag, herstel">
+            Neuroplasticiteit
+          </a> — Hoe ons brein zich voortdurend aanpast en verandert.
+        </li>
+        <li>
+          <a href="onderwerpen/neuronen.html"
+             data-tags="zenuwcellen, actiepotentiaal, synaps, neurotransmitters, axon, dendriet">
+            Neuronen
+          </a> — De bouwstenen van ons zenuwstelsel.
+        </li>
+      </ul>
+
+      <h2 id="T">T</h2>
+      <ul>
+        <li>
+          <a href="onderwerpen/trauma.html"
+             data-tags="ptss, stress, zenuwstelsel, hechting, veiligheid, veerkracht, herstel">
+            Trauma
+          </a> — Geheugen, emotionele reacties en herstel.
+        </li>
+      </ul>
+
+      <!-- lege headings voor ankers (vul later aan) -->
+      <h2 id="A" style="display:none"></h2>
+      <h2 id="B" style="display:none"></h2>
+      <h2 id="C" style="display:none"></h2>
+      <h2 id="D" style="display:none"></h2>
+      <h2 id="E" style="display:none"></h2>
+      <h2 id="F" style="display:none"></h2>
+      <h2 id="G" style="display:none"></h2>
+      <h2 id="H" style="display:none"></h2>
+      <h2 id="I" style="display:none"></h2>
+      <h2 id="J" style="display:none"></h2>
+      <h2 id="K" style="display:none"></h2>
+      <h2 id="L" style="display:none"></h2>
+      <h2 id="M" style="display:none"></h2>
+      <h2 id="O" style="display:none"></h2>
+      <h2 id="P" style="display:none"></h2>
+      <h2 id="Q" style="display:none"></h2>
+      <h2 id="R" style="display:none"></h2>
+      <h2 id="S" style="display:none"></h2>
+      <h2 id="U" style="display:none"></h2>
+      <h2 id="V" style="display:none"></h2>
+      <h2 id="W" style="display:none"></h2>
+      <h2 id="X" style="display:none"></h2>
+      <h2 id="Y" style="display:none"></h2>
+      <h2 id="Z" style="display:none"></h2>
+    </section>
   </main>
 
+  <!-- === FOOTER === -->
+  <footer class="site-footer">
+    <p>© 2025 De Onwijze Wijsheid — Samen leren, samen delen.</p>
+  </footer>
+
+  <!-- === ZOEKSCRIPT === -->
+  <script>
+  (function(){
+    const input = document.getElementById('zoekveld');
+    const clearBtn = document.getElementById('wisZoek');
+    const status = document.getElementById('zoekStatus');
+    const items = Array.from(document.querySelectorAll('.onderwerpen-lijst li'));
+    const links = items.map(li => li.querySelector('a'));
+
+    // Sneltoets "/"
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== input) {
+        e.preventDefault(); input.focus(); input.select();
+      }
+    });
+
+    function norm(s){
+      return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
+    }
+
+    function highlight(el, query){
+      el.innerHTML = el.textContent;
+      if (!query) return;
+      const parts = norm(query).split(/\s+/).filter(Boolean);
+      let html = el.textContent;
+      parts.forEach(w => { html = html.replace(new RegExp(`(${w})`, 'ig'), '<mark>$1</mark>'); });
+      el.innerHTML = html;
+    }
+
+    function filter(){
+      const q = input.value.trim();
+      const nq = norm(q);
+      let count = 0;
+
+      items.forEach((li, i) => {
+        const a = links[i];
+        const hay = norm(a.textContent + ' ' + (a.getAttribute('data-tags')||''));
+        const match = nq.split(/\s+/).every(t => hay.includes(t));
+        li.style.display = match ? '' : 'none';
+        highlight(a, match ? q : '');
+        if (match) count++;
+      });
+
+      // Letterkopjes verbergen als geen zichtbare items eronder
+      const headers = Array.from(document.querySelectorAll('.onderwerpen-lijst h2'));
+      headers.forEach(h => {
+        let sib = h.nextElementSibling, vis = false;
+        while (sib && sib.tagName !== 'H2') {
+          if (sib.tagName === 'UL') {
+            if (Array.from(sib.children).some(li => li.style.display !== 'none')) { vis = true; break; }
+          }
+          sib = sib.nextElementSibling;
+        }
+        h.style.display = vis ? '' : 'none';
+      });
+
+      if (q) { status.hidden = false; status.textContent = count + (count===1?' resultaat':' resultaten'); }
+      else { status.hidden = true; }
+    }
+
+    // Autofill via ?zoek= of #zoek=
+    const params = new URLSearchParams(location.search);
+    const hashZoek = location.hash.startsWith('#zoek=') ? decodeURIComponent(location.hash.slice(6)) : '';
+    const startQuery = params.get('zoek') || hashZoek || '';
+    if (startQuery) input.value = startQuery;
+
+    input.addEventListener('input', filter);
+    clearBtn.addEventListener('click', () => { input.value=''; input.focus(); filter(); });
+
+    filter();
+  })();
+  </script>
 </body>
 </html>
