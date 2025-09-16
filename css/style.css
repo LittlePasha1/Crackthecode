@@ -1,10 +1,15 @@
 :root {
-  --cream: #fdfae9;
-  --diepgroenblauw: #1f5454;     /* hoofdgroenblauw */
-  --bronsbruin: #a8804f;         /* zachtere, minder gele bronskleur */
-  --accentkleur: #a57440;        /* warme, zachte accentkleur */
-  --oranje-hover: #9a5b2f;
-
+  --cream: #FFF9EF;
+  --diepgroenblauw: #1f5454;
+  --goud:#c18a2f;
+  --goud-deep:#a56f24;
+  --koper:#a57440;
+  --koper-deep:#7e5227; 
+  --line: rgba(31,84,84,.22);
+  --baby-blue:#e9f4f7;
+  --nav-achtergrond:#fefbf3;
+  --nav-tekst:#1f5454;
+  --nav-hover:#1f5454;
   --footer-grad-left: #fdfae9;
   --footer-grad-mid: #eddcc2;
   --footer-grad-right: #e7d7bb;
@@ -116,6 +121,8 @@ body.denkstukken-page {
   line-height: 1.8;
   padding: 2rem 3rem;
 }
+body.denkstukken-page a{ color: var(--koper); }
+body.denkstukken-page a:hover{ color: var(--diepgroenblauw); }
 /* ========== LINKS ========= */
 a {
   color: #f2793c;
@@ -164,94 +171,85 @@ header {
 }
 
 /* ========== MAIN NAVIGATIE STIJL ========== */
+/* ========== MAIN NAVIGATIE SCHOON BLOK ========== */
 .main-navigation {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  padding: 1.5rem 2.5rem;
+  padding: 1.2rem 2rem;
   margin: 3rem auto;
-  position: relative;
-  border: 2px solid var(--nav-border);
-  border-radius: 12px;
+  border: 4px solid var(--diepgroenblauw);
+  border-radius: 18px;
   background-color: var(--nav-achtergrond);
-  width: 100%;
-  max-width: 960px; /* <- pas dit aan naar je content-container */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  max-width: 960px;
+  box-shadow: 0 9px 30px rgba(0, 0, 0, 0.05);
 }
 
 .main-navigation ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .main-navigation li {
-  position: relative;
   flex: 1;
   text-align: center;
 }
+
 .main-navigation a {
   position: relative;
-  display: inline-block;
-  padding: 0.5em 1em;
-  font-weight: 700;
-  font-size: 1.1rem;
+  display: block;
+  padding: 16px 14px;
+  font-family: "Playfair Display","Marcellus SC",serif;
+  font-size: 1.4rem;
+  font-weight: 1000;
+  letter-spacing: 2.3px;
+  color: var(--goud);
   text-decoration: none;
-  font-family: var(--font-titel);
-  color: var(--nav-tekst);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
+
+/* Hover: tekst goud + onderlijntje */
 .main-navigation a:hover {
-  color: var(--nav-hover);
+  color: var(--goud);
 }
-/* ========== HOVER ENKEL ONDERLIJN ========== */
 .main-navigation a::after {
   content: '';
+  background-color: var(--goud);
   position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: var(--nav-hover);
   left: 0;
   bottom: -6px;
+  height: 3px;
+  width: 100%;
+  background-color: var(--diepgroenblauw);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-
 .main-navigation a:hover::after {
   transform: scaleX(1);
 }
 
-.main-navigation a:hover::before,
-.main-navigation a:hover::after {
-  transform: scaleX(1);
-}
-/* ========== ACTIEVE TAB: 2 ONDERLIJNEN ========== */
+/* Actieve tab: dubbele lijn (groen + goud) */
 .main-navigation a.active-tab::before,
 .main-navigation a.active-tab::after {
   content: '';
   position: absolute;
-  height: 3px;
-  width: 100%;
   left: 0;
+  width: 100%;
+  height: 3px;
   border-radius: 2px;
 }
-
 .main-navigation a.active-tab::before {
-  background-color: var(--nav-border);  /* donkergroenblauw */
+  background-color: var(--diepgroenblauw);
   bottom: -4px;
 }
-
 .main-navigation a.active-tab::after {
-  background-color: var(--nav-hover);  /* goud */
+  background-color: var(--goud);
   bottom: -10px;
 }
+
 .intro-container {
   max-width: 960px;
   margin: 0 auto;
@@ -381,7 +379,7 @@ background: url('../images/spiral.png');
 }
 /* Hover effect voor alle links */
 .content-box a:hover {
-  color: var(--oranje-hover);
+  color: var(--goud);
 }
 
 /* Pijltje na alle links behalve titel-link */
@@ -836,6 +834,47 @@ footer {
   display: block;
   opacity: 0.95;
 }
+/* Wrapper die STICKY is (blijft naast de content, niet top/bottom) */
+.schelp-wrap{
+  position: sticky;
+  top: 160px;               /* hoe hoog hij “plakt”; pas aan naar smaak */
+  float: right;             /* rechts van je content */
+  margin-right: 14px;       /* afstand tot rand */
+  z-index: 40;
+}
+
+/* Knop zelf: heel subtiel, geen achtergrond, geen rand */
+.schelp-btn{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.10));
+  transition: filter .2s ease, transform .2s ease;
+}
+
+/* Afbeelding zelf – iets groter, mooie koper/karamel vibe (komt uit je PNG) */
+.schelp-btn img{
+  width: 72px;              /* pas grootte hier */
+  height: auto;
+  display: block;
+  border-radius: 999px;     /* zacht rond */
+}
+
+/* Hover: subtiel, niet in-your-face */
+.schelp-btn:hover{
+  transform: translateY(-1px);
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,.14)) saturate(1.02);
+}
+
+/* Mobiel: kleiner en niet in de weg (links/rechts kan wisselen, hier midden) */
+@media (max-width: 820px){
+  .schelp-wrap{ top: 100px; margin-right: 6px; }
+  .schelp-btn img{ width: 58px; }
+}
 
 /* ========== INGESLOTEN AFBEELDING RECHTS ========== */
 /* ========== INGESLOTEN AFBEELDING RECHTS ========== */
@@ -876,7 +915,6 @@ footer {
   display: block;
   border-radius: 0.4rem;
 }
-
 
 /* ========== LINK STIJL ========== */
 .link {
@@ -1448,6 +1486,114 @@ body {
   font-size: 1.1rem;
   line-height: 1.75;
 }
+/* Pagina stijl specifiek voor Onderwerpen */
+body.onderwerpen-page {
+  background-color: var(--cream);
+  font-family: 'Spectral', serif;
+}
+
+.onderwerpen-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.onderwerpen-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--diepgroenblauw);
+  margin-bottom: 1rem;
+}
+
+.onderwerpen-intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.onderwerpen-index {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.onderwerpen-index a {
+  margin: 0 0.3rem;
+  text-decoration: none;
+  color: var(--nav-tekst);
+  font-weight: bold;
+}
+
+.onderwerpen-lijst h2 {
+  margin-top: 2rem;
+  color: var(--bronsbruin);
+  border-bottom: 1px solid var(--accentkleur);
+  padding-bottom: 0.3rem;
+}
+
+.onderwerpen-lijst ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.onderwerpen-lijst li {
+  margin: 0.8rem 0;
+}
+
+.onderwerpen-lijst a {
+  color: var(--diepgroenblauw);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.onderwerpen-lijst a:hover {
+  color: var(--oranje-hover);
+  text-decoration: underline;
+}
+/* Zoeker */
+.onderwerpen-search {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.onderwerpen-search input[type="search"] {
+  flex: 1;
+  padding: 0.8rem 2.5rem 0.8rem 0.9rem;
+  border: 1px solid var(--accentkleur);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+  outline: none;
+}
+
+.onderwerpen-search input[type="search"]::placeholder { opacity: 0.7; }
+
+.onderwerpen-search #wisZoek {
+  position: absolute;
+  right: 0.4rem;
+  background: transparent;
+  border: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  opacity: 0.6;
+}
+.onderwerpen-search #wisZoek:hover { opacity: 1; }
+
+.zoek-status {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: var(--nav-tekst);
+}
+
+mark {
+  background: #ffe6b8; /* zacht oranje */
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
 /* =================== MOBIEL (tot 768px) =================== */
 @media (max-width: 768px) {
   body {
