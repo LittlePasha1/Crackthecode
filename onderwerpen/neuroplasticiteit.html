@@ -130,6 +130,35 @@
     </article>
   </main>
 
+  <!-- === EXTRA NAVIGATIE === -->
+<div class="onderwerp-nav">
+  <p>
+    <a href="../onderwerpen.html" class="link-terug">← Terug naar alfabetische lijst</a>
+  </p>
+  <p>
+    <button class="random-knop" onclick="randomOnderwerp()">🎲 Ontdek een willekeurig onderwerp</button>
+  </p>
+</div>
+
+<script>
+function randomOnderwerp() {
+  const onderwerpen = [
+    "hersenen.html",
+    "neuronen.html",
+    "neuroplasticiteit.html",
+    "trauma.html",
+    "leren.html",
+    "beroerte.html",
+    "bloed-hersenbarriere.html",
+    "hersenschors.html",
+    "hersenstam.html"
+  ];
+  const keuze = onderwerpen[Math.floor(Math.random() * onderwerpen.length)];
+  window.location.href = keuze;
+}
+</script>
+
+
   <footer class="site-footer">
     <p>© 2025 De Onwijze Wijsheden — Samen leren, samen delen.</p>
   </footer>
