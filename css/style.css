@@ -1593,6 +1593,49 @@ mark {
   padding: 0 2px;
   border-radius: 3px;
 }
+/* — Onderwerpen: artikel lay-out — */
+.onderwerpen-page .onderwerp-article {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* Titelbox hergebruikt jouw kleuren, maar iets compacter voor Onderwerpen */
+.onderwerpen-page .onderwerp-article .title-box {
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 0;
+}
+
+.onderwerpen-page .onderwerp-article .denktext {
+  padding: 1.5rem 1.4rem 2rem;
+  max-width: 720px;    /* prettige leesbreedte */
+}
+
+/* Referentielijst */
+.onderwerpen-page .referenties {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.2rem;
+}
+.onderwerpen-page .referenties li {
+  margin: 0.6rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.onderwerpen-page .referenties li::before {
+  content: "◆";
+  color: var(--goud);
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+
 
 /* =================== MOBIEL (tot 768px) =================== */
 @media (max-width: 768px) {
