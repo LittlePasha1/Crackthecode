@@ -1635,6 +1635,28 @@ mark {
   font-size: 0.8rem;
 }
 
+/* BEWERK-KNOP (schelp) */
+.cta-bewerk {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem auto;
+  max-width: 280px; /* voorkomt dat de knop te groot wordt */
+}
+
+.cta-bewerk img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* maakt de schelp mooi afgerond */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover-effect: subtiel wetenschappelijk glow */
+.cta-bewerk img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 28px rgba(31,84,84,0.35); /* donkergroenblauw glow */
+}
 
 
 /* =================== MOBIEL (tot 768px) =================== */
